@@ -1,0 +1,2558 @@
+{
+  "canonicalSource": "manamaths/OPERATIONS/data/lo-tracker.json",
+  "generatedAtRepoPath": "manamaths-notes/OPERATIONS/data/notes-tracker.json",
+  "notes": [
+    "This tracker records which Mana Maths learning objectives have Notes modules in manamaths-notes.",
+    "Notes mirror Mana Maths LOs one-to-one using the same objectiveId, code, title, and slug.",
+    "Use this file to answer requests like 'pick up where we last left off'.",
+    "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
+  ],
+  "summary": {
+    "totalObjectives": 127,
+    "notesComplete": 1,
+    "notesStarted": 0,
+    "notesNotStarted": 126
+  },
+  "learningObjectives": [
+    {
+      "objectiveId": "YR9_T1_LO1",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Place Values and Decimals",
+      "canonicalDisplayTitle": "Place Values and Decimals",
+      "slug": "lo-yr9-place-values-and-decimals",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO2",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Rounding to Decimal Points",
+      "canonicalDisplayTitle": "Rounding to Decimal Points",
+      "slug": "lo-yr9-rounding-to-decimal-points",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO3",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Multiplying and dividing by 10,100,1000",
+      "canonicalDisplayTitle": "Multiplying and dividing by 10,100,1000",
+      "slug": "lo-yr9-multiplying-dividing-by-10-100-1000",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO4",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Scientific notation",
+      "canonicalDisplayTitle": "Scientific notation",
+      "slug": "lo-yr9-scientific-notation",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO5",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Integers",
+      "canonicalDisplayTitle": "Integers",
+      "slug": "lo-yr9-integers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-integers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-integers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-integers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO6",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Powers & Roots",
+      "canonicalDisplayTitle": "Powers & Roots",
+      "slug": "lo-yr9-powers-and-roots",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO7",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "GEMA (formerly BEDMAS)",
+      "canonicalDisplayTitle": "GEMA (formerly BEDMAS)",
+      "slug": "lo-yr9-gema-bedmas",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO8",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Substitution",
+      "canonicalDisplayTitle": "Substitution",
+      "slug": "lo-yr9-substitution",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-substitution",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-substitution/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-substitution/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO9",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Measurement prefixes",
+      "canonicalDisplayTitle": "Measurement prefixes",
+      "slug": "lo-yr9-measurement-prefixes",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO10",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Time",
+      "canonicalDisplayTitle": "Time",
+      "slug": "lo-yr9-time",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-time",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-time/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-time/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO11",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Reading scales",
+      "canonicalDisplayTitle": "Reading scales",
+      "slug": "lo-yr9-reading-scales",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-reading-scales",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-reading-scales/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-reading-scales/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO12",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Weight",
+      "canonicalDisplayTitle": "Weight",
+      "slug": "lo-yr9-weight",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-weight",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-weight/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-weight/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO13",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Capacity",
+      "canonicalDisplayTitle": "Capacity",
+      "slug": "lo-yr9-capacity",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-capacity",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-capacity/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-capacity/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO14",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Converting between length units",
+      "canonicalDisplayTitle": "Converting between length units",
+      "slug": "lo-yr9-converting-between-length-units",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-length-units",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-length-units/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-length-units/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO15",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Estimating lengths from scale drawings and photos",
+      "canonicalDisplayTitle": "Estimating lengths from scale drawings and photos",
+      "slug": "lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-estimating-lengths-from-scale-drawings-and-photos/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO16",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Perimeter (shapes with straight edges only)",
+      "canonicalDisplayTitle": "Perimeter (shapes with straight edges only)",
+      "slug": "lo-yr9-perimeter-shapes-with-straight-edges-only",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-shapes-with-straight-edges-only/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO17",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Area of basic shapes only (squares, rectangles, triangles, parallelograms, kite)",
+      "canonicalDisplayTitle": "Area of basic shapes only (squares, rectangles, triangles, parallelograms, kite)",
+      "slug": "lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-basic-shapes-only-squares-rectangles-triangles-parallelograms-kite/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO18",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Area of L-shapes and composite shapes",
+      "canonicalDisplayTitle": "Area of L-shapes and composite shapes",
+      "slug": "lo-yr9-area-of-l-shapes-and-composite-shapes",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-l-shapes-and-composite-shapes/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO19",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Area of trapezium",
+      "canonicalDisplayTitle": "Area of trapezium",
+      "slug": "lo-yr9-area-of-trapezium",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-trapezium",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-trapezium/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-area-of-trapezium/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO20",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Circumference and area of circles",
+      "canonicalDisplayTitle": "Circumference and area of circles",
+      "slug": "lo-yr9-circumference-and-area-of-circles",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-circumference-and-area-of-circles",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-circumference-and-area-of-circles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO21",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO21",
+      "canonicalSourceCode": "LO21",
+      "canonicalTitle": "Volume of cubes and cuboids",
+      "canonicalDisplayTitle": "Volume of cubes and cuboids",
+      "slug": "lo-yr9-volume-of-cubes-and-cuboids",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-cubes-and-cuboids/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO22",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Volume of prism",
+      "canonicalDisplayTitle": "Volume of prism",
+      "slug": "lo-yr9-volume-of-prism",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-prism",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-prism/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-prism/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_LO23",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Liquid volume",
+      "canonicalDisplayTitle": "Liquid volume",
+      "slug": "lo-yr9-liquid-volume",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-liquid-volume",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-liquid-volume/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-liquid-volume/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX01",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Perimeter and area of composite shapes involving circles",
+      "canonicalDisplayTitle": "Perimeter and area of composite shapes involving circles",
+      "slug": "lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-perimeter-and-area-of-composite-shapes-involving-circles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX02",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Drawing nets of basic shapes",
+      "canonicalDisplayTitle": "Drawing nets of basic shapes",
+      "slug": "lo-yr9-drawing-nets-of-basic-shapes",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-nets-of-basic-shapes/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX03",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Surface area",
+      "canonicalDisplayTitle": "Surface area",
+      "slug": "lo-yr9-surface-area",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-surface-area",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-surface-area/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-surface-area/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX04",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Volume of other 3D shapes (cylinders, cones, pyramids, spheres, etc)",
+      "canonicalDisplayTitle": "Volume of other 3D shapes (cylinders, cones, pyramids, spheres, etc)",
+      "slug": "lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-volume-of-other-3d-shapes-cylinders-cones-pyramids-spheres-etc/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX05",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX05",
+      "canonicalSourceCode": "EX05",
+      "canonicalTitle": "Forming measurement expressions",
+      "canonicalDisplayTitle": "Forming measurement expressions",
+      "slug": "lo-yr9-forming-measurement-expressions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-measurement-expressions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-measurement-expressions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-measurement-expressions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX06",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX06",
+      "canonicalSourceCode": "EX06",
+      "canonicalTitle": "Solving measurement equations",
+      "canonicalDisplayTitle": "Solving measurement equations",
+      "slug": "lo-yr9-solving-measurement-equations",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-measurement-equations",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-measurement-equations/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-measurement-equations/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T1_EX07",
+      "canonicalTopicId": "T1",
+      "canonicalInternalCode": "T1_EX07",
+      "canonicalSourceCode": "EX07",
+      "canonicalTitle": "Advanced Power Rules",
+      "canonicalDisplayTitle": "Advanced Power Rules",
+      "slug": "lo-yr9-advanced-power-rules",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-advanced-power-rules",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-advanced-power-rules/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-advanced-power-rules/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO1",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Forming Fractions",
+      "canonicalDisplayTitle": "Forming Fractions",
+      "slug": "lo-yr9-forming-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO2",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Equivalent Fractions",
+      "canonicalDisplayTitle": "Equivalent Fractions",
+      "slug": "lo-yr9-equivalent-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-equivalent-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-equivalent-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-equivalent-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO3",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Simplifying Fractions",
+      "canonicalDisplayTitle": "Simplifying Fractions",
+      "slug": "lo-yr9-simplifying-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO4",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Converting between improper fractions and mixed numbers",
+      "canonicalDisplayTitle": "Converting between improper fractions and mixed numbers",
+      "slug": "lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-converting-between-improper-fractions-and-mixed-numbers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO5",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Adding and subtracting fractions",
+      "canonicalDisplayTitle": "Adding and subtracting fractions",
+      "slug": "lo-yr9-adding-and-subtracting-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO6",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Multiplying fractions",
+      "canonicalDisplayTitle": "Multiplying fractions",
+      "slug": "lo-yr9-multiplying-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO7",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Reciprocals",
+      "canonicalDisplayTitle": "Reciprocals",
+      "slug": "lo-yr9-reciprocals",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-reciprocals",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-reciprocals/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-reciprocals/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO8",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Dividing fractions",
+      "canonicalDisplayTitle": "Dividing fractions",
+      "slug": "lo-yr9-dividing-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO9",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Finding fractions of quantity",
+      "canonicalDisplayTitle": "Finding fractions of quantity",
+      "slug": "lo-yr9-finding-fractions-of-a-quantity",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-finding-fractions-of-a-quantity/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO10",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Multiples & Lowest Common Multiples",
+      "canonicalDisplayTitle": "Multiples & Lowest Common Multiples",
+      "slug": "lo-yr9-multiples-and-lowest-common-multiples",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiples-and-lowest-common-multiples/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO11",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Factors, Highest Common Factors & Primes",
+      "canonicalDisplayTitle": "Factors, Highest Common Factors & Primes",
+      "slug": "lo-yr9-factors-highest-common-factors-and-primes",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-factors-highest-common-factors-and-primes/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO12",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Irrational numbers",
+      "canonicalDisplayTitle": "Irrational numbers",
+      "slug": "lo-yr9-irrational-numbers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-irrational-numbers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-irrational-numbers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-irrational-numbers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO13",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Forming expressions",
+      "canonicalDisplayTitle": "Forming expressions",
+      "slug": "lo-yr9-forming-expressions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-expressions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-expressions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-expressions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO14",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Multiplying Expressions (no powers)",
+      "canonicalDisplayTitle": "Multiplying Expressions (no powers)",
+      "slug": "lo-yr9-multiplying-expressions-no-powers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-no-powers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO15",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Adding and Subtracting Expressions (Like Terms)",
+      "canonicalDisplayTitle": "Adding and Subtracting Expressions (Like Terms)",
+      "slug": "lo-yr9-adding-and-subtracting-expressions-like-terms",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-adding-and-subtracting-expressions-like-terms/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO16",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Multiplying Expressions (with powers)",
+      "canonicalDisplayTitle": "Multiplying Expressions (with powers)",
+      "slug": "lo-yr9-multiplying-expressions-with-powers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-expressions-with-powers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO17",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Dividing Expressions",
+      "canonicalDisplayTitle": "Dividing Expressions",
+      "slug": "lo-yr9-dividing-expressions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-expressions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-expressions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-dividing-expressions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO18",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Simplifying Expressions with GEMA / BEDMAS",
+      "canonicalDisplayTitle": "Simplifying Expressions with GEMA / BEDMAS",
+      "slug": "lo-yr9-simplifying-expressions-with-gema-bedmas",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-expressions-with-gema-bedmas/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO19",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Expanding single brackets",
+      "canonicalDisplayTitle": "Expanding single brackets",
+      "slug": "lo-yr9-expanding-single-brackets",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO20",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Factorising single brackets",
+      "canonicalDisplayTitle": "Factorising single brackets",
+      "slug": "lo-yr9-factorising-single-brackets",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO22",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Defining Variables & Forming Equations",
+      "canonicalDisplayTitle": "Defining Variables & Forming Equations",
+      "slug": "lo-yr9-defining-variables-and-forming-equations",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-defining-variables-and-forming-equations/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO23",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Solving 1-step equations",
+      "canonicalDisplayTitle": "Solving 1-step equations",
+      "slug": "lo-yr9-solving-1-step-equations",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO24",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO24",
+      "canonicalSourceCode": "LO24",
+      "canonicalTitle": "Solving 2-step equations",
+      "canonicalDisplayTitle": "Solving 2-step equations",
+      "slug": "lo-yr9-solving-2-step-equations",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-2-step-equations",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-2-step-equations/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-2-step-equations/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO25",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO25",
+      "canonicalSourceCode": "LO25",
+      "canonicalTitle": "Solving equations with variables on both sides",
+      "canonicalDisplayTitle": "Solving equations with variables on both sides",
+      "slug": "lo-yr9-solving-equations-with-variables-on-both-sides",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-variables-on-both-sides/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO26",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO26",
+      "canonicalSourceCode": "LO26",
+      "canonicalTitle": "Forming and solving equations from context",
+      "canonicalDisplayTitle": "Forming and solving equations from context",
+      "slug": "lo-yr9-forming-and-solving-equations-from-context",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-and-solving-equations-from-context/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO27",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO27",
+      "canonicalSourceCode": "LO27",
+      "canonicalTitle": "Solving inequalities",
+      "canonicalDisplayTitle": "Solving inequalities",
+      "slug": "lo-yr9-solving-inequalities",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-inequalities",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-inequalities/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-inequalities/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_LO28",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_LO28",
+      "canonicalSourceCode": "LO28",
+      "canonicalTitle": "Re-arranging formula",
+      "canonicalDisplayTitle": "Re-arranging formula",
+      "slug": "lo-yr9-re-arranging-formula",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-re-arranging-formula",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-re-arranging-formula/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-re-arranging-formula/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX01",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Mixed Numbers",
+      "canonicalDisplayTitle": "Mixed Numbers",
+      "slug": "lo-yr9-mixed-numbers",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-mixed-numbers",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-mixed-numbers/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-mixed-numbers/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX02",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Prime Factors",
+      "canonicalDisplayTitle": "Prime Factors",
+      "slug": "lo-yr9-prime-factors",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-prime-factors",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-prime-factors/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-prime-factors/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX03",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Basic Power Rules",
+      "canonicalDisplayTitle": "Basic Power Rules",
+      "slug": "lo-yr9-basic-power-rules",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-basic-power-rules",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-basic-power-rules/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-basic-power-rules/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX04",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Expanding double brackets",
+      "canonicalDisplayTitle": "Expanding double brackets",
+      "slug": "lo-yr9-expanding-double-brackets",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX05",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX05",
+      "canonicalSourceCode": "EX05",
+      "canonicalTitle": "Factorising double brackets (with a co-efficient equal to 1)",
+      "canonicalDisplayTitle": "Factorising double brackets (with a co-efficient equal to 1)",
+      "slug": "lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-double-brackets-with-a-co-efficient-equal-to-1/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX06",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX06",
+      "canonicalSourceCode": "EX06",
+      "canonicalTitle": "Factorising special double brackets (perfect squares, difference between squares)",
+      "canonicalDisplayTitle": "Factorising special double brackets (perfect squares, difference between squares)",
+      "slug": "lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-special-double-brackets-perfect-squares-difference-between-squares/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX07",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX07",
+      "canonicalSourceCode": "EX07",
+      "canonicalTitle": "Solving equations with fractions",
+      "canonicalDisplayTitle": "Solving equations with fractions",
+      "slug": "lo-yr9-solving-equations-with-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-equations-with-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX08",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX08",
+      "canonicalSourceCode": "EX08",
+      "canonicalTitle": "Solving quadratics",
+      "canonicalDisplayTitle": "Solving quadratics",
+      "slug": "lo-yr9-solving-quadratics",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-quadratics",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-quadratics/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-quadratics/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T2_EX09",
+      "canonicalTopicId": "T2",
+      "canonicalInternalCode": "T2_EX09",
+      "canonicalSourceCode": "EX09",
+      "canonicalTitle": "Simplifying algebraic fractions",
+      "canonicalDisplayTitle": "Simplifying algebraic fractions",
+      "slug": "lo-yr9-simplifying-algebraic-fractions",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-simplifying-algebraic-fractions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO1",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Relationship between percentages, fractions, and decimals",
+      "canonicalDisplayTitle": "Relationship between percentages, fractions, and decimals",
+      "slug": "lo-yr9-relationship-between-percentages-fractions-and-decimals",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-relationship-between-percentages-fractions-and-decimals/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO2",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Forming percentages",
+      "canonicalDisplayTitle": "Forming percentages",
+      "slug": "lo-yr9-forming-percentages",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-percentages",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-percentages/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-percentages/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO3",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Percentage of a given quantity",
+      "canonicalDisplayTitle": "Percentage of a given quantity",
+      "slug": "lo-yr9-percentage-of-a-given",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-percentage-of-a-given",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-percentage-of-a-given/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-percentage-of-a-given/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO4",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Increasing and decreasing by a given percentage",
+      "canonicalDisplayTitle": "Increasing and decreasing by a given percentage",
+      "slug": "lo-yr9-increasing-and-decreasing-by-a-given-percentage",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-increasing-and-decreasing-by-a-given-percentage/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO5",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Tools of chance",
+      "canonicalDisplayTitle": "Tools of chance",
+      "slug": "lo-yr9-tools-of-chance",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-tools-of-chance",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-tools-of-chance/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-tools-of-chance/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO6",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "F/T",
+      "canonicalDisplayTitle": "F/T",
+      "slug": "lo-yr9-f-t",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-f-t",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-f-t/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-f-t/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO7",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Probabilities from experiments and statistical displays",
+      "canonicalDisplayTitle": "Probabilities from experiments and statistical displays",
+      "slug": "lo-yr9-probabilities-from-experiments-and-statistical-displays",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-probabilities-from-experiments-and-statistical-displays/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO8",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Trees/Combined Events",
+      "canonicalDisplayTitle": "Trees/Combined Events",
+      "slug": "lo-yr9-trees-combined-events",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-trees-combined-events",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-trees-combined-events/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-trees-combined-events/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO9",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Two-way tables",
+      "canonicalDisplayTitle": "Two-way tables",
+      "slug": "lo-yr9-two-way-tables",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-two-way-tables",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-two-way-tables/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-two-way-tables/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO10",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Expected Number",
+      "canonicalDisplayTitle": "Expected Number",
+      "slug": "lo-yr9-expected-number",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-expected-number",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-expected-number/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-expected-number/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO11",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Investigation types",
+      "canonicalDisplayTitle": "Investigation types",
+      "slug": "lo-yr9-investigation-types",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-investigation-types",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-investigation-types/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-investigation-types/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO12",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Types of data",
+      "canonicalDisplayTitle": "Types of data",
+      "slug": "lo-yr9-types-of-data",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-types-of-data",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-types-of-data/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-types-of-data/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO13",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Calculating averages and range",
+      "canonicalDisplayTitle": "Calculating averages and range",
+      "slug": "lo-yr9-calculating-averages-and-range",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-calculating-averages-and-range",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-calculating-averages-and-range/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-calculating-averages-and-range/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO14",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Quartiles",
+      "canonicalDisplayTitle": "Quartiles",
+      "slug": "lo-yr9-quartiles",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-quartiles",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-quartiles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-quartiles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO15",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO15",
+      "canonicalSourceCode": "LO15",
+      "canonicalTitle": "Selecting appropriate displays",
+      "canonicalDisplayTitle": "Selecting appropriate displays",
+      "slug": "lo-yr9-selecting-appropriate-displays",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-selecting-appropriate-displays",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-selecting-appropriate-displays/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-selecting-appropriate-displays/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO16",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO16",
+      "canonicalSourceCode": "LO16",
+      "canonicalTitle": "Interpreting pie charts & pictograms",
+      "canonicalDisplayTitle": "Interpreting pie charts & pictograms",
+      "slug": "lo-yr9-interpreting-pie-charts-pictograms",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-pie-charts-pictograms/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO17",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO17",
+      "canonicalSourceCode": "LO17",
+      "canonicalTitle": "Interpreting bar graphs & histograms",
+      "canonicalDisplayTitle": "Interpreting bar graphs & histograms",
+      "slug": "lo-yr9-interpreting-bar-graphs-histograms",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-interpreting-bar-graphs-histograms/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO18",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO18",
+      "canonicalSourceCode": "LO18",
+      "canonicalTitle": "Writing a statistical paragraph",
+      "canonicalDisplayTitle": "Writing a statistical paragraph",
+      "slug": "lo-yr9-writing-a-statistical-paragraph",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-writing-a-statistical-paragraph/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO19",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO19",
+      "canonicalSourceCode": "LO19",
+      "canonicalTitle": "Analysing time series graphs - TSN",
+      "canonicalDisplayTitle": "Analysing time series graphs - TSN",
+      "slug": "lo-yr9-analysing-time-series-graphs-tsn",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-time-series-graphs-tsn/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO20",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO20",
+      "canonicalSourceCode": "LO20",
+      "canonicalTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
+      "canonicalDisplayTitle": "Analysing scatter plots (i.e. bivariate) - TARSOG",
+      "slug": "lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-analysing-scatter-plots-i-e-bivariate-tarsog/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO21",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO21",
+      "canonicalSourceCode": "LO21",
+      "canonicalTitle": "Comparing box-and-whisker graphs - CSSI",
+      "canonicalDisplayTitle": "Comparing box-and-whisker graphs - CSSI",
+      "slug": "lo-yr9-comparing-box-and-whisker-graphs-cssi",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-comparing-box-and-whisker-graphs-cssi/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO22",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO22",
+      "canonicalSourceCode": "LO22",
+      "canonicalTitle": "Misleading graphs",
+      "canonicalDisplayTitle": "Misleading graphs",
+      "slug": "lo-yr9-misleading-graphs",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-misleading-graphs",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-misleading-graphs/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-misleading-graphs/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_LO23",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_LO23",
+      "canonicalSourceCode": "LO23",
+      "canonicalTitle": "Planning and collecting multivariate data",
+      "canonicalDisplayTitle": "Planning and collecting multivariate data",
+      "slug": "lo-yr9-planning-and-collecting-multivariate-data",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-planning-and-collecting-multivariate-data/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_EX01",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Reverse percentage",
+      "canonicalDisplayTitle": "Reverse percentage",
+      "slug": "lo-yr9-reverse-percentage",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-reverse-percentage",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-reverse-percentage/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-reverse-percentage/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_EX02",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Linear model for scatter plots",
+      "canonicalDisplayTitle": "Linear model for scatter plots",
+      "slug": "lo-yr9-linear-model-for-scatter-plots",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-linear-model-for-scatter-plots/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_EX03",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Sampling variation",
+      "canonicalDisplayTitle": "Sampling variation",
+      "slug": "lo-yr9-sampling-variation",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-variation",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-variation/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-variation/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T3_EX04",
+      "canonicalTopicId": "T3",
+      "canonicalInternalCode": "T3_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Sampling methodology",
+      "canonicalDisplayTitle": "Sampling methodology",
+      "slug": "lo-yr9-sampling-methodology",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-methodology",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-methodology/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-sampling-methodology/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO1",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Extrapolating linear, quadratic, and exponential patterns",
+      "canonicalDisplayTitle": "Extrapolating linear, quadratic, and exponential patterns",
+      "slug": "lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-extrapolating-linear-quadratic-and-exponential-patterns/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO2",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Identifying linear, quadratic, and exponential patterns",
+      "canonicalDisplayTitle": "Identifying linear, quadratic, and exponential patterns",
+      "slug": "lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-identifying-linear-quadratic-and-exponential-patterns/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO3",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
+      "canonicalDisplayTitle": "Spatial patterns (including drawing next pattern and converting to pattern)",
+      "slug": "lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-spatial-patterns-including-drawing-next-pattern-and-converting-to-pattern/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO4",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Determining nth term of pattern or spatial pattern",
+      "canonicalDisplayTitle": "Determining nth term of pattern or spatial pattern",
+      "slug": "lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-determining-nth-term-of-pattern-or-spatial-pattern/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO5",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Understanding Cartesian plane and co-ordinates",
+      "canonicalDisplayTitle": "Understanding Cartesian plane and co-ordinates",
+      "slug": "lo-yr9-understanding-cartesian-plane-and-co-ordinates",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-understanding-cartesian-plane-and-co-ordinates/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO6",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Drawing straight-line from given equation",
+      "canonicalDisplayTitle": "Drawing straight-line from given equation",
+      "slug": "lo-yr9-drawing-straight-line-from-given-equation",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-straight-line-from-given-equation/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO7",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Gradient",
+      "canonicalDisplayTitle": "Gradient",
+      "slug": "lo-yr9-gradient",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-gradient",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-gradient/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-gradient/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO8",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Finding x- and y-intercepts",
+      "canonicalDisplayTitle": "Finding x- and y-intercepts",
+      "slug": "lo-yr9-finding-x-and-y-intercepts",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-finding-x-and-y-intercepts/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO9",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Forming equations of given straight line graph (using y=mx+c)",
+      "canonicalDisplayTitle": "Forming equations of given straight line graph (using y=mx+c)",
+      "slug": "lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-given-straight-line-graph-using-y-mx-c/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO10",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Forming equations of horizontal and vertical lines",
+      "canonicalDisplayTitle": "Forming equations of horizontal and vertical lines",
+      "slug": "lo-yr9-forming-equations-of-horizontal-and-vertical-lines",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-horizontal-and-vertical-lines",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-horizontal-and-vertical-lines/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equations-of-horizontal-and-vertical-lines/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO11",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Finding point of intersection of two lines",
+      "canonicalDisplayTitle": "Finding point of intersection of two lines",
+      "slug": "lo-yr9-finding-point-of-intersection-of-two-lines",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-finding-point-of-intersection-of-two-lines/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO12",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Drawing parabola from given equation",
+      "canonicalDisplayTitle": "Drawing parabola from given equation",
+      "slug": "lo-yr9-drawing-parabola-from-given-equation",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-parabola-from-given-equation/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO13",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO13",
+      "canonicalSourceCode": "LO13",
+      "canonicalTitle": "Using tables to explore patterns and graphs",
+      "canonicalDisplayTitle": "Using tables to explore patterns and graphs",
+      "slug": "lo-yr9-using-tables-to-explore-patterns-and-graphs",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-using-tables-to-explore-patterns-and-graphs/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_LO14",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_LO14",
+      "canonicalSourceCode": "LO14",
+      "canonicalTitle": "Applying straight line graphs to solve problems",
+      "canonicalDisplayTitle": "Applying straight line graphs to solve problems",
+      "slug": "lo-yr9-applying-straight-line-graphs-to-solve-problems",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-applying-straight-line-graphs-to-solve-problems",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-applying-straight-line-graphs-to-solve-problems/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-applying-straight-line-graphs-to-solve-problems/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_EX01",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Using algebra to find the point of intersection of two lines",
+      "canonicalDisplayTitle": "Using algebra to find the point of intersection of two lines",
+      "slug": "lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-using-algebra-to-find-the-point-of-intersection-of-two-lines/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_EX02",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Forming equation of parabolas",
+      "canonicalDisplayTitle": "Forming equation of parabolas",
+      "slug": "lo-yr9-forming-equation-of-parabolas",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equation-of-parabolas",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-forming-equation-of-parabolas/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_EX03",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Using features of a parabola to solve problems",
+      "canonicalDisplayTitle": "Using features of a parabola to solve problems",
+      "slug": "lo-yr9-using-features-of-a-parabola-to-solve-problems",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-using-features-of-a-parabola-to-solve-problems/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T4_EX04",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": "T4_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Drawing exponential graphs",
+      "canonicalDisplayTitle": "Drawing exponential graphs",
+      "slug": "lo-yr9-drawing-exponential-graphs",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-exponential-graphs",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-exponential-graphs/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-drawing-exponential-graphs/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO1",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO1",
+      "canonicalSourceCode": "LO1",
+      "canonicalTitle": "Naming angles",
+      "canonicalDisplayTitle": "Naming angles",
+      "slug": "lo-yr9-naming-angles",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-naming-angles",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-naming-angles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-naming-angles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO2",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO2",
+      "canonicalSourceCode": "LO2",
+      "canonicalTitle": "Angles around a point",
+      "canonicalDisplayTitle": "Angles around a point",
+      "slug": "lo-yr9-angles-around-a-point",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-angles-around-a-point",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-angles-around-a-point/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-angles-around-a-point/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO3",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO3",
+      "canonicalSourceCode": "LO3",
+      "canonicalTitle": "Angles on a straight line",
+      "canonicalDisplayTitle": "Angles on a straight line",
+      "slug": "lo-yr9-angles-on-a-straight-line",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-angles-on-a-straight-line",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-angles-on-a-straight-line/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-angles-on-a-straight-line/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO4",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO4",
+      "canonicalSourceCode": "LO4",
+      "canonicalTitle": "Vertically opposite angles",
+      "canonicalDisplayTitle": "Vertically opposite angles",
+      "slug": "lo-yr9-vertically-opposite-angles",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-vertically-opposite-angles",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-vertically-opposite-angles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-vertically-opposite-angles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO5",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO5",
+      "canonicalSourceCode": "LO5",
+      "canonicalTitle": "Interior angles of a triangle",
+      "canonicalDisplayTitle": "Interior angles of a triangle",
+      "slug": "lo-yr9-interior-angles-of-a-triangle",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-interior-angles-of-a-triangle/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO6",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO6",
+      "canonicalSourceCode": "LO6",
+      "canonicalTitle": "Parallel line rules",
+      "canonicalDisplayTitle": "Parallel line rules",
+      "slug": "lo-yr9-parallel-line-rules",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-parallel-line-rules",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-parallel-line-rules/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-parallel-line-rules/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO7",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO7",
+      "canonicalSourceCode": "LO7",
+      "canonicalTitle": "Regular/irregular polygon",
+      "canonicalDisplayTitle": "Regular/irregular polygon",
+      "slug": "lo-yr9-regular-irregular-polygon",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-regular-irregular-polygon",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-regular-irregular-polygon/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-regular-irregular-polygon/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO8",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO8",
+      "canonicalSourceCode": "LO8",
+      "canonicalTitle": "Pythagoras theory finding short and long sides",
+      "canonicalDisplayTitle": "Pythagoras theory finding short and long sides",
+      "slug": "lo-yr9-pythagoras-theory-finding-short-and-long-sides",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-pythagoras-theory-finding-short-and-long-sides/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO9",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO9",
+      "canonicalSourceCode": "LO9",
+      "canonicalTitle": "Applying Pythagoras\u2019 theory",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 theory",
+      "slug": "lo-yr9-applying-pythagoras-theory",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO10",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO10",
+      "canonicalSourceCode": "LO10",
+      "canonicalTitle": "Pythagorean triples",
+      "canonicalDisplayTitle": "Pythagorean triples",
+      "slug": "lo-yr9-pythagorean-triples",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-pythagorean-triples",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-pythagorean-triples/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-pythagorean-triples/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO11",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO11",
+      "canonicalSourceCode": "LO11",
+      "canonicalTitle": "Transformation (Translation, reflection, enlargement)",
+      "canonicalDisplayTitle": "Transformation (Translation, reflection, enlargement)",
+      "slug": "lo-yr9-transformation-translation-reflection-enlargement",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-transformation-translation-reflection-enlargement",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-transformation-translation-reflection-enlargement/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-transformation-translation-reflection-enlargement/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_LO12",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO12",
+      "canonicalSourceCode": "LO12",
+      "canonicalTitle": "Representing and constructing 3D shapes",
+      "canonicalDisplayTitle": "Representing and constructing 3D shapes",
+      "slug": "lo-yr9-representing-and-constructing-3d-shapes",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-representing-and-constructing-3d-shapes/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_EX01",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX01",
+      "canonicalSourceCode": "EX01",
+      "canonicalTitle": "Using trig functions to calculate lengths of a right-angled triangle",
+      "canonicalDisplayTitle": "Using trig functions to calculate lengths of a right-angled triangle",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-lengths-of-a-right-angled-triangle/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_EX02",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX02",
+      "canonicalSourceCode": "EX02",
+      "canonicalTitle": "Using trig functions to calculate angles of a right-angled triangle",
+      "canonicalDisplayTitle": "Using trig functions to calculate angles of a right-angled triangle",
+      "slug": "lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-using-trig-functions-to-calculate-angles-of-a-right-angled-triangle/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_EX03",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX03",
+      "canonicalSourceCode": "EX03",
+      "canonicalTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "canonicalDisplayTitle": "Applying Pythagoras\u2019 Theory to 3D representations",
+      "slug": "lo-yr9-applying-pythagoras-theory-to-3d-representations",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-applying-pythagoras-theory-to-3d-representations/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "YR9_T5_EX04",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_EX04",
+      "canonicalSourceCode": "EX04",
+      "canonicalTitle": "Introduction to Circle Geometry",
+      "canonicalDisplayTitle": "Introduction to Circle Geometry",
+      "slug": "lo-yr9-introduction-to-circle-geometry",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-yr9-introduction-to-circle-geometry",
+        "source": "manamaths-notes/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-introduction-to-circle-geometry/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    }
+  ]
+}

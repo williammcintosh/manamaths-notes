@@ -1,0 +1,104 @@
+% Mana Maths Notes template
+% Landscape, slide-looking teaching pages with sparse projector-first layout.
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=1.2cm,top=0.6cm,bottom=0.8cm,left=1.0cm,right=1.0cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\everymath{\displaystyle}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.35em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=0.45em,topsep=0.2em}
+\setlength{\columnsep}{1.2cm}
+
+\definecolor{mmblue}{HTML}{1F4E79}
+\definecolor{mmsoft}{HTML}{EEF4F8}
+\definecolor{mmline}{HTML}{D7E1E8}
+\definecolor{mmwarn}{HTML}{A63D40}
+\definecolor{mmlink}{HTML}{315C2B}
+
+\newcommand{\NotesTitle}[1]{{\fontsize{28}{31}\selectfont\textbf{#1}}\par\vspace{0.25em}\color{mmblue}\rule{\linewidth}{1.2pt}\color{black}\vspace{0.55em}}
+\newcommand{\SectionTitle}[1]{{\Large\textbf{\textcolor{mmblue}{#1}}}\par\vspace{0.25em}}
+\newcommand{\KeyIdea}[1]{\colorbox{mmsoft}{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{Key idea:} #1\vspace{0.35em}}}\par\vspace{0.5em}}
+\newcommand{\WorkedExample}[2]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{#1}\par\vspace{0.35em}#2\vspace{0.35em}}}\par\vspace{0.55em}}
+\newcommand{\CommonMistake}[1]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{\textcolor{mmwarn}{Common mistake}}\par\vspace{0.25em}#1\vspace{0.35em}}}\par\vspace{0.5em}}
+\newcommand{\TryThese}[1]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{\textcolor{mmlink}{Try these}}\par\vspace{0.25em}#1\vspace{0.35em}}}\par}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.35em}}
+
+\begin{document}
+\sffamily
+\boldmath
+
+% Copy this template into an LO folder and replace the content below.
+\NotesTitle{LO title goes here}
+
+\begin{multicols}{2}
+
+\SectionTitle{What you are learning}
+Solve very simple examples first and show each line of working clearly.
+
+\KeyIdea{State the one main thing students need to remember in plain language.}
+
+\SectionTitle{Steps}
+\StepLine{1}{Read the problem and decide what operation or rule is needed.}
+\StepLine{2}{Write one line of working at a time.}
+\StepLine{3}{Check the final answer makes sense.}
+
+\columnbreak
+
+\SectionTitle{Worked examples}
+\WorkedExample{Example 1}{
+\[
+2x + 3x = 5x
+\]
+Combine like terms only.
+}
+
+\WorkedExample{Example 2}{
+\[
+3(x+2)=3x+6
+\]
+Multiply the 3 by each term in the bracket.
+}
+
+\end{multicols}
+
+\vspace{0.3em}
+\CommonMistake{Mixing unlike terms, for example writing \(2x + 3 = 5x\). The \(x\) and the constant are not like terms.}
+
+\TryThese{%
+\begin{enumerate}
+  \item Simplify \(4x + 2x\)
+  \item Expand \(2(x+5)\)
+  \item Simplify \(7a - 3a\)
+\end{enumerate}}
+
+\newpage
+
+\NotesTitle{LO title goes here — more examples}
+
+\SectionTitle{Model one more carefully}
+\WorkedExample{Example 3}{
+\[
+5y - 2y + y = 4y
+\]
+Count how many \(y\) terms there are altogether.
+}
+
+\WorkedExample{Example 4}{
+\[
+4(2a+1)=8a+4
+\]
+Multiply the 4 by both terms inside the bracket.
+}
+
+\SectionTitle{Teacher prompt}
+Ask students what changed on each line before moving on.
+
+\end{document}

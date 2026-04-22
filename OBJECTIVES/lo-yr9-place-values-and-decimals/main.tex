@@ -1,0 +1,155 @@
+\documentclass[20pt,a4paper,landscape]{extarticle}
+\usepackage[margin=1.2cm,top=0.6cm,bottom=0.8cm,left=1.0cm,right=1.0cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\everymath{\displaystyle}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.35em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=0.45em,topsep=0.2em}
+\setlength{\columnsep}{1.2cm}
+
+\definecolor{mmblue}{HTML}{1F4E79}
+\definecolor{mmsoft}{HTML}{EEF4F8}
+\definecolor{mmwarn}{HTML}{A63D40}
+\definecolor{mmlink}{HTML}{315C2B}
+
+\newcommand{\NotesTitle}[1]{{\fontsize{28}{31}\selectfont\textbf{#1}}\par\vspace{0.25em}\color{mmblue}\rule{\linewidth}{1.2pt}\color{black}\vspace{0.55em}}
+\newcommand{\SectionTitle}[1]{{\Large\textbf{\textcolor{mmblue}{#1}}}\par\vspace{0.25em}}
+\newcommand{\KeyIdea}[1]{\colorbox{mmsoft}{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{Key idea:} #1\vspace{0.35em}}}\par\vspace{0.5em}}
+\newcommand{\WorkedExample}[2]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{#1}\par\vspace{0.35em}#2\vspace{0.35em}}}\par\vspace{0.55em}}
+\newcommand{\CommonMistake}[1]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{\textcolor{mmwarn}{Common mistake}}\par\vspace{0.25em}#1\vspace{0.35em}}}\par\vspace{0.5em}}
+\newcommand{\TryThese}[1]{\fbox{\parbox{0.97\linewidth}{\vspace{0.35em}\textbf{\textcolor{mmlink}{Try these}}\par\vspace{0.25em}#1\vspace{0.35em}}}\par}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.35em}}
+
+\begin{document}
+\sffamily
+\boldmath
+
+\NotesTitle{Topic 1 LO1 — Place Values and Decimals}
+
+\begin{multicols}{2}
+
+\SectionTitle{What you are learning}
+Read, write, compare, and split numbers using place value.
+
+\KeyIdea{A digit's value depends on its place. The same digit can mean very different amounts in different positions.}
+
+\SectionTitle{Steps}
+\StepLine{1}{Look at the digit you care about.}
+\StepLine{2}{Name its place: ones, tens, tenths, hundredths, and so on.}
+\StepLine{3}{Write its value, not just the digit.}
+\StepLine{4}{If comparing numbers, check from left to right.}
+
+\columnbreak
+
+\SectionTitle{Place-value reminder}
+\begin{itemize}
+  \item In \(347\), the \(4\) means \(40\).
+  \item In \(5.3\), the \(3\) means \(0.3\).
+  \item In \(2.74\), the \(7\) means \(0.7\).
+  \item In \(2.74\), the \(4\) means \(0.04\).
+\end{itemize}
+
+\WorkedExample{Example 1: value of a digit}{
+Find the value of the \(6\) in \(862\).
+\[
+862 = 800 + 60 + 2
+\]
+So the value of the \(6\) is \(60\).
+}
+
+\WorkedExample{Example 2: decimal place value}{
+Find the value of the \(7\) in \(2.74\).
+\[
+2.74 = 2 + 0.7 + 0.04
+\]
+So the value of the \(7\) is \(0.7\).
+}
+
+\end{multicols}
+
+\vspace{0.25em}
+\CommonMistake{Saying the value is just the digit. In \(862\), the digit is \(6\), but its value is \(60\). In \(2.74\), the digit is \(7\), but its value is \(0.7\).}
+
+\TryThese{%
+\begin{enumerate}
+  \item What is the value of the \(4\) in \(347\)?
+  \item What is the value of the \(5\) in \(5.3\)?
+  \item What is the value of the \(4\) in \(3.48\)?
+\end{enumerate}}
+
+\newpage
+
+\NotesTitle{Topic 1 LO1 — Place Values and Decimals}
+
+\begin{multicols}{2}
+\SectionTitle{Comparing numbers}
+When two numbers have the same whole-number part, compare the decimal places next.
+
+\WorkedExample{Example 3: compare decimals}{
+Which is greater: \(0.8\) or \(0.08\)?
+\[
+0.8 = 8\text{ tenths}
+\]
+\[
+0.08 = 8\text{ hundredths}
+\]
+A tenth is bigger than a hundredth, so
+\[
+0.8 > 0.08
+\]
+}
+
+\WorkedExample{Example 4: order numbers}{
+Order \(3.2,\ 2.9,\ 3.02\) from smallest to largest.
+\[
+2.9 < 3.02 < 3.2
+\]
+So the order is:
+\[
+2.9,\ 3.02,\ 3.2
+\]
+}
+
+\columnbreak
+
+\SectionTitle{Partitioning numbers}
+Split a number into place-value parts.
+
+\WorkedExample{Example 5: whole number}{
+Partition \(407\).
+\[
+407 = 400 + 0 + 7
+\]
+Usually we write this as:
+\[
+407 = 400 + 7
+\]
+}
+
+\WorkedExample{Example 6: decimal number}{
+Partition \(3.48\).
+\[
+3.48 = 3 + 0.4 + 0.08
+\]
+That is 3 ones, 4 tenths, and 8 hundredths.
+}
+\end{multicols}
+
+\CommonMistake{Thinking more digits means a bigger decimal. For example, \(0.08\) is not bigger than \(0.8\). It is smaller because 8 hundredths is less than 8 tenths.}
+
+\TryThese{%
+\begin{enumerate}
+  \item Which is greater: \(45\) or \(54\)?
+  \item Order from smallest to largest: \(0.5,\ 0.05,\ 0.15\)
+  \item Partition \(4.7\)
+\end{enumerate}}
+
+\end{document}
