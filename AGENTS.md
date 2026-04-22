@@ -49,14 +49,15 @@ Use `python3 manamaths-notes/OPERATIONS/scripts/generate_site.py` to build the s
 
 The site currently:
 - builds an index page from `OPERATIONS/data/notes-tracker.json`
-- builds one HTML page per complete LO
-- links each LO page to the built PDF in `OBJECTIVES/<slug>/build/main.pdf`
+- builds one HTML page per complete LO from the LaTeX source
+- builds one embeddable HTML fragment per complete LO in `SITE/fragments/`
 - deploys via `.github/workflows/deploy-pages.yml`
+- can be embedded or linked from the main `manamaths` site
 
 After changing Notes content, refresh in this order:
-1. build the target PDF with `tectonic`
+1. build the target PDF with `tectonic` if you want a printable/export copy
 2. refresh `notes-tracker.json`
-3. regenerate the site
+3. regenerate the site and fragments
 4. commit and push
 
 ## Future thread guidance

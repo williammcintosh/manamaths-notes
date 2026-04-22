@@ -16,7 +16,7 @@ Each module is a landscape, slide-looking LaTeX notes deck for first teaching:
 - common mistake
 - tiny practice
 
-LaTeX is the source of truth. PDF is the primary output. HTML can be generated later from the same source or a parallel conversion pipeline.
+LaTeX is the source of truth. HTML notes pages are generated from that LaTeX source for the website. PDF can still be built separately for print/export.
 
 ## Shape
 

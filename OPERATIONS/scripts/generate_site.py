@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 import html
 import json
+import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 TRACKER = REPO / 'OPERATIONS/data/notes-tracker.json'
 SITE = REPO / 'SITE'
 OBJECTIVES_SITE = SITE / 'objectives'
+FRAGMENTS_SITE = SITE / 'fragments'
 BASE_URL = 'https://williammcintosh.github.io/manamaths-notes'
 
 STYLE = '''
@@ -18,6 +20,8 @@ STYLE = '''
   --line: #d8e1e8;
   --blue: #1f4e79;
   --green: #2f6b3b;
+  --soft: #eef4f8;
+  --warn: #a63d40;
 }
 * { box-sizing: border-box; }
 body {
@@ -33,7 +37,7 @@ a:hover { text-decoration: underline; }
 .hero h1 { margin: 0 0 8px; font-size: 2.2rem; }
 .hero p { margin: 0; color: var(--muted); }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 22px 0 30px; }
-.stat, .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
+.stat, .card, .notes-page, .notes-fragment { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
 .stat { padding: 18px; }
 .stat .label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
 .stat .value { font-size: 2rem; font-weight: 700; }
@@ -46,10 +50,42 @@ a:hover { text-decoration: underline; }
 .badge.started { background: #fff4df; color: #9a6200; }
 .badge.not_started { background: #edf2f7; color: #607286; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.viewer { width: 100%; height: 82vh; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
 .topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
 .small { color: var(--muted); font-size: 0.92rem; }
+.notes-page, .notes-fragment { padding: 22px; }
+.notes-page-header { margin-bottom: 18px; }
+.notes-page-header h2 { margin: 0 0 6px; font-size: 1.6rem; }
+.notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+.notes-section-title { font-size: 1.12rem; font-weight: 800; color: var(--blue); margin: 0 0 8px; }
+.notes-key-idea, .notes-box { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 16px; background: #fff; }
+.notes-key-idea { background: var(--soft); }
+.notes-example { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 16px; background: #fff; }
+.notes-example h4 { margin: 0 0 8px; font-size: 1rem; }
+.notes-steps { margin: 0 0 16px; padding-left: 1.2rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 8px; }
+.notes-list, .notes-try { margin: 0 0 14px; padding-left: 1.2rem; }
+.notes-page-split { height: 1px; background: var(--line); margin: 24px 0; }
+.notes-common-mistake { border-color: #e6c8cb; }
+.notes-common-mistake strong { color: var(--warn); }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
 '''
+
+MATH_BLOCK_RE = re.compile(r'\\\[(.*?)\\\]', re.S)
+MATH_INLINE_RE = re.compile(r'\\\((.*?)\\\)', re.S)
+NOTES_TITLE_RE = re.compile(r'\\NotesTitle\{(.*?)\}', re.S)
+SECTION_RE = re.compile(r'\\SectionTitle\{(.*?)\}', re.S)
+KEY_IDEA_RE = re.compile(r'\\KeyIdea\{(.*?)\}', re.S)
+STEP_RE = re.compile(r'\\StepLine\{(.*?)\}\{(.*?)\}', re.S)
+ITEMIZE_RE = re.compile(r'\\begin\{itemize\}(.*?)\\end\{itemize\}', re.S)
+ENUM_RE = re.compile(r'\\begin\{enumerate\}(.*?)\\end\{enumerate\}', re.S)
+ITEM_RE = re.compile(r'\\item\s+(.*?)(?=(?:\\item|$))', re.S)
+EXAMPLE_RE = re.compile(r'\\WorkedExample\{(.*?)\}\{(.*?)\}', re.S)
+COMMON_RE = re.compile(r'\\CommonMistake\{(.*?)\}', re.S)
+TRY_RE = re.compile(r'\\TryThese\{\%?\s*\\begin\{enumerate\}(.*?)\\end\{enumerate\}\s*\}', re.S)
+MULTICOLS_RE = re.compile(r'\\begin\{multicols\}\{2\}(.*?)\\columnbreak(.*?)\\end\{multicols\}', re.S)
+TEXT_REPL = {
+    r'\\textbf{': '<strong>',
+}
 
 
 def page(title: str, body: str) -> str:
@@ -60,6 +96,10 @@ def page(title: str, body: str) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
   <style>{STYLE}</style>
+  <script>
+    window.MathJax = {{ tex: {{ inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }} }};
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -70,20 +110,161 @@ def page(title: str, body: str) -> str:
 '''
 
 
-def rel_pdf_path(slug: str) -> str:
-    return f'../../OBJECTIVES/{slug}/build/main.pdf'
+def norm(s: str) -> str:
+    return re.sub(r'\s+', ' ', s).strip()
+
+
+def render_tex_inline(text: str) -> str:
+    text = text.strip()
+    text = html.escape(text)
+    text = text.replace('\\textbf{', '<strong>')
+    text = text.replace('}', '</strong>', text.count('</strong>') if '</strong>' in text else 0)
+    text = text.replace('&lt;strong&gt;', '<strong>').replace('&lt;/strong&gt;', '</strong>')
+    text = text.replace('\\text{', '\\text{')
+    text = text.replace('\\,', ' ')
+    text = text.replace('\\ ', ' ')
+    text = text.replace('\\%', '%')
+    text = re.sub(r'\\text\{(.*?)\}', lambda m: m.group(1), text)
+    text = text.replace('—', '&mdash;')
+    return text
+
+
+def wrap_paragraphs(text: str) -> str:
+    chunks = [c.strip() for c in re.split(r'\n\s*\n', text) if c.strip()]
+    out = []
+    for chunk in chunks:
+        chunk = re.sub(r'\n+', '<br />', chunk)
+        out.append(f'<p>{chunk}</p>')
+    return ''.join(out)
+
+
+def render_list(body: str, klass: str) -> str:
+    items = [render_tex_body(norm(m.group(1))) for m in ITEM_RE.finditer(body)]
+    return f'<ul class="{klass}">' + ''.join(f'<li>{i}</li>' for i in items) + '</ul>'
+
+
+def render_enum(body: str, klass: str) -> str:
+    items = [render_tex_body(norm(m.group(1))) for m in ITEM_RE.finditer(body)]
+    return f'<ol class="{klass}">' + ''.join(f'<li>{i}</li>' for i in items) + '</ol>'
+
+
+def render_tex_body(text: str) -> str:
+    text = text.strip()
+    text = html.escape(text)
+    text = re.sub(r'\\text\{(.*?)\}', lambda m: m.group(1), text)
+    text = text.replace('\\,', ' ')
+    text = text.replace('\\ ', ' ')
+    text = text.replace('\\%', '%')
+    text = text.replace('\\f\\frac', '\\frac')
+    text = re.sub(r'\\begin\{itemize\}(.*?)\\end\{itemize\}', lambda m: render_list(m.group(1), 'notes-list'), text, flags=re.S)
+    text = re.sub(r'\\begin\{enumerate\}(.*?)\\end\{enumerate\}', lambda m: render_enum(m.group(1), 'notes-try'), text, flags=re.S)
+    parts = [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
+    rendered = []
+    for p in parts:
+        if p.startswith('<ul ') or p.startswith('<ol '):
+            rendered.append(p)
+        else:
+            rendered.append(f'<p>{p.replace(chr(10), "<br />")}</p>')
+    return ''.join(rendered)
+
+
+def parse_notes_tex(tex: str) -> list[dict]:
+    tex = re.sub(r'\\text\{(.*?)\}', lambda m: m.group(1), tex, flags=re.S)
+    document = tex.split('\\begin{document}', 1)[-1].split('\\end{document}', 1)[0]
+    pages = [p.strip() for p in document.split('\\newpage') if p.strip()]
+    parsed = []
+    for page in pages:
+        title = norm(NOTES_TITLE_RE.search(page).group(1)) if NOTES_TITLE_RE.search(page) else ''
+        cols = MULTICOLS_RE.search(page)
+        left = right = ''
+        if cols:
+            left, right = cols.group(1), cols.group(2)
+        rest = MULTICOLS_RE.sub('', page)
+        common = COMMON_RE.search(rest)
+        tries = TRY_RE.search(rest)
+        parsed.append({
+            'title': title,
+            'left': left,
+            'right': right,
+            'common': common.group(1).strip() if common else '',
+            'tries': tries.group(1).strip() if tries else '',
+        })
+    return parsed
+
+
+def render_column(col: str) -> str:
+    out = []
+    pos = 0
+    patterns = [
+        ('section', SECTION_RE),
+        ('key', KEY_IDEA_RE),
+        ('step', STEP_RE),
+        ('example', EXAMPLE_RE),
+        ('itemize', ITEMIZE_RE),
+    ]
+    matches = []
+    for kind, rx in patterns:
+        for m in rx.finditer(col):
+            matches.append((m.start(), m.end(), kind, m))
+    matches.sort(key=lambda x: x[0])
+    for start, end, kind, m in matches:
+        if start > pos:
+            plain = norm(col[pos:start])
+            if plain:
+                out.append(render_tex_body(plain))
+        if kind == 'section':
+            out.append(f'<div class="notes-section-title">{render_tex_body(m.group(1))}</div>')
+        elif kind == 'key':
+            out.append(f'<div class="notes-key-idea"><strong>Key idea:</strong> {render_tex_body(m.group(1))}</div>')
+        elif kind == 'step':
+            num = render_tex_body(m.group(1))
+            body = render_tex_body(m.group(2))
+            out.append(f'<ol class="notes-steps" start="{html.escape(re.sub(r"<.*?>","",num))}"><li>{body}</li></ol>')
+        elif kind == 'example':
+            out.append(f'<div class="notes-example"><h4>{render_tex_body(m.group(1))}</h4>{render_tex_body(m.group(2))}</div>')
+        elif kind == 'itemize':
+            out.append(render_list(m.group(1), 'notes-list'))
+        pos = end
+    tail = norm(col[pos:])
+    if tail:
+        out.append(render_tex_body(tail))
+    return ''.join(out)
+
+
+def render_notes_content(tex_path: Path) -> tuple[str, str]:
+    tex = tex_path.read_text()
+    pages = parse_notes_tex(tex)
+    page_html = []
+    frag_html = []
+    for i, page_data in enumerate(pages):
+        title_html = html.escape(page_data['title'])
+        section = f'<section class="notes-page">'
+        if title_html:
+            section += f'<div class="notes-page-header"><h2>{title_html}</h2></div>'
+        section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
+        if page_data['common']:
+            section += f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
+        if page_data['tries']:
+            section += f'<div class="notes-box"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
+        section += '</section>'
+        page_html.append(section)
+        frag_html.append(section)
+        if i != len(pages) - 1:
+            page_html.append('<div class="notes-page-split"></div>')
+            frag_html.append('<div class="notes-page-split"></div>')
+    return ''.join(page_html), ''.join(frag_html)
 
 
 def objective_body(lo: dict) -> str:
     title = html.escape(lo['canonicalDisplayTitle'])
     code = html.escape(lo['canonicalInternalCode'])
     slug = lo['slug']
-    pdf_path = rel_pdf_path(slug)
+    tex_path = REPO / 'OBJECTIVES' / slug / 'main.tex'
+    rendered, _fragment = render_notes_content(tex_path)
     status = lo['notesStatus']
     return f'''
 <div class="topnav">
   <a href="../index.html">← Notes index</a>
-  <a href="{pdf_path}">Open PDF</a>
 </div>
 <div class="hero">
   <h1>{title}</h1>
@@ -91,12 +272,8 @@ def objective_body(lo: dict) -> str:
 </div>
 <div class="card" style="margin-bottom: 18px;">
   <div class="badge {status}">{status.replace('_', ' ').title()}</div>
-  <div class="actions">
-    <a href="{pdf_path}">Download PDF</a>
-  </div>
 </div>
-<iframe class="viewer" src="{pdf_path}#view=FitH"></iframe>
-<p class="small" style="margin-top: 10px;">If the embedded viewer fails on your browser, use the PDF link above.</p>
+{rendered}
 '''
 
 
@@ -109,7 +286,7 @@ def index_body(data: dict) -> str:
         code = html.escape(lo['canonicalInternalCode'])
         slug = lo['slug']
         if status == 'complete':
-            actions = f'<div class="actions"><a href="objectives/{slug}.html">Open notes page</a><a href="OBJECTIVES/{slug}/build/main.pdf">PDF</a></div>'
+            actions = f'<div class="actions"><a href="objectives/{slug}.html">Open notes page</a></div>'
         elif status == 'started':
             actions = '<div class="small">In progress</div>'
         else:
@@ -123,7 +300,7 @@ def index_body(data: dict) -> str:
     return f'''
 <div class="hero">
   <h1>Mana Maths Notes</h1>
-  <p>PDF-first teaching notes for Mana Maths learning objectives.</p>
+  <p>HTML teaching notes generated from LaTeX source for Mana Maths learning objectives.</p>
 </div>
 <div class="stats">
   <div class="stat"><div class="label">Total LOs</div><div class="value">{summary['totalObjectives']}</div></div>
@@ -143,12 +320,17 @@ def index_body(data: dict) -> str:
 def main():
     data = json.loads(TRACKER.read_text())
     OBJECTIVES_SITE.mkdir(parents=True, exist_ok=True)
+    FRAGMENTS_SITE.mkdir(parents=True, exist_ok=True)
     (SITE / 'index.html').write_text(page('Mana Maths Notes', index_body(data)))
     for lo in data['learningObjectives']:
         if lo['notesStatus'] != 'complete':
             continue
-        out = OBJECTIVES_SITE / f"{lo['slug']}.html"
+        slug = lo['slug']
+        tex_path = REPO / 'OBJECTIVES' / slug / 'main.tex'
+        rendered, fragment = render_notes_content(tex_path)
+        out = OBJECTIVES_SITE / f"{slug}.html"
         out.write_text(page(lo['canonicalDisplayTitle'], objective_body(lo)))
+        (FRAGMENTS_SITE / f'{slug}.html').write_text(fragment)
 
 
 if __name__ == '__main__':
