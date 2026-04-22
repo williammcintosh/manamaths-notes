@@ -43,10 +43,28 @@ This produced:
 - Track repo progress in `OPERATIONS/data/notes-tracker.json`.
 - Refresh progress with `python3 manamaths-notes/OPERATIONS/scripts/generate_notes_tracker.py` after adding or finishing a module.
 
+## Website pipeline
+
+Use `python3 manamaths-notes/OPERATIONS/scripts/generate_site.py` to build the static site into `manamaths-notes/SITE/`.
+
+The site currently:
+- builds an index page from `OPERATIONS/data/notes-tracker.json`
+- builds one HTML page per complete LO
+- links each LO page to the built PDF in `OBJECTIVES/<slug>/build/main.pdf`
+- deploys via `.github/workflows/deploy-pages.yml`
+
+After changing Notes content, refresh in this order:
+1. build the target PDF with `tectonic`
+2. refresh `notes-tracker.json`
+3. regenerate the site
+4. commit and push
+
 ## Future thread guidance
 
 When working on this repo:
 1. Edit `main.tex` in the target LO folder.
 2. Build with `tectonic`.
 3. Visually inspect the PDF.
-4. Adjust spacing/content until it feels like a sparse teaching deck, not a worksheet.
+4. Refresh `notes-tracker.json`.
+5. Regenerate `SITE/`.
+6. Adjust spacing/content until it feels like a sparse teaching deck, not a worksheet.

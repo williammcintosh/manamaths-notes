@@ -2,6 +2,9 @@
 
 PDF-first teaching notes for Mana Maths.
 
+Live site target:
+- https://williammcintosh.github.io/manamaths-notes/
+
 ## Purpose
 
 `manamaths-notes` mirrors Mana Maths learning objectives one-to-one.
@@ -21,6 +24,8 @@ LaTeX is the source of truth. PDF is the primary output. HTML can be generated l
 - `OBJECTIVES/lo-yr9-.../` — one notes module per LO
 - `OPERATIONS/data/notes-tracker.json` — Notes progress tracker
 - `OPERATIONS/scripts/generate_notes_tracker.py` — regenerate the Notes tracker from actual repo state
+- `OPERATIONS/scripts/generate_site.py` — build the static website into `SITE/`
+- `SITE/` — generated website output for GitHub Pages
 - `build/` — generated outputs when needed
 
 ## Conventions
