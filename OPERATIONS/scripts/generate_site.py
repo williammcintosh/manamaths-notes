@@ -150,12 +150,14 @@ def render_enum(body: str, klass: str) -> str:
 
 def render_tex_body(text: str) -> str:
     text = text.strip()
+    text = text.replace('\\f\\frac', '\\frac')
+    text = re.sub(r'\\\((.*?)\\\)', lambda m: f'${m.group(1).strip()}$', text, flags=re.S)
+    text = re.sub(r'\\\[(.*?)\\\]', lambda m: f'$$ {m.group(1).strip()} $$', text, flags=re.S)
     text = html.escape(text)
     text = re.sub(r'\\text\{(.*?)\}', lambda m: m.group(1), text)
     text = text.replace('\\,', ' ')
     text = text.replace('\\ ', ' ')
     text = text.replace('\\%', '%')
-    text = text.replace('\\f\\frac', '\\frac')
     text = re.sub(r'\\begin\{itemize\}(.*?)\\end\{itemize\}', lambda m: render_list(m.group(1), 'notes-list'), text, flags=re.S)
     text = re.sub(r'\\begin\{enumerate\}(.*?)\\end\{enumerate\}', lambda m: render_enum(m.group(1), 'notes-try'), text, flags=re.S)
     parts = [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
@@ -213,7 +215,9 @@ def render_column(col: str) -> str:
             if plain:
                 out.append(render_tex_body(plain))
         if kind == 'section':
-            out.append(f'<div class="notes-section-title">{render_tex_body(m.group(1))}</div>')
+            section_title = norm(m.group(1))
+            if section_title.lower() != 'what you are learning':
+                out.append(f'<div class="notes-section-title">{render_tex_body(section_title)}</div>')
         elif kind == 'key':
             out.append(f'<div class="notes-key-idea"><strong>Key idea:</strong> {render_tex_body(m.group(1))}</div>')
         elif kind == 'step':
@@ -239,8 +243,6 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
     for i, page_data in enumerate(pages):
         title_html = html.escape(page_data['title'])
         section = f'<section class="notes-page">'
-        if title_html:
-            section += f'<div class="notes-page-header"><h2>{title_html}</h2></div>'
         section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
         if page_data['common']:
             section += f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
