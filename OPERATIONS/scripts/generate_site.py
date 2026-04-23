@@ -52,22 +52,20 @@ a:hover { text-decoration: underline; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
 .small { color: var(--muted); font-size: 0.92rem; }
-.notes-page, .notes-fragment { padding: 22px; }
-.notes-page-header { margin-bottom: 18px; }
-.notes-page-header h2 { margin: 0 0 6px; font-size: 1.6rem; }
-.notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
-.notes-section-title { font-size: 1.12rem; font-weight: 800; color: var(--blue); margin: 0 0 8px; }
-.notes-key-idea, .notes-box { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 16px; background: #fff; }
+.notes-page, .notes-fragment { padding: 18px; }
+.notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; align-items: start; }
+.notes-section-title { font-size: 1.02rem; font-weight: 800; color: var(--blue); margin: 0 0 6px; }
+.notes-key-idea, .notes-box { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin: 0 0 12px; background: #fff; min-height: 132px; }
 .notes-key-idea { background: var(--soft); }
-.notes-example { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 16px; background: #fff; }
-.notes-example h4 { margin: 0 0 8px; font-size: 1rem; }
-.notes-steps { margin: 0 0 16px; padding-left: 1.2rem; }
-.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 8px; }
-.notes-list, .notes-try { margin: 0 0 14px; padding-left: 1.2rem; }
-.notes-page-split { height: 1px; background: var(--line); margin: 24px 0; }
-.notes-common-mistake { border-color: #e6c8cb; }
+.notes-example { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin: 0 0 12px; background: #fff; min-height: 176px; display: flex; flex-direction: column; justify-content: flex-start; }
+.notes-example h4 { margin: 0 0 6px; font-size: 0.96rem; }
+.notes-steps { margin: 0 0 12px; padding-left: 1.1rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 6px; }
+.notes-list, .notes-try { margin: 0 0 12px; padding-left: 1.1rem; }
+.notes-page-split { height: 1px; background: var(--line); margin: 18px 0; }
+.notes-common-mistake { border-color: #e6c8cb; min-height: 116px; }
 .notes-common-mistake strong { color: var(--warn); }
-@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } .notes-example, .notes-key-idea, .notes-box { min-height: 0; } }
 '''
 
 MATH_BLOCK_RE = re.compile(r'\\\[(.*?)\\\]', re.S)
