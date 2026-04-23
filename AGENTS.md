@@ -53,6 +53,7 @@ The site currently:
 - builds one embeddable HTML fragment per complete LO in `SITE/fragments/`
 - deploys via `.github/workflows/deploy-pages.yml`
 - can be embedded or linked from the main `manamaths` site
+- should prefer a denser, narrower notes column with tighter module padding and a strong green divider between the upper and lower notes sections
 
 After changing Notes content, refresh in this order:
 1. build the target PDF with `tectonic` if you want a printable/export copy

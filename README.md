@@ -32,7 +32,8 @@ LaTeX is the source of truth. HTML notes pages are generated from that LaTeX sou
 
 - Keep Notes aligned one-to-one with Mana Maths LO ids and slugs.
 - Keep pages landscape and projector-friendly.
-- Prefer sparse, slide-looking layouts over dense worksheet layouts.
+- Prefer a compact, structured notes layout rather than airy card spacing.
+- Use tighter module padding, narrower overall content width, and a strong green divider between top and bottom notes sections when that layout fits.
 - Treat `main.tex` as the canonical entry point for each LO.
 - Build with `tectonic` for this repo.
 - Keep repo-specific workflow notes in `manamaths-notes/AGENTS.md`.
