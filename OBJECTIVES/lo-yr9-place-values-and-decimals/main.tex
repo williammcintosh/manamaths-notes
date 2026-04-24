@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array}
+\usepackage{tikz}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
@@ -10,28 +11,37 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{blocks}[rounded][shadow=true]
 
-\definecolor{mmgreenDeep}{HTML}{2F5D39}
-\definecolor{mmgreenMid}{HTML}{4F7D4D}
-\definecolor{mmgreenSoft}{HTML}{E7F0E2}
-\definecolor{mmgreenMist}{HTML}{F5F9F1}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenMid}{HTML}{3F6A42}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmgreenMist}{HTML}{F3F8ED}
+\definecolor{mmpage}{HTML}{EAF2E3}
 \definecolor{mmtext}{HTML}{163221}
 \definecolor{mmwarn}{HTML}{8F2F36}
 \definecolor{mmwarnSoft}{HTML}{F8E8EA}
 
-\setbeamercolor{background canvas}{bg=white}
-\setbeamercolor{normal text}{fg=mmtext,bg=white}
-\setbeamercolor{block title}{fg=white,bg=mmgreenMid}
+\setbeamercolor{background canvas}{bg=mmpage}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpage}
+\setbeamercolor{block title}{fg=white,bg=mmgreenLeaf}
 \setbeamercolor{block body}{fg=mmtext,bg=white}
 \setbeamercolor{block title example}{fg=white,bg=mmgreenDeep}
-\setbeamercolor{block body example}{fg=mmtext,bg=mmgreenMist}
+\setbeamercolor{block body example}{fg=mmtext,bg=mmgreenSoft}
 \setbeamercolor{block title alerted}{fg=white,bg=mmwarn}
 \setbeamercolor{block body alerted}{fg=mmtext,bg=mmwarnSoft}
 
-\newcommand{\NotesTitle}[1]{{\fontsize{22}{24}\selectfont\bfseries\textcolor{mmgreenDeep}{#1}\par\vspace{0.12em}{\color{mmgreenMid}\rule{\linewidth}{1.4pt}}\par\vspace{0.25em}}}
+\newcommand{\FrameScaffold}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[mmpage] (current page.south west) rectangle (current page.north east);
+    \fill[white,rounded corners=18pt] ([xshift=0.45cm,yshift=0.38cm]current page.south west) rectangle ([xshift=-0.45cm,yshift=-0.38cm]current page.north east);
+    \fill[mmgreenDeep,rounded corners=16pt] ([xshift=0.85cm,yshift=-0.62cm]current page.north west) rectangle ([xshift=-0.85cm,yshift=-1.95cm]current page.north east);
+  \end{tikzpicture}%
+}
+\newcommand{\NotesTitle}[1]{\FrameScaffold\vspace*{0.20cm}{\color{white}\LARGE\bfseries\strut #1\par}\vspace{0.40cm}{\color{mmgreenLeaf}\rule{\linewidth}{2.2pt}}\par\vspace{0.22cm}}
 \newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.06em}}
-\newcommand{\GreenDivider}{\par\vspace{0.02em}{\color{mmgreenDeep}\rule{\linewidth}{3.2pt}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.02em}{\color{mmgreenDeep}\rule{\linewidth}{4.0pt}}\par\vspace{0.05em}}
 \newcommand{\KeyIdea}[1]{\begin{exampleblock}{Key idea}\small #1\end{exampleblock}}
 \newcommand{\WorkedExample}[2]{\begin{block}{#1}\small #2\end{block}}
 \newcommand{\CommonMistake}[1]{\begin{alertblock}{Common mistake}\small #1\end{alertblock}}
