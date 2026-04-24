@@ -2,7 +2,6 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array}
-\usepackage{tikz}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
@@ -11,10 +10,9 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{blocks}[rounded][shadow=false]
 
 \definecolor{mmgreenDeep}{HTML}{244B2C}
-\definecolor{mmgreenMid}{HTML}{3F6A42}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmgreenMist}{HTML}{F3F8ED}
@@ -25,23 +23,16 @@
 
 \setbeamercolor{background canvas}{bg=mmpage}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpage}
-\setbeamercolor{block title}{fg=white,bg=mmgreenLeaf}
+\setbeamercolor{block title}{fg=mmtext,bg=mmgreenSoft}
 \setbeamercolor{block body}{fg=mmtext,bg=white}
-\setbeamercolor{block title example}{fg=white,bg=mmgreenDeep}
-\setbeamercolor{block body example}{fg=mmtext,bg=mmgreenSoft}
-\setbeamercolor{block title alerted}{fg=white,bg=mmwarn}
-\setbeamercolor{block body alerted}{fg=mmtext,bg=mmwarnSoft}
+\setbeamercolor{block title example}{fg=mmtext,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
 
-\newcommand{\FrameScaffold}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \fill[mmpage] (current page.south west) rectangle (current page.north east);
-    \fill[white,rounded corners=18pt] ([xshift=0.45cm,yshift=0.38cm]current page.south west) rectangle ([xshift=-0.45cm,yshift=-0.38cm]current page.north east);
-    \fill[mmgreenDeep,rounded corners=16pt] ([xshift=0.85cm,yshift=-0.62cm]current page.north west) rectangle ([xshift=-0.85cm,yshift=-1.95cm]current page.north east);
-  \end{tikzpicture}%
-}
-\newcommand{\NotesTitle}[1]{\FrameScaffold\vspace*{0.20cm}{\color{white}\LARGE\bfseries\strut #1\par}\vspace{0.40cm}{\color{mmgreenLeaf}\rule{\linewidth}{2.2pt}}\par\vspace{0.22cm}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmgreenSoft}{\parbox{0.975\linewidth}{\vspace{0.22em}\hspace{0.35em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.22em}}}\par\vspace{0.30em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.22em}}}
 \newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.06em}}
-\newcommand{\GreenDivider}{\par\vspace{0.02em}{\color{mmgreenDeep}\rule{\linewidth}{4.0pt}}\par\vspace{0.05em}}
+\newcommand{\GreenDivider}{\par\vspace{0.02em}{\color{mmgreenLeaf}\rule{\linewidth}{3.2pt}}\par\vspace{0.05em}}
 \newcommand{\KeyIdea}[1]{\begin{exampleblock}{Key idea}\small #1\end{exampleblock}}
 \newcommand{\WorkedExample}[2]{\begin{block}{#1}\small #2\end{block}}
 \newcommand{\CommonMistake}[1]{\begin{alertblock}{Common mistake}\small #1\end{alertblock}}
@@ -50,7 +41,7 @@
 
 \begin{document}
 
-\begin{frame}[t,shrink=15]
+\begin{frame}[t,shrink=12]
 \NotesTitle{Topic 1 LO1 — Place Values and Decimals}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
@@ -84,26 +75,14 @@
 \end{enumerate}}
 \end{frame}
 
-\begin{frame}[t,shrink=15]
+\begin{frame}[t,shrink=12]
 \NotesTitle{Topic 1 LO1 — Place Values and Decimals}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
-\WorkedExample{Example 1: value of a digit}{
-Find the value of the \(6\) in \(862\).
-\[
-862 = 800 + 60 + 2
-\]
-So the value of the \(6\) is \(60\).
-}
+\WorkedExample{Example 1: value of a digit}{Find the value of the \(6\) in \(862\).\[862 = 800 + 60 + 2\]So the value of the \(6\) is \(60\).}
 \end{column}
 \begin{column}{0.48\textwidth}
-\WorkedExample{Example 2: decimal place value}{
-Find the value of the \(7\) in \(2.74\).
-\[
-2.74 = 2 + 0.7 + 0.04
-\]
-So the value of the \(7\) is \(0.7\).
-}
+\WorkedExample{Example 2: decimal place value}{Find the value of the \(7\) in \(2.74\).\[2.74 = 2 + 0.7 + 0.04\]So the value of the \(7\) is \(0.7\).}
 \end{column}
 \end{columns}
 \GreenDivider
@@ -114,59 +93,32 @@ So the value of the \(7\) is \(0.7\).
 \end{enumerate}}
 \end{frame}
 
-\begin{frame}[t,shrink=15]
+\begin{frame}[t,shrink=12]
 \NotesTitle{Topic 1 LO1 — Place Values and Decimals}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
 \SectionTitle{Comparing numbers}
 \small When two numbers have the same whole-number part, compare the decimal places next.\normalsize
-\WorkedExample{Example 3: compare decimals}{
-Which is greater: \(0.8\) or \(0.08\)?
-\[
-0.8 = 8\text{ tenths}
-\]
-\[
-0.08 = 8\text{ hundredths}
-\]
-A tenth is bigger than a hundredth, so \(0.8 > 0.08\).
-}
+\WorkedExample{Example 3: compare decimals}{Which is greater: \(0.8\) or \(0.08\)?\[0.8 = 8\text{ tenths}\]\[0.08 = 8\text{ hundredths}\]A tenth is bigger than a hundredth, so \(0.8 > 0.08\).}
 \end{column}
 \begin{column}{0.48\textwidth}
-\WorkedExample{Example 4: order numbers}{
-Order \(3.2,\ 2.9,\ 3.02\) from smallest to largest.
-\[
-2.9 < 3.02 < 3.2
-\]
-So the order is \(2.9,\ 3.02,\ 3.2\).
-}
+\WorkedExample{Example 4: order numbers}{Order \(3.2,\ 2.9,\ 3.02\) from smallest to largest.\[2.9 < 3.02 < 3.2\]So the order is \(2.9,\ 3.02,\ 3.2\).}
 \end{column}
 \end{columns}
 \GreenDivider
 \CommonMistake{Thinking more digits means a bigger decimal. For example, \(0.08\) is not bigger than \(0.8\). It is smaller because 8 hundredths is less than 8 tenths.}
 \end{frame}
 
-\begin{frame}[t,shrink=15]
+\begin{frame}[t,shrink=12]
 \NotesTitle{Topic 1 LO1 — Place Values and Decimals}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
 \SectionTitle{Partitioning numbers}
 \small Split a number into place-value parts.\normalsize
-\WorkedExample{Example 5: whole number}{
-Partition \(407\).
-\[
-407 = 400 + 0 + 7
-\]
-Usually we write this as \(407 = 400 + 7\).
-}
+\WorkedExample{Example 5: whole number}{Partition \(407\).\[407 = 400 + 0 + 7\]Usually we write this as \(407 = 400 + 7\).}
 \end{column}
 \begin{column}{0.48\textwidth}
-\WorkedExample{Example 6: decimal number}{
-Partition \(3.48\).
-\[
-3.48 = 3 + 0.4 + 0.08
-\]
-That is 3 ones, 4 tenths, and 8 hundredths.
-}
+\WorkedExample{Example 6: decimal number}{Partition \(3.48\).\[3.48 = 3 + 0.4 + 0.08\]That is 3 ones, 4 tenths, and 8 hundredths.}
 \end{column}
 \end{columns}
 \GreenDivider

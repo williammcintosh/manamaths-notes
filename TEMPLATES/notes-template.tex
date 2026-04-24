@@ -1,10 +1,9 @@
 % Mana Maths Notes template
-% Beamer-based, landscape, projector-friendly teaching pages with a clear website-inspired green card layout.
+% Beamer-based, landscape, projector-friendly teaching pages with accessible green rounded cards.
 \documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array}
-\usepackage{tikz}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
@@ -13,10 +12,9 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{blocks}[rounded][shadow=false]
 
 \definecolor{mmgreenDeep}{HTML}{244B2C}
-\definecolor{mmgreenMid}{HTML}{3F6A42}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmgreenMist}{HTML}{F3F8ED}
@@ -27,23 +25,16 @@
 
 \setbeamercolor{background canvas}{bg=mmpage}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpage}
-\setbeamercolor{block title}{fg=white,bg=mmgreenLeaf}
+\setbeamercolor{block title}{fg=mmtext,bg=mmgreenSoft}
 \setbeamercolor{block body}{fg=mmtext,bg=white}
-\setbeamercolor{block title example}{fg=white,bg=mmgreenDeep}
-\setbeamercolor{block body example}{fg=mmtext,bg=mmgreenSoft}
-\setbeamercolor{block title alerted}{fg=white,bg=mmwarn}
-\setbeamercolor{block body alerted}{fg=mmtext,bg=mmwarnSoft}
+\setbeamercolor{block title example}{fg=mmtext,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
 
-\newcommand{\FrameScaffold}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \fill[mmpage] (current page.south west) rectangle (current page.north east);
-    \fill[white,rounded corners=18pt] ([xshift=0.45cm,yshift=0.38cm]current page.south west) rectangle ([xshift=-0.45cm,yshift=-0.38cm]current page.north east);
-    \fill[mmgreenDeep,rounded corners=16pt] ([xshift=0.85cm,yshift=-0.62cm]current page.north west) rectangle ([xshift=-0.85cm,yshift=-1.95cm]current page.north east);
-  \end{tikzpicture}%
-}
-\newcommand{\NotesTitle}[1]{\FrameScaffold\vspace*{0.20cm}{\color{white}\LARGE\bfseries\strut #1\par}\vspace{0.40cm}{\color{mmgreenLeaf}\rule{\linewidth}{2.2pt}}\par\vspace{0.22cm}}
-\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.08em}}
-\newcommand{\GreenDivider}{\par\vspace{0.03em}{\color{mmgreenDeep}\rule{\linewidth}{4.0pt}}\par\vspace{0.08em}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmgreenSoft}{\parbox{0.975\linewidth}{\vspace{0.22em}\hspace{0.35em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.22em}}}\par\vspace{0.30em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.22em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.06em}}
+\newcommand{\GreenDivider}{\par\vspace{0.02em}{\color{mmgreenLeaf}\rule{\linewidth}{3.2pt}}\par\vspace{0.05em}}
 \newcommand{\KeyIdea}[1]{\begin{exampleblock}{Key idea}\small #1\end{exampleblock}}
 \newcommand{\WorkedExample}[2]{\begin{block}{#1}\small #2\end{block}}
 \newcommand{\CommonMistake}[1]{\begin{alertblock}{Common mistake}\small #1\end{alertblock}}
