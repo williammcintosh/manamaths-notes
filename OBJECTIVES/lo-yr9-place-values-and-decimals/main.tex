@@ -13,8 +13,8 @@
 \setbeamertemplate{headline}{}
 \setbeamertemplate{blocks}[rounded][shadow=false]
 
-\definecolor{mmtanPage}{HTML}{F3E8D7}
-\definecolor{mmtanSoft}{HTML}{F8F0E5}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
 \definecolor{mmgreenDeep}{HTML}{244B2C}
 \definecolor{mmgreenLeaf}{HTML}{5D8A56}
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
@@ -22,14 +22,16 @@
 \definecolor{mmwarn}{HTML}{8F2F36}
 \definecolor{mmwarnSoft}{HTML}{F8E8EA}
 
-\setbeamercolor{background canvas}{bg=mmtanPage}
-\setbeamercolor{normal text}{fg=mmtext,bg=mmtanPage}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 \setbeamercolor{block title}{fg=mmgreenDeep,bg=mmgreenSoft}
 \setbeamercolor{block body}{fg=mmtext,bg=mmtanSoft}
 \setbeamercolor{block title example}{fg=mmgreenDeep,bg=mmgreenSoft}
 \setbeamercolor{block body example}{fg=mmtext,bg=white}
 \setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
 \setbeamercolor{block body alerted}{fg=mmtext,bg=white}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
 
 \newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
