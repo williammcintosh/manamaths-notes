@@ -41,6 +41,21 @@
 \newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
 \newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.05em}}
 
+\usepackage{tikz}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[
+ black,
+ line width=1.5pt,
+ rounded corners=10pt
+ ]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
 \begin{document}
 
 \begin{frame}[t,shrink=12]
