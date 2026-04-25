@@ -83,6 +83,9 @@ EXAMPLE_RE = re.compile(r'\\WorkedExample\{(.*?)\}\{(.*?)\}', re.S)
 COMMON_RE = re.compile(r'\\CommonMistake\{(.*?)\}', re.S)
 TRY_RE = re.compile(r'\\TryThese\{\%?\s*\\begin\{enumerate\}(.*?)\\end\{enumerate\}\s*\}', re.S)
 MULTICOLS_RE = re.compile(r'\\begin\{multicols\}\{2\}(.*?)\\columnbreak(.*?)\\end\{multicols\}', re.S)
+FRAME_RE = re.compile(r'\\begin\{frame\}(?:\[[^\]]*\])?(.*?)\\end\{frame\}', re.S)
+COLUMNS_BLOCK_RE = re.compile(r'\\begin\{columns\}(?:\[[^\]]*\])?(.*?)\\end\{columns\}', re.S)
+COLUMN_RE = re.compile(r'\\begin\{column\}\{[^}]+\}(.*?)\\end\{column\}', re.S)
 TEXT_REPL = {
     r'\\textbf{': '<strong>',
 }
@@ -173,21 +176,38 @@ def render_tex_body(text: str) -> str:
 def parse_notes_tex(tex: str) -> list[dict]:
     tex = re.sub(r'\\text\{(.*?)\}', lambda m: m.group(1), tex, flags=re.S)
     document = tex.split('\\begin{document}', 1)[-1].split('\\end{document}', 1)[0]
-    pages = [p.strip() for p in document.split('\\newpage') if p.strip()]
+    pages = [p.strip() for p in FRAME_RE.findall(document) if p.strip()]
     parsed = []
     for page in pages:
         title = norm(NOTES_TITLE_RE.search(page).group(1)) if NOTES_TITLE_RE.search(page) else ''
-        cols = MULTICOLS_RE.search(page)
         left = right = ''
-        if cols:
-            left, right = cols.group(1), cols.group(2)
-        rest = MULTICOLS_RE.sub('', page)
+        bottom_left = bottom_right = ''
+
+        multicol_match = MULTICOLS_RE.search(page)
+        if multicol_match:
+            left, right = multicol_match.group(1), multicol_match.group(2)
+            rest = MULTICOLS_RE.sub('', page)
+        else:
+            column_blocks = COLUMNS_BLOCK_RE.findall(page)
+            rest = COLUMNS_BLOCK_RE.sub('', page)
+            extracted_blocks = []
+            for block in column_blocks:
+                cols = [c.strip() for c in COLUMN_RE.findall(block)]
+                if len(cols) >= 2:
+                    extracted_blocks.append((cols[0], cols[1]))
+            if extracted_blocks:
+                left, right = extracted_blocks[0]
+            if len(extracted_blocks) > 1:
+                bottom_left, bottom_right = extracted_blocks[1]
+
         common = COMMON_RE.search(rest)
         tries = TRY_RE.search(rest)
         parsed.append({
             'title': title,
             'left': left,
             'right': right,
+            'bottom_left': bottom_left,
+            'bottom_right': bottom_right,
             'common': common.group(1).strip() if common else '',
             'tries': tries.group(1).strip() if tries else '',
         })
@@ -202,6 +222,8 @@ def render_column(col: str) -> str:
         ('key', KEY_IDEA_RE),
         ('step', STEP_RE),
         ('example', EXAMPLE_RE),
+        ('common', COMMON_RE),
+        ('try', TRY_RE),
         ('itemize', ITEMIZE_RE),
     ]
     matches = []
@@ -226,6 +248,10 @@ def render_column(col: str) -> str:
             out.append(f'<ol class="notes-steps" start="{html.escape(re.sub(r"<.*?>","",num))}"><li>{body}</li></ol>')
         elif kind == 'example':
             out.append(f'<div class="notes-example"><h4>{render_tex_body(m.group(1))}</h4>{render_tex_body(m.group(2))}</div>')
+        elif kind == 'common':
+            out.append(f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(m.group(1))}</div>')
+        elif kind == 'try':
+            out.append(f'<div class="notes-box"><strong>Try these</strong>{render_enum(m.group(1), "notes-try")}</div>')
         elif kind == 'itemize':
             out.append(render_list(m.group(1), 'notes-list'))
         pos = end
@@ -241,13 +267,15 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
     page_html = []
     frag_html = []
     for i, page_data in enumerate(pages):
-        title_html = html.escape(page_data['title'])
         section = f'<section class="notes-page">'
-        section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
+        if page_data['left'] or page_data['right']:
+            section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
         if page_data['common']:
             section += f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
         if page_data['tries']:
             section += f'<div class="notes-box"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
+        if page_data['bottom_left'] or page_data['bottom_right']:
+            section += f'<div class="notes-columns notes-columns-bottom"><div>{render_column(page_data["bottom_left"])}</div><div>{render_column(page_data["bottom_right"])}</div></div>'
         section += '</section>'
         page_html.append(section)
         frag_html.append(section)
