@@ -53,8 +53,8 @@ a:hover { text-decoration: underline; }
 .topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
 .small { color: var(--muted); font-size: 0.92rem; }
 .notes-page, .notes-fragment { padding: 12px; }
-.notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; align-items: start; }
-.notes-columns > div { border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns { display: block; column-count: 2; column-gap: 14px; }
+.notes-columns > div { break-inside: avoid; margin-bottom: 14px; border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
 .notes-columns > div > :first-child { margin-top: 0 !important; }
 .notes-columns > div > :last-child { margin-bottom: 0 !important; }
 .notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
@@ -67,7 +67,7 @@ a:hover { text-decoration: underline; }
 .notes-common-block strong { color: var(--warn); }
 .notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
 .notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
-.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 12px; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 5px 6px; }
 .notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
 .notes-steps { margin: 0 0 8px; padding-left: 1rem; }
 .notes-list, .notes-try { margin: 0; padding-left: 1rem; }
@@ -272,6 +272,8 @@ def render_column(col: str) -> str:
 
 def wrap_notes_column(content: str) -> str:
     content = content.strip()
+    if not content:
+        return ''
     if content.startswith('<div class="notes-common-block">') and content.endswith('</div>'):
         inner = re.sub(r'^<div class="notes-common-block">', '', content)
         inner = re.sub(r'</div>$', '', inner)
@@ -289,21 +291,20 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
     page_html = []
     frag_html = []
     for i, page_data in enumerate(pages):
-        section = f'<section class="notes-page">'
-        if page_data['left'] or page_data['right']:
-            left_html = render_column(page_data["left"])
-            right_html = render_column(page_data["right"])
-            stack_class = " notes-columns--stack-when-wide" if 'notes-example-block' in left_html or 'notes-example-block' in right_html else ""
-            section += f'<div class="notes-columns{stack_class}">{wrap_notes_column(left_html)}{wrap_notes_column(right_html)}</div>'
+        cards = []
+        if page_data['left']:
+            cards.append(wrap_notes_column(render_column(page_data['left'])))
+        if page_data['right']:
+            cards.append(wrap_notes_column(render_column(page_data['right'])))
         if page_data['common']:
-            section += f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
+            cards.append(f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>')
         if page_data['tries']:
-            section += f'<div class="notes-try-block"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
-        if page_data['bottom_left'] or page_data['bottom_right']:
-            bottom_left_html = render_column(page_data["bottom_left"])
-            bottom_right_html = render_column(page_data["bottom_right"])
-            section += f'<div class="notes-columns notes-columns-bottom">{wrap_notes_column(bottom_left_html)}{wrap_notes_column(bottom_right_html)}</div>'
-        section += '</section>'
+            cards.append(f'<div class="notes-try-block"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>')
+        if page_data['bottom_left']:
+            cards.append(wrap_notes_column(render_column(page_data['bottom_left'])))
+        if page_data['bottom_right']:
+            cards.append(wrap_notes_column(render_column(page_data['bottom_right'])))
+        section = f'<section class="notes-page"><div class="notes-columns">{"".join(card for card in cards if card)}</div></section>'
         page_html.append(section)
         frag_html.append(section)
         if i != len(pages) - 1:
