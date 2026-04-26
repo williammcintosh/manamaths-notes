@@ -56,16 +56,18 @@ a:hover { text-decoration: underline; }
 .notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; align-items: start; }
 .notes-columns > div { border: 5px solid #000; border-radius: 18px; padding: 12px; background: #fff; }
 .notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
-.notes-key-idea, .notes-box { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: #fff; }
-.notes-key-idea { background: var(--soft); }
-.notes-example { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: #fff; display: flex; flex-direction: column; justify-content: flex-start; }
-.notes-example h4 { margin: 0 0 4px; font-size: 0.9rem; }
+.notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
+.notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
+.notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
+.notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
+.notes-common-block strong { color: var(--warn); }
+.notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-page > .notes-common-block { border-color: #e6c8cb; }
 .notes-steps { margin: 0 0 8px; padding-left: 1rem; }
 .notes-steps li, .notes-list li, .notes-try li { margin-bottom: 4px; }
 .notes-list, .notes-try { margin: 0 0 8px; padding-left: 1rem; }
 .notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
-.notes-common-mistake { border-color: #e6c8cb; }
-.notes-common-mistake strong { color: var(--warn); }
 .notes-page p { margin: 0 0 4px; line-height: 1.18; }
 @media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
 '''
@@ -247,11 +249,11 @@ def render_column(col: str) -> str:
             body = render_tex_body(m.group(2))
             out.append(f'<ol class="notes-steps" start="{html.escape(re.sub(r"<.*?>","",num))}"><li>{body}</li></ol>')
         elif kind == 'example':
-            out.append(f'<div class="notes-example"><h4>{render_tex_body(m.group(1))}</h4>{render_tex_body(m.group(2))}</div>')
+            out.append(f'<div class="notes-example-block"><h4 class="notes-example-title">{render_tex_body(m.group(1))}</h4>{render_tex_body(m.group(2))}</div>')
         elif kind == 'common':
-            out.append(f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(m.group(1))}</div>')
+            out.append(f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(m.group(1))}</div>')
         elif kind == 'try':
-            out.append(f'<div class="notes-box"><strong>Try these</strong>{render_enum(m.group(1), "notes-try")}</div>')
+            out.append(f'<div class="notes-try-block"><strong>Try these</strong>{render_enum(m.group(1), "notes-try")}</div>')
         elif kind == 'itemize':
             out.append(render_list(m.group(1), 'notes-list'))
         pos = end
@@ -271,9 +273,9 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
         if page_data['left'] or page_data['right']:
             section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
         if page_data['common']:
-            section += f'<div class="notes-box notes-common-mistake"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
+            section += f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
         if page_data['tries']:
-            section += f'<div class="notes-box"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
+            section += f'<div class="notes-try-block"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
         if page_data['bottom_left'] or page_data['bottom_right']:
             section += f'<div class="notes-columns notes-columns-bottom"><div>{render_column(page_data["bottom_left"])}</div><div>{render_column(page_data["bottom_right"])}</div></div>'
         section += '</section>'
