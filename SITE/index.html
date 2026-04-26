@@ -68,6 +68,8 @@ a:hover { text-decoration: underline; }
 .notes-steps li:last-child, .notes-list li:last-child, .notes-try li:last-child { margin-bottom: 0; }
 .notes-steps li p, .notes-list li p, .notes-try li p { margin: 0; }
 .notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
+.notes-columns + .notes-columns { margin-top: 2.5rem; }
+.notes-columns + .notes-columns::before { content: ""; display: block; height: 14px; background: var(--soft); border-radius: 8px; margin: 0 auto 2.5rem; width: 62%; }
 .notes-page p { margin: 0 0 4px; line-height: 1.18; }
 @media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
 </style>
