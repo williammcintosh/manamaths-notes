@@ -55,6 +55,8 @@ a:hover { text-decoration: underline; }
 .notes-page, .notes-fragment { padding: 12px; }
 .notes-columns { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; align-items: start; }
 .notes-columns > div { border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns > div > :first-child { margin-top: 0 !important; }
+.notes-columns > div > :last-child { margin-bottom: 0 !important; }
 .notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
 .notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
 .notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
