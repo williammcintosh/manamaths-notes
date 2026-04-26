@@ -58,6 +58,7 @@ a:hover { text-decoration: underline; }
 .notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
 .notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
 .notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-common-block, .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
 .notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
 .notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
 .notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
