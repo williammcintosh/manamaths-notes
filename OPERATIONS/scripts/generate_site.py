@@ -65,6 +65,8 @@ a:hover { text-decoration: underline; }
 .notes-common-block strong { color: var(--warn); }
 .notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
 .notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 12px; }
+.notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
 .notes-steps { margin: 0 0 8px; padding-left: 1rem; }
 .notes-list, .notes-try { margin: 0; padding-left: 1rem; }
 .notes-steps li, .notes-list li, .notes-try li { margin-bottom: 2px; }
@@ -266,6 +268,19 @@ def render_column(col: str) -> str:
     return ''.join(out)
 
 
+def wrap_notes_column(content: str) -> str:
+    content = content.strip()
+    if content.startswith('<div class="notes-common-block">') and content.endswith('</div>'):
+        inner = re.sub(r'^<div class="notes-common-block">', '', content)
+        inner = re.sub(r'</div>$', '', inner)
+        return f'<div class="notes-common-block">{inner}</div>'
+    if content.startswith('<div class="notes-try-block">') and content.endswith('</div>'):
+        inner = re.sub(r'^<div class="notes-try-block">', '', content)
+        inner = re.sub(r'</div>$', '', inner)
+        return f'<div class="notes-try-block">{inner}</div>'
+    return f'<div>{content}</div>'
+
+
 def render_notes_content(tex_path: Path) -> tuple[str, str]:
     tex = tex_path.read_text()
     pages = parse_notes_tex(tex)
@@ -277,13 +292,15 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
             left_html = render_column(page_data["left"])
             right_html = render_column(page_data["right"])
             stack_class = " notes-columns--stack-when-wide" if 'notes-example-block' in left_html or 'notes-example-block' in right_html else ""
-            section += f'<div class="notes-columns{stack_class}"><div>{left_html}</div><div>{right_html}</div></div>'
+            section += f'<div class="notes-columns{stack_class}">{wrap_notes_column(left_html)}{wrap_notes_column(right_html)}</div>'
         if page_data['common']:
             section += f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
         if page_data['tries']:
             section += f'<div class="notes-try-block"><strong>Try these</strong>{render_enum(page_data["tries"], "notes-try")}</div>'
         if page_data['bottom_left'] or page_data['bottom_right']:
-            section += f'<div class="notes-columns notes-columns-bottom"><div>{render_column(page_data["bottom_left"])}</div><div>{render_column(page_data["bottom_right"])}</div></div>'
+            bottom_left_html = render_column(page_data["bottom_left"])
+            bottom_right_html = render_column(page_data["bottom_right"])
+            section += f'<div class="notes-columns notes-columns-bottom">{wrap_notes_column(bottom_left_html)}{wrap_notes_column(bottom_right_html)}</div>'
         section += '</section>'
         page_html.append(section)
         frag_html.append(section)
