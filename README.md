@@ -34,6 +34,7 @@ LaTeX is the source of truth. HTML notes pages are generated from that LaTeX sou
 - Keep pages landscape and projector-friendly.
 - Prefer a compact, structured notes layout rather than airy card spacing.
 - Use tighter module padding, narrower overall content width, and a strong green divider between top and bottom notes sections when that layout fits.
+- For stacked Notes column groups on the website, use a full-width separator that spans both columns, not a centered short bar.
 - Treat `main.tex` as the canonical entry point for each LO.
 - Build with `tectonic` for this repo.
 - Keep repo-specific workflow notes in `manamaths-notes/AGENTS.md`.
