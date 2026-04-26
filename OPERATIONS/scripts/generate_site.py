@@ -271,7 +271,10 @@ def render_notes_content(tex_path: Path) -> tuple[str, str]:
     for i, page_data in enumerate(pages):
         section = f'<section class="notes-page">'
         if page_data['left'] or page_data['right']:
-            section += f'<div class="notes-columns"><div>{render_column(page_data["left"])}</div><div>{render_column(page_data["right"])}</div></div>'
+            left_html = render_column(page_data["left"])
+            right_html = render_column(page_data["right"])
+            stack_class = " notes-columns--stack-when-wide" if 'notes-example-block' in left_html or 'notes-example-block' in right_html else ""
+            section += f'<div class="notes-columns{stack_class}"><div>{left_html}</div><div>{right_html}</div></div>'
         if page_data['common']:
             section += f'<div class="notes-common-block"><strong>Common mistake</strong>{render_tex_body(page_data["common"])}</div>'
         if page_data['tries']:
