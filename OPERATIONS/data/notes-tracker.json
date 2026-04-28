@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 1,
+    "notesComplete": 6,
     "notesStarted": 0,
-    "notesNotStarted": 126
+    "notesNotStarted": 121
   },
   "learningObjectives": [
     {
@@ -42,16 +42,16 @@
       "canonicalTitle": "Rounding to Decimal Points",
       "canonicalDisplayTitle": "Rounding to Decimal Points",
       "slug": "lo-yr9-rounding-to-decimal-points",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-rounding-to-decimal-points/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -62,16 +62,16 @@
       "canonicalTitle": "Multiplying and dividing by 10,100,1000",
       "canonicalDisplayTitle": "Multiplying and dividing by 10,100,1000",
       "slug": "lo-yr9-multiplying-dividing-by-10-100-1000",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-multiplying-dividing-by-10-100-1000/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -82,16 +82,16 @@
       "canonicalTitle": "Scientific notation",
       "canonicalDisplayTitle": "Scientific notation",
       "slug": "lo-yr9-scientific-notation",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-scientific-notation/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -102,16 +102,16 @@
       "canonicalTitle": "Integers",
       "canonicalDisplayTitle": "Integers",
       "slug": "lo-yr9-integers",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-integers",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-integers/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-integers/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -122,16 +122,16 @@
       "canonicalTitle": "Powers & Roots",
       "canonicalDisplayTitle": "Powers & Roots",
       "slug": "lo-yr9-powers-and-roots",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-powers-and-roots/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {

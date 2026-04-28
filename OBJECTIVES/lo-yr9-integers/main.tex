@@ -1,0 +1,140 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{block title}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body}{fg=mmtext,bg=mmtanSoft}
+\setbeamercolor{block title example}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\usepackage{tikz}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[
+ black,
+ line width=1.5pt,
+ rounded corners=10pt
+ ]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t,shrink=8]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{Integers are whole numbers that can be positive, negative, or zero. They have no fractions or decimals. Use a number line to visualise addition and subtraction.}
+\SectionTitle{Steps — adding integers}
+\StepLine{1}{Start at the first number on the number line.}
+\StepLine{2}{If adding a positive, move right. If adding a negative, move left.}
+\SectionTitle{Steps — subtracting integers}
+\StepLine{1}{Change subtraction to adding the opposite.}
+\StepLine{2}{Then follow the addition rules.}
+\StepLine{3}{Example: \(7 - (-2) = 7 + 2 = 9\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Key facts}
+\begin{itemize}
+  \setlength{\itemsep}{0.12em}
+  \item Opposite of \(-7\) is \(7\).
+  \item \(3, -5, 0\) are integers; \(1/2\) and \(-5.5\) are not.
+  \item \(-3 + 5 = 2\) (start at \(-3\), move 5 right)
+  \item \(7 - (-2) = 7 + 2 = 9\)
+  \item \((-3) + (-4) = -7\)
+  \item On a number line, \(-1 > -5\) because \(-1\) is further right.
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\vfill
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\CommonMistake{Thinking \(-5\) is greater than \(-1\). On the number line, \(-1\) is to the right of \(-5\), so \(-1 > -5\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item What is the opposite of \(-7\)?
+  \item Calculate: \(-3 + 5\).
+  \item Order from smallest: \(-2, 0, 3\).
+\end{enumerate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: temperature rise}{A temperature is \(-4^\circ\)C. It rises by \(10^\circ\)C. What is the new temperature?\[-4 + 10 = 6\]Answer: \(6^\circ\)C.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: adding negatives}{Calculate \((-3) + (-4)\).\[(-3) + (-4)\]Start at \(-3\), move 4 left: \(-7\). Answer: \(-7\).}
+\end{column}
+\end{columns}
+\GreenDivider
+\TryThese{\begin{enumerate}
+  \item Calculate: \(5 + (-2)\).
+  \item Calculate: \(-1 - 3\).
+  \item Calculate: \(7 - (-2)\).
+\end{enumerate}}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: multiply negatives}{Calculate \((-3) \times 4\).\[(-3) \times 4\]Positive \(\times\) negative = negative. Answer: \(-12\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: diving scenario}{A diver at \(-12\) m ascends 3 m then descends 5 m.\[-12 + 3 - 5 = -14\]Answer: final depth is \(-14\) m.}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Forgetting that two negatives make a positive. \((-3) \times (-4) = 12\), not \(-12\). Think: subtracting a debt means gaining money.}
+\end{frame}
+
+\end{document}

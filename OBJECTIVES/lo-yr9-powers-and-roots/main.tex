@@ -1,0 +1,140 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{block title}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body}{fg=mmtext,bg=mmtanSoft}
+\setbeamercolor{block title example}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\usepackage{tikz}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[
+ black,
+ line width=1.5pt,
+ rounded corners=10pt
+ ]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t,shrink=8]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{A power (or exponent) tells you how many times to multiply a number by itself. A root asks: what number, multiplied by itself, gives the original?}
+\SectionTitle{Steps — evaluate powers}
+\StepLine{1}{Identify the base (the big number) and the exponent (the small number).}
+\StepLine{2}{Multiply the base by itself exponent times.}
+\StepLine{3}{Example: \(2^{3} = 2 \times 2 \times 2 = 8\).}
+\SectionTitle{Steps — square roots}
+\StepLine{1}{Ask: what number times itself equals the given?}
+\StepLine{2}{Example: \(\sqrt{25} = 5\) because \(5 \times 5 = 25\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Key facts}
+\begin{itemize}
+  \setlength{\itemsep}{0.12em}
+  \item \(2 \times 2 \times 2 \times 2 = 2^{4}\)
+  \item \(2^{3} = 8\)
+  \item \(3^{2} = 9\)
+  \item \(\sqrt{25} = 5\)
+  \item \(4^{1} = 4\) (any number to the power 1 is itself)
+  \item \(\sqrt{4} = 2\) (rational — an integer)
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\vfill
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\CommonMistake{Thinking \(2^{3} = 6\) (multiplying base by exponent). Remember: \(2^{3} = 2 \times 2 \times 2 = 8\), not \(2 \times 3 = 6\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item Write \(2 \times 2 \times 2 \times 2\) using a power.
+  \item What is \(2^{3}\)?
+  \item What is \(\sqrt{25}\)?
+\end{enumerate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: square numbers}{Evaluate \(3^{2}\).\[3^{2} = 3 \times 3 = 9\]Answer: \(9\). \(9\) is called a square number.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: cube numbers}{Calculate \(5^{3}\).\[5^{3} = 5 \times 5 \times 5 = 125\]Answer: \(125\). \(125\) is called a cube number.}
+\end{column}
+\end{columns}
+\GreenDivider
+\TryThese{\begin{enumerate}
+  \item Evaluate \(3^{2}\).
+  \item Find \(\sqrt{36}\).
+  \item Name one cube number.
+\end{enumerate}}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: powers of 10}{Calculate \(10^{3}\).\[10^{3} = 10 \times 10 \times 10 = 1000\]Pattern: the exponent tells how many zeros.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: expressing as a power}{Write \(81\) as a power of \(3\).\[81 = 3 \times 3 \times 3 \times 3 = 3^{4}\]Answer: \(3^{4}\).}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Confusing \(-3^{2}\) with \((-3)^{2}\). \(-3^{2} = -9\) (the square happens first). \((-3)^{2} = 9\) (the whole negative is squared).}
+\end{frame}
+
+\end{document}

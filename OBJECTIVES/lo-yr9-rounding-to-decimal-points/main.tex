@@ -1,0 +1,136 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{block title}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body}{fg=mmtext,bg=mmtanSoft}
+\setbeamercolor{block title example}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\usepackage{tikz}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[
+ black,
+ line width=1.5pt,
+ rounded corners=10pt
+ ]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t,shrink=8]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{Rounding gives a simpler number that is close to the original. We round to a specific decimal place by looking at the next digit to the right.}
+\SectionTitle{Steps}
+\StepLine{1}{Find the decimal place you are rounding to.}
+\StepLine{2}{Look at the digit immediately to the right.}
+\StepLine{3}{If that digit is 5 or more, round up. If it is 4 or less, round down.}
+\StepLine{4}{Drop all digits to the right of the rounding place.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Rounding reminder}
+\begin{itemize}
+  \setlength{\itemsep}{0.12em}
+  \item Round \(3.4\) to nearest whole: look at \(4\) (tenths). \(4 < 5\), so \(3\).
+  \item Round \(7.6\) to nearest whole: look at \(6\) (tenths). \(6 \ge 5\), so \(8\).
+  \item Round \(2.31\) to 1 d.p.: look at \(1\) (hundredths). \(1 < 5\), so \(2.3\).
+  \item Round \(5.68\) to 1 d.p.: look at \(8\) (hundredths). \(8 \ge 5\), so \(5.7\).
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\vfill
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\CommonMistake{When the digit to round is a 9, rounding up can change the whole number. For example, \(2.97\) to 1 d.p. rounds to \(3.0\), not \(2.10\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item Round \(4.86\) to 1 decimal place.
+  \item Round \(1.73\) to 1 decimal place.
+  \item Round \(6.15\) to 1 decimal place.
+\end{enumerate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: round to 1 d.p.}{Round \(8.42\) to 1 decimal place.\[8.42\]The rounding digit is \(4\) (tenths). Look right at \(2\) (hundredths). \(2 < 5\), so the \(4\) stays. Answer: \(8.4\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: round to 2 d.p.}{Round \(3.141\) to 2 decimal places.\[3.141\]The rounding digit is \(4\) (hundredths). Look right at \(1\) (thousandths). \(1 < 5\), so the \(4\) stays. Answer: \(3.14\).}
+\end{column}
+\end{columns}
+\GreenDivider
+\TryThese{\begin{enumerate}
+  \item Round \(5.678\) to 2 decimal places.
+  \item Round \(7.204\) to 2 decimal places.
+  \item Round \(9.995\) to 2 decimal places.
+\end{enumerate}}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: 9 rolling over}{Round \(2.97\) to 1 decimal place.\[2.97\]The rounding digit is \(9\) (tenths). Look right at \(7\) (hundredths). \(7 \ge 5\), so we need to round the \(9\) up. \(9\) rounds to \(10\), which carries into the units: \(3.0\). Answer: \(3.0\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: 2 d.p. with 9}{Round \(4.995\) to 2 decimal places.\[4.995\]The rounding digit is \(9\) (hundredths). Look right at \(5\) (thousandths). \(5 \ge 5\), so round the \(9\) up. \(9\) becomes \(10\), carries: \(5.00\). Answer: \(5.00\).}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Forgetting to show the zero after rounding. For example, \(3.0\) is correct for \(2.97\) to 1 d.p. If you write just \(3\), you have rounded to a whole number, not 1 decimal place.}
+\end{frame}
+
+\end{document}
