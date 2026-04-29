@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rounding to Decimal Points</title>
+  <style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #163047;
+  --muted: #5d7183;
+  --line: #d8e1e8;
+  --blue: #1f4e79;
+  --green: #2f6b3b;
+  --soft: #eef4f8;
+  --warn: #a63d40;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.hero { margin-bottom: 18px; }
+.hero h1 { margin: 0 0 6px; font-size: 1.9rem; }
+.hero p { margin: 0; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 22px 0 30px; }
+.stat, .card, .notes-page, .notes-fragment { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
+.stat { padding: 18px; }
+.stat .label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.stat .value { font-size: 2rem; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { padding: 18px; }
+.card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+.badge { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; }
+.badge.complete { background: #e8f5ec; color: var(--green); }
+.badge.started { background: #fff4df; color: #9a6200; }
+.badge.not_started { background: #edf2f7; color: #607286; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
+.small { color: var(--muted); font-size: 0.92rem; }
+.notes-page, .notes-fragment { padding: 12px; }
+.notes-columns { display: block; column-count: 2; column-gap: 14px; }
+.notes-columns > div { break-inside: avoid; margin-bottom: 14px; border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns > div > :first-child { margin-top: 0 !important; }
+.notes-columns > div > :last-child { margin-bottom: 0 !important; }
+.notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
+.notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
+.notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-common-block, .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
+.notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
+.notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
+.notes-common-block strong { color: var(--warn); }
+.notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 5px 6px; }
+.notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
+.notes-steps { margin: 0 0 8px; padding-left: 1rem; }
+.notes-list, .notes-try { margin: 0; padding-left: 1rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 2px; }
+.notes-steps li:last-child, .notes-list li:last-child, .notes-try li:last-child { margin-bottom: 0; }
+.notes-steps li p, .notes-list li p, .notes-try li p { margin: 0; }
+.notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
+.notes-columns + .notes-columns { margin-top: 2.5rem; }
+.notes-columns + .notes-columns::before { content: ""; display: block; column-span: all; height: 14px; background: var(--soft); border-radius: 8px; margin: 0 0 2.5rem; width: 100%; }
+.notes-page p { margin: 0 0 4px; line-height: 1.18; }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
+</style>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\(','\)']], displayMath: [['\[','\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    
+<div class="topnav">
+  <a href="../index.html">← Notes index</a>
+</div>
+<div class="hero">
+  <h1>Rounding to Decimal Points</h1>
+  <p>T1_LO2 · lo-yr9-rounding-to-decimal-points</p>
+</div>
+<div class="card" style="margin-bottom: 18px;">
+  <div class="badge complete">Complete</div>
+</div>
+<section class="notes-page"><div class="notes-columns"><div><div class="notes-key-idea"><strong>Key idea:</strong> <p>Rounding gives a simpler number that is close to the original. We round to a specific decimal place by looking at the next digit to the right.</p></div><div class="notes-section-title"><p>Steps</p></div><ol class="notes-steps" start="1"><li><p>Find the decimal place you are rounding to.</p></li></ol><ol class="notes-steps" start="2"><li><p>Look at the digit immediately to the right.</p></li></ol><ol class="notes-steps" start="3"><li><p>If that digit is 5 or more, round up. If it is 4 or less, round down.</p></li></ol><ol class="notes-steps" start="4"><li><p>Drop all digits to the right of the rounding place.</p></li></ol></div><div><div class="notes-section-title"><p>Rounding reminder</p></div><ul class="notes-list"><li><p>Round $3.4$ to nearest whole: look at $4$ (tenths). $4 &lt; 5$, so $3$.</p></li><li><p>Round $7.6$ to nearest whole: look at $6$ (tenths). $6 \ge 5$, so $8$.</p></li><li><p>Round $2.31$ to 1 d.p.: look at $1$ (hundredths). $1 &lt; 5$, so $2.3$.</p></li><li><p>Round $5.68$ to 1 d.p.: look at $8$ (hundredths). $8 \ge 5$, so $5.7$.</p></li></ul></div><div class="notes-common-block"><strong>Common mistake</strong><p>When the digit to round is a 9, rounding up can change the whole number. For example, $2.97$ to 1 d.p. rounds to $3.0$, not $2.10$.</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Round $4.86$ to 1 decimal place.</p></li><li><p>Round $1.73$ to 1 decimal place.</p></li><li><p>Round $6.15$ to 1 decimal place.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 1: round to 1 d.p.</p></h4><p>Round $8.42$ to 1 decimal place.$$ 8.42 $$The rounding digit is $4$ (tenths). Look right at $2$ (hundredths). $2 &lt; 5$, so the $4$ stays. Answer: $8.4$.</p></div></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 2: round to 2 d.p.</p></h4><p>Round $3.141$ to 2 decimal places.$$ 3.141 $$The rounding digit is $4$ (hundredths). Look right at $1$ (thousandths). $1 &lt; 5$, so the $4$ stays. Answer: $3.14$.</p></div></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Round $5.678$ to 2 decimal places.</p></li><li><p>Round $7.204$ to 2 decimal places.</p></li><li><p>Round $9.995$ to 2 decimal places.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 3: 9 rolling over</p></h4><p>Round $2.97$ to 1 decimal place.$$ 2.97 $$The rounding digit is $9$ (tenths). Look right at $7$ (hundredths). $7 \ge 5$, so we need to round the $9$ up. $9$ rounds to $10$, which carries into the units: $3.0$. Answer: $3.0$.</p></div></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 4: 2 d.p. with 9</p></h4><p>Round $4.995$ to 2 decimal places.$$ 4.995 $$The rounding digit is $9$ (hundredths). Look right at $5$ (thousandths). $5 \ge 5$, so round the $9$ up. $9$ becomes $10$, carries: $5.00$. Answer: $5.00$.</p></div></div><div class="notes-common-block"><strong>Common mistake</strong><p>Forgetting to show the zero after rounding. For example, $3.0$ is correct for $2.97$ to 1 d.p. If you write just $3$, you have rounded to a whole number, not 1 decimal place.</p></div></div></section>
+
+  </div>
+</body>
+</html>

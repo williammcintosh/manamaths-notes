@@ -1,0 +1,121 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{block title}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body}{fg=mmtext,bg=mmtanSoft}
+\setbeamercolor{block title example}{fg=mmgreenDeep,bg=mmgreenSoft}
+\setbeamercolor{block body example}{fg=mmtext,bg=white}
+\setbeamercolor{block title alerted}{fg=mmwarn,bg=mmwarnSoft}
+\setbeamercolor{block body alerted}{fg=mmtext,bg=white}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\usepackage{tikz}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t,shrink=10]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{GEMA tells you the order to work in: \textbf{G}rouping symbols first, then \textbf{E}xponents, then \textbf{M}ultiplication and \textbf{D}ivision from left to right, then \textbf{A}ddition and \textbf{S}ubtraction from left to right.}
+\SectionTitle{Steps}
+\StepLine{1}{Do anything inside brackets first.}
+\StepLine{2}{Work out powers such as \(3^2\).}
+\StepLine{3}{Multiply and divide from left to right.}
+\StepLine{4}{Add and subtract from left to right.}
+\StepLine{5}{If two versions look similar, brackets can completely change the value.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Key facts}
+\begin{itemize}
+  \item \(3+4\times2=11\), not \(14\).
+  \item \((3+4)\times2=14\).
+  \item \(18\div3\times2=6\times2=12\).
+  \item \(2^3+5=8+5=13\).
+  \item Multiplication and division have equal priority.
+  \item Addition and subtraction have equal priority.
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\CommonMistake{Doing addition before multiplication. In \(5+2\times3\), you must do \(2\times3\) first, so the answer is \(11\), not \(21\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item Evaluate \(6+3\times4\).
+  \item Evaluate \((6+3)\times4\).
+  \item Evaluate \(20\div(2+3)\).
+\end{enumerate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: no brackets}{Evaluate \(7+3\times2\).\[7+3\times2=7+6=13\]Multiply first, then add.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: brackets}{Evaluate \((7+3)\times2\).\[(7+3)\times2=10\times2=20\]Brackets make the addition happen first.}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: left to right}{Evaluate \(18\div3\times2\).\[18\div3\times2=6\times2=12\]Do division and multiplication left to right.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: powers}{Evaluate \(2^3+4\).\[2^3+4=8+4=12\]Work out the exponent before adding.}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

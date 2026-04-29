@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Powers &amp; Roots</title>
+  <style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #163047;
+  --muted: #5d7183;
+  --line: #d8e1e8;
+  --blue: #1f4e79;
+  --green: #2f6b3b;
+  --soft: #eef4f8;
+  --warn: #a63d40;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.hero { margin-bottom: 18px; }
+.hero h1 { margin: 0 0 6px; font-size: 1.9rem; }
+.hero p { margin: 0; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 22px 0 30px; }
+.stat, .card, .notes-page, .notes-fragment { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
+.stat { padding: 18px; }
+.stat .label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.stat .value { font-size: 2rem; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { padding: 18px; }
+.card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+.badge { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; }
+.badge.complete { background: #e8f5ec; color: var(--green); }
+.badge.started { background: #fff4df; color: #9a6200; }
+.badge.not_started { background: #edf2f7; color: #607286; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
+.small { color: var(--muted); font-size: 0.92rem; }
+.notes-page, .notes-fragment { padding: 12px; }
+.notes-columns { display: block; column-count: 2; column-gap: 14px; }
+.notes-columns > div { break-inside: avoid; margin-bottom: 14px; border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns > div > :first-child { margin-top: 0 !important; }
+.notes-columns > div > :last-child { margin-bottom: 0 !important; }
+.notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
+.notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
+.notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-common-block, .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
+.notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
+.notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
+.notes-common-block strong { color: var(--warn); }
+.notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 5px 6px; }
+.notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
+.notes-steps { margin: 0 0 8px; padding-left: 1rem; }
+.notes-list, .notes-try { margin: 0; padding-left: 1rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 2px; }
+.notes-steps li:last-child, .notes-list li:last-child, .notes-try li:last-child { margin-bottom: 0; }
+.notes-steps li p, .notes-list li p, .notes-try li p { margin: 0; }
+.notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
+.notes-columns + .notes-columns { margin-top: 2.5rem; }
+.notes-columns + .notes-columns::before { content: ""; display: block; column-span: all; height: 14px; background: var(--soft); border-radius: 8px; margin: 0 0 2.5rem; width: 100%; }
+.notes-page p { margin: 0 0 4px; line-height: 1.18; }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
+</style>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\(','\)']], displayMath: [['\[','\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    
+<div class="topnav">
+  <a href="../index.html">← Notes index</a>
+</div>
+<div class="hero">
+  <h1>Powers &amp; Roots</h1>
+  <p>T1_LO6 · lo-yr9-powers-and-roots</p>
+</div>
+<div class="card" style="margin-bottom: 18px;">
+  <div class="badge complete">Complete</div>
+</div>
+<section class="notes-page"><div class="notes-columns"><div><div class="notes-key-idea"><strong>Key idea:</strong> <p>A power (or exponent) tells you how many times to multiply a number by itself. A root asks: what number, multiplied by itself, gives the original?</p></div><div class="notes-section-title"><p>Steps — evaluate powers</p></div><ol class="notes-steps" start="1"><li><p>Identify the base (the big number) and the exponent (the small number).</p></li></ol><ol class="notes-steps" start="2"><li><p>Multiply the base by itself exponent times.</p></li></ol><ol class="notes-steps" start="3"><li><p>Example: \(2^{3</p></li></ol><p>= 2 \times 2 \times 2 = 8\).}</p><div class="notes-section-title"><p>Steps — square roots</p></div><ol class="notes-steps" start="1"><li><p>Ask: what number times itself equals the given?</p></li></ol><ol class="notes-steps" start="2"><li><p>Example: \(\sqrt{25</p></li></ol><p>= 5\) because $5 \times 5 = 25$.}</p></div><div><div class="notes-section-title"><p>Key facts</p></div><ul class="notes-list"><li><p>$2 \times 2 \times 2 \times 2 = 2^{4}$</p></li><li><p>$2^{3} = 8$</p></li><li><p>$3^{2} = 9$</p></li><li><p>$\sqrt{25} = 5$</p></li><li><p>$4^{1} = 4$ (any number to the power 1 is itself)</p></li><li><p>$\sqrt{4} = 2$ (rational — an integer)</p></li></ul></div><div><div class="notes-common-block"><strong>Common mistake</strong><p>Thinking \(2^{3</p></div><p>= 6\) (multiplying base by exponent). Remember: $2^{3} = 2 \times 2 \times 2 = 8$, not $2 \times 3 = 6$.}</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Write $2 \times 2 \times 2 \times 2$ using a power.</p></li><li><p>What is $2^{3}$?</p></li><li><p>What is $\sqrt{25}$?</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 1: square numbers</p></h4><p>Evaluate \(3^{2</p></div><p>\).$$ 3^{2} = 3 \times 3 = 9 $$Answer: $9$. $9$ is called a square number.}</p></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 2: cube numbers</p></h4><p>Calculate \(5^{3</p></div><p>\).$$ 5^{3} = 5 \times 5 \times 5 = 125 $$Answer: $125$. $125$ is called a cube number.}</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Evaluate $3^{2}$.</p></li><li><p>Find $\sqrt{36}$.</p></li><li><p>Name one cube number.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 3: powers of 10</p></h4><p>Calculate \(10^{3</p></div><p>\).$$ 10^{3} = 10 \times 10 \times 10 = 1000 $$Pattern: the exponent tells how many zeros.}</p></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 4: expressing as a power</p></h4><p>Write $81$ as a power of $3$.\[81 = 3 \times 3 \times 3 \times 3 = 3^{4</p></div><p>\]Answer: $3^{4}$.}</p></div><div class="notes-common-block"><strong>Common mistake</strong><p>Confusing \(-3^{2</p></div></div></section>
+
+  </div>
+</body>
+</html>

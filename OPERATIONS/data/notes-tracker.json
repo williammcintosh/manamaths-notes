@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 6,
+    "notesComplete": 10,
     "notesStarted": 0,
-    "notesNotStarted": 121
+    "notesNotStarted": 117
   },
   "learningObjectives": [
     {
@@ -142,16 +142,16 @@
       "canonicalTitle": "GEMA (formerly BEDMAS)",
       "canonicalDisplayTitle": "GEMA (formerly BEDMAS)",
       "slug": "lo-yr9-gema-bedmas",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-gema-bedmas/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -162,16 +162,16 @@
       "canonicalTitle": "Substitution",
       "canonicalDisplayTitle": "Substitution",
       "slug": "lo-yr9-substitution",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-substitution",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-substitution/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-substitution/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -182,16 +182,16 @@
       "canonicalTitle": "Measurement prefixes",
       "canonicalDisplayTitle": "Measurement prefixes",
       "slug": "lo-yr9-measurement-prefixes",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-measurement-prefixes/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
@@ -202,16 +202,16 @@
       "canonicalTitle": "Time",
       "canonicalDisplayTitle": "Time",
       "slug": "lo-yr9-time",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-time",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-time/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-time/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {

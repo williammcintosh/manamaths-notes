@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientific notation</title>
+  <style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #163047;
+  --muted: #5d7183;
+  --line: #d8e1e8;
+  --blue: #1f4e79;
+  --green: #2f6b3b;
+  --soft: #eef4f8;
+  --warn: #a63d40;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.hero { margin-bottom: 18px; }
+.hero h1 { margin: 0 0 6px; font-size: 1.9rem; }
+.hero p { margin: 0; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 22px 0 30px; }
+.stat, .card, .notes-page, .notes-fragment { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
+.stat { padding: 18px; }
+.stat .label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.stat .value { font-size: 2rem; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { padding: 18px; }
+.card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+.badge { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; }
+.badge.complete { background: #e8f5ec; color: var(--green); }
+.badge.started { background: #fff4df; color: #9a6200; }
+.badge.not_started { background: #edf2f7; color: #607286; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
+.small { color: var(--muted); font-size: 0.92rem; }
+.notes-page, .notes-fragment { padding: 12px; }
+.notes-columns { display: block; column-count: 2; column-gap: 14px; }
+.notes-columns > div { break-inside: avoid; margin-bottom: 14px; border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns > div > :first-child { margin-top: 0 !important; }
+.notes-columns > div > :last-child { margin-bottom: 0 !important; }
+.notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
+.notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
+.notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-common-block, .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
+.notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
+.notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
+.notes-common-block strong { color: var(--warn); }
+.notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 5px 6px; }
+.notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
+.notes-steps { margin: 0 0 8px; padding-left: 1rem; }
+.notes-list, .notes-try { margin: 0; padding-left: 1rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 2px; }
+.notes-steps li:last-child, .notes-list li:last-child, .notes-try li:last-child { margin-bottom: 0; }
+.notes-steps li p, .notes-list li p, .notes-try li p { margin: 0; }
+.notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
+.notes-columns + .notes-columns { margin-top: 2.5rem; }
+.notes-columns + .notes-columns::before { content: ""; display: block; column-span: all; height: 14px; background: var(--soft); border-radius: 8px; margin: 0 0 2.5rem; width: 100%; }
+.notes-page p { margin: 0 0 4px; line-height: 1.18; }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
+</style>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\(','\)']], displayMath: [['\[','\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    
+<div class="topnav">
+  <a href="../index.html">← Notes index</a>
+</div>
+<div class="hero">
+  <h1>Scientific notation</h1>
+  <p>T1_LO4 · lo-yr9-scientific-notation</p>
+</div>
+<div class="card" style="margin-bottom: 18px;">
+  <div class="badge complete">Complete</div>
+</div>
+<section class="notes-page"><div class="notes-columns"><div><div class="notes-key-idea"><strong>Key idea:</strong> <p>Scientific notation writes very large or very small numbers compactly as \(a \times 10^{n</p></div><p>\), where $1 \le a &lt; 10$ and $n$ is an integer.}</p><div class="notes-section-title"><p>Steps — large numbers</p></div><ol class="notes-steps" start="1"><li><p>Move the decimal point left until only one digit remains before it.</p></li></ol><ol class="notes-steps" start="2"><li><p>Count how many places you moved — that is the exponent $n$.</p></li></ol><ol class="notes-steps" start="3"><li><p>Write the result as \(a \times 10^{n</p></li></ol><p>\).}</p><div class="notes-section-title"><p>Steps — small numbers</p></div><ol class="notes-steps" start="1"><li><p>Move the decimal point right until only one non-zero digit is before it.</p></li></ol><ol class="notes-steps" start="2"><li><p>Count the places moved — that is $-n$.</p></li></ol><ol class="notes-steps" start="3"><li><p>Write as \(a \times 10^{-n</p></li></ol><p>\).}</p></div><div><div class="notes-section-title"><p>Examples</p></div><ul class="notes-list"><li><p>$2000 = 2 \times 10^{3}$ (move 3 left)</p></li><li><p>$0.00037 = 3.7 \times 10^{-4}$ (move 4 right)</p></li><li><p>$5 \times 10^{3} = 5000$ (move 3 right)</p></li><li><p>$7.5 \times 10^{-2} = 0.075$ (move 2 left)</p></li></ul></div><div><div class="notes-common-block"><strong>Common mistake</strong><p>Writing \(30 \times 10^{2</p></div><p>\) instead of $3 \times 10^{3}$. The coefficient must be between 1 and 10. $30$ is too large. Adjust: $30 \times 10^{2} = 3 \times 10^{3}$.}</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Write $2000$ in scientific notation.</p></li><li><p>Write $0.00037$ in scientific notation.</p></li><li><p>Express $5 \times 10^{3}$ as an ordinary number.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 1: large number</p></h4><p>Write $9,500,000$ in scientific notation.$$ 9 500 000 $$Move the decimal point 6 places left: $9.5$. Answer: \(9.5 \times 10^{6</p></div><p>\).}</p></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 2: small number</p></h4><p>Write $0.00012$ in scientific notation.$$ 0.00012 $$Move the decimal point 4 places right: $1.2$. Answer: \(1.2 \times 10^{-4</p></div><p>\).}</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Convert $3.84 \times 10^{5}$ to a normal number.</p></li><li><p>Write $0.02$ in scientific notation.</p></li><li><p>Write $7.5 \times 10^{-2}$ as a decimal.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 3: multiplying in sci. not.</p></h4><p>Calculate \((3 \times 10^{4</p></div><p>) \times (2 \times 10^{3})\).$$ 3 \times 2 = 6 $$$$ 10^{4} \times 10^{3} = 10^{7} $$Answer: $6 \times 10^{7}$.}</p></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 4: dividing in sci. not.</p></h4><p>Calculate \((6 \times 10^{5</p></div><p>) \div (2 \times 10^{2})\).$$ 6 \div 2 = 3 $$$$ 10^{5} \div 10^{2} = 10^{3} $$Answer: $3 \times 10^{3}$.}</p></div><div class="notes-common-block"><strong>Common mistake</strong><p>Adding exponents instead of subtracting during division. Remember: divide coefficients, subtract exponents.</p></div></div></section>
+
+  </div>
+</body>
+</html>

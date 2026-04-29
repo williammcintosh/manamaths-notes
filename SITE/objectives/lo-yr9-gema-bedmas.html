@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEMA (formerly BEDMAS)</title>
+  <style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #163047;
+  --muted: #5d7183;
+  --line: #d8e1e8;
+  --blue: #1f4e79;
+  --green: #2f6b3b;
+  --soft: #eef4f8;
+  --warn: #a63d40;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.hero { margin-bottom: 18px; }
+.hero h1 { margin: 0 0 6px; font-size: 1.9rem; }
+.hero p { margin: 0; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 22px 0 30px; }
+.stat, .card, .notes-page, .notes-fragment { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 6px 18px rgba(12,30,44,0.05); }
+.stat { padding: 18px; }
+.stat .label { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
+.stat .value { font-size: 2rem; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { padding: 18px; }
+.card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+.badge { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; }
+.badge.complete { background: #e8f5ec; color: var(--green); }
+.badge.started { background: #fff4df; color: #9a6200; }
+.badge.not_started { background: #edf2f7; color: #607286; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.topnav { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px; font-size: 0.95rem; }
+.small { color: var(--muted); font-size: 0.92rem; }
+.notes-page, .notes-fragment { padding: 12px; }
+.notes-columns { display: block; column-count: 2; column-gap: 14px; }
+.notes-columns > div { break-inside: avoid; margin-bottom: 14px; border: 5px solid #000; border-radius: 18px; padding: 5px 6px; background: #fff; }
+.notes-columns > div > :first-child { margin-top: 0 !important; }
+.notes-columns > div > :last-child { margin-bottom: 0 !important; }
+.notes-section-title { font-size: 0.92rem; font-weight: 800; color: var(--blue); margin: 0 0 4px; }
+.notes-key-idea { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; margin: 0 0 8px; background: var(--soft); }
+.notes-example-block, .notes-common-block, .notes-try-block { margin: 0; }
+.notes-common-block, .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-example-block + .notes-example-block, .notes-common-block + .notes-try-block, .notes-try-block + .notes-common-block { margin-top: 8px; }
+.notes-example-title { margin: 0 0 4px; font-size: 0.9rem; color: var(--blue); }
+.notes-common-block strong, .notes-try-block strong, .notes-key-idea strong { display: block; margin: 0 0 4px; }
+.notes-common-block strong { color: var(--warn); }
+.notes-page > .notes-common-block, .notes-page > .notes-try-block { border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; background: #fff; }
+.notes-page .notes-common-block { border-color: #e6c8cb; background: #fff1f2; }
+.notes-columns > div.notes-common-block, .notes-columns > div.notes-try-block { border-width: 5px; border-color: #000; border-radius: 18px; padding: 5px 6px; }
+.notes-columns > div.notes-common-block { background: #fff1f2; border-color: #e6c8cb; }
+.notes-steps { margin: 0 0 8px; padding-left: 1rem; }
+.notes-list, .notes-try { margin: 0; padding-left: 1rem; }
+.notes-steps li, .notes-list li, .notes-try li { margin-bottom: 2px; }
+.notes-steps li:last-child, .notes-list li:last-child, .notes-try li:last-child { margin-bottom: 0; }
+.notes-steps li p, .notes-list li p, .notes-try li p { margin: 0; }
+.notes-page-split { height: 6px; background: var(--green); border-radius: 999px; margin: 10px 0; }
+.notes-columns + .notes-columns { margin-top: 2.5rem; }
+.notes-columns + .notes-columns::before { content: ""; display: block; column-span: all; height: 14px; background: var(--soft); border-radius: 8px; margin: 0 0 2.5rem; width: 100%; }
+.notes-page p { margin: 0 0 4px; line-height: 1.18; }
+@media (max-width: 900px) { .notes-columns { grid-template-columns: 1fr; } }
+</style>
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\(','\)']], displayMath: [['\[','\]']] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    
+<div class="topnav">
+  <a href="../index.html">← Notes index</a>
+</div>
+<div class="hero">
+  <h1>GEMA (formerly BEDMAS)</h1>
+  <p>T1_LO7 · lo-yr9-gema-bedmas</p>
+</div>
+<div class="card" style="margin-bottom: 18px;">
+  <div class="badge complete">Complete</div>
+</div>
+<section class="notes-page"><div class="notes-columns"><div><div class="notes-key-idea"><strong>Key idea:</strong> <p>GEMA tells you the order to work in: \textbf{G</p></div><p>rouping symbols first, then \textbf{E}xponents, then \textbf{M}ultiplication and \textbf{D}ivision from left to right, then \textbf{A}ddition and \textbf{S}ubtraction from left to right.}</p><div class="notes-section-title"><p>Steps</p></div><ol class="notes-steps" start="1"><li><p>Do anything inside brackets first.</p></li></ol><ol class="notes-steps" start="2"><li><p>Work out powers such as $3^2$.</p></li></ol><ol class="notes-steps" start="3"><li><p>Multiply and divide from left to right.</p></li></ol><ol class="notes-steps" start="4"><li><p>Add and subtract from left to right.</p></li></ol><ol class="notes-steps" start="5"><li><p>If two versions look similar, brackets can completely change the value.</p></li></ol></div><div><div class="notes-section-title"><p>Key facts</p></div><ul class="notes-list"><li><p>$3+4\times2=11$, not $14$.</p></li><li><p>$(3+4)\times2=14$.</p></li><li><p>$18\div3\times2=6\times2=12$.</p></li><li><p>$2^3+5=8+5=13$.</p></li><li><p>Multiplication and division have equal priority.</p></li><li><p>Addition and subtraction have equal priority.</p></li></ul></div><div class="notes-common-block"><strong>Common mistake</strong><p>Doing addition before multiplication. In $5+2\times3$, you must do $2\times3$ first, so the answer is $11$, not $21$.</p></div><div class="notes-try-block"><strong>Try these</strong><ol class="notes-try"><li><p>Evaluate $6+3\times4$.</p></li><li><p>Evaluate $(6+3)\times4$.</p></li><li><p>Evaluate $20\div(2+3)$.</p></li></ol></div></div></section><div class="notes-page-split"></div><section class="notes-page"><div class="notes-columns"><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 1: no brackets</p></h4><p>Evaluate $7+3\times2$.$$ 7+3\times2=7+6=13 $$Multiply first, then add.</p></div></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 2: brackets</p></h4><p>Evaluate $(7+3)\times2$.$$ (7+3)\times2=10\times2=20 $$Brackets make the addition happen first.</p></div></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 3: left to right</p></h4><p>Evaluate $18\div3\times2$.$$ 18\div3\times2=6\times2=12 $$Do division and multiplication left to right.</p></div></div><div><div class="notes-example-block"><h4 class="notes-example-title"><p>Example 4: powers</p></h4><p>Evaluate $2^3+4$.$$ 2^3+4=8+4=12 $$Work out the exponent before adding.</p></div></div></div></section>
+
+  </div>
+</body>
+</html>
