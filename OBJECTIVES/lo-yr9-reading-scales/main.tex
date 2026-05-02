@@ -51,13 +51,13 @@
 \end{tikzpicture}}
 
 \newcommand{\MiniRuler}[1]{%
-\begin{tikzpicture}[baseline=0,scale=0.2]
+\begin{tikzpicture}[baseline=0,scale=0.35]
 \draw[line width=1.5pt] (0,0)--(12,0);
 \foreach \x/\l in {0/0,2/2,4/4,6/6,8/8,10/10,12/12}{
   \draw[line width=0.8pt] (\x,0)--(\x,-0.4);
   \node[below,font=\bfseries\fontsize{8}{8}\selectfont,inner sep=1pt] at (\x,-0.5) {\l};
 }
-\draw[red,line width=3pt] (#1,0.25)--(#1,-0.5);
+\draw[red,line width=4pt] (#1,0.6)--(#1,-1.0);
 \end{tikzpicture}}
 
 \newcommand{\MiniDial}[1]{%
@@ -85,7 +85,7 @@
 \StepLine{2}{Count the number of unlabelled gaps between them to find each division's value.}
 \StepLine{3}{Start at the lower labelled value and add the correct number of divisions.}
 \vspace{0.08em}
-\centerline{\MiniRuler{6}}
+\centerline{\MiniRuler{7}}
 \end{column}
 \begin{column}{0.48\textwidth}
 \SectionTitle{Scale types}
