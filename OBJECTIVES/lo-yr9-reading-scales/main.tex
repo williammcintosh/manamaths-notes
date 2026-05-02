@@ -1,0 +1,137 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.45cm,yshift=-0.45cm]current page.north west) rectangle ([xshift=-0.45cm,yshift=0.45cm]current page.south east);\end{tikzpicture}}
+
+% -- Mini diagrams for notes (simplified versions) --
+\newcommand{\MiniTherm}[1]{%
+\begin{tikzpicture}[baseline=0,scale=0.25]
+\draw[line width=1.5pt,rounded corners=1] (0.3,0) rectangle (1.2,3.0);
+\draw[line width=1.5pt,rounded corners=2] (0.15,-0.2) rectangle (1.35,0.2);
+\fill[red!90!black] (0.32,0.03) rectangle (1.18,#1/30*2.6+0.2);
+\foreach \y/\l in {0.2/-20,0.72/-10,1.24/0,1.76/10,2.28/20,2.8/30}{
+  \draw[line width=0.8pt] (1.2,\y)--(1.5,\y);
+  \node[anchor=west,font=\bfseries\fontsize{6}{6}\selectfont,inner sep=1pt] at (1.55,\y) {\l};
+}
+\draw[red,line width=1.5pt] (1.2,#1/30*2.6+0.2)--(1.55,#1/30*2.6+0.2);
+\end{tikzpicture}}
+
+\newcommand{\MiniRuler}[1]{%
+\begin{tikzpicture}[baseline=0,scale=0.2]
+\draw[line width=1.5pt] (0,0)--(12,0);
+\foreach \x/\l in {0/0,2/2,4/4,6/6,8/8,10/10,12/12}{
+  \draw[line width=0.8pt] (\x,0)--(\x,-0.4);
+  \node[below,font=\bfseries\fontsize{8}{8}\selectfont,inner sep=1pt] at (\x,-0.5) {\l};
+}
+\draw[red,line width=1.5pt] (#1,0.15)--(#1,-0.4);
+\end{tikzpicture}}
+
+\newcommand{\MiniDial}[1]{%
+\begin{tikzpicture}[baseline=0,scale=0.25]
+\draw[line width=1.5pt] (0,0) circle (1.5);
+\foreach \angle/\label in {90/0,0/10,-90/20,180/30}{
+  \draw[line width=0.8pt] (\angle:1.2)--(\angle:1.5);
+  \node[font=\bfseries\fontsize{8}{8}\selectfont,inner sep=1pt] at (\angle:1.8) {\label};
+}
+\pgfmathsetmacro{\na}{90 - (#1 * 12)}
+\draw[red,line width=1.5pt] (0,0)--(\na:1.0);
+\filldraw[black] (0,0) circle (0.08);
+\end{tikzpicture}}
+
+\begin{document}
+
+\begin{frame}[t,shrink=10]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{Reading a scale means finding the value where the pointer, liquid level, or mark falls between the labelled divisions on a measuring instrument.}
+\SectionTitle{Steps}
+\StepLine{1}{Identify the two labelled marks the pointer sits between.}
+\StepLine{2}{Count the number of unlabelled gaps between them to find each division's value.}
+\StepLine{3}{Start at the lower labelled value and add the correct number of divisions.}
+\vspace{0.08em}
+\centerline{\MiniTherm{22}\qquad\MiniRuler{6}\qquad\MiniDial{15}}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Scale types}
+\begin{itemize}
+  \item \textbf{Linear scales}: thermometer (\!-30 to 30), ruler (0 to 15), measuring jug (0 to 500)
+  \item \textbf{Circular scales}: dial (0 to 30), speedometer (0 to 100 km/h), weighing scale (0 to 15 kg)
+  \item \textbf{Compound scales}: gas meter (multiple alternating dials, each 0 to 9)
+\end{itemize}
+\GreenDivider
+\CommonMistake{Miscounting the gaps. If the scale goes from 20 to 30 with 5 gaps, each gap is worth 2, not 1.}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example: thermometer}{The thermometer below shows a reading between 10 and 20. There are 10 unlabelled divisions in that range. Each division = 1. The red liquid reaches 5 divisions above 10, so the reading is \textbf{15}.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item A ruler has marks at 4 and 5 with 10 equal gaps. Where is the 6th gap?
+  \item A jug shows 200 mL and 300 mL with 4 gaps. What is each division worth?
+  \item A speedometer reads between 60 and 80 with 4 gaps. What speed is 3 gaps above 60?
+\end{enumerate}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: ruler}{A ruler has 0 at the left and two labelled marks at 4 and 6. Between 4 and 6 there are 10 equal gaps. The red mark is 7 gaps past 4. Each gap = (6 - 4) \(\div\) 10 = 0.2. The reading is \(4 + 7 \times 0.2 = 5.4\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: speedometer}{A speedometer arc shows 0, 20, 40, 60, 80, 100. Between 20 and 40 there are 5 gaps. The needle sits 2 gaps past 20. Each gap = (40 - 20) \(\div\) 5 = 4. Speed = \(20 + 2 \times 4 = 28\) km/h.}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: dial (0 to 30)}{A round dial has 0 at top, 10 at right, 20 at bottom, 30 at left. Between 10 and 20 there are 5 gaps. The needle points 3 gaps past 10. Each gap = (20 - 10) \(\div\) 5 = 2. Reading = \(10 + 3 \times 2 = 16\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: gas meter}{Four dials labelled 1M, 100K, 10K, 1K, each 0--9, alternating direction. Read left to right: for each dial, record the lower digit when the needle is between two digits. 3 - 8 - 2 - 5 = \textbf{3,825} (units).}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
