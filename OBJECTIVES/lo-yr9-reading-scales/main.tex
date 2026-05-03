@@ -134,4 +134,31 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{A gas meter uses multiple dials that alternate direction. Each dial shows one digit of the reading (0--9), and neighbouring dials spin in opposite directions.}
+\SectionTitle{How to read a gas meter}
+\StepLine{1}{Start at the leftmost dial (1\textsc{m}) and move right.}
+\StepLine{2}{If the needle is \emph{between} two digits, record the \textbf{lower} digit.}
+\StepLine{3}{If the needle is \emph{exactly on} a digit, check the next dial to the right: if that needle has passed 0, record the higher digit; otherwise record the digit shown.}
+\StepLine{4}{Write the digits in order: they form the total reading in cubic metres.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Example}
+\small A gas meter shows:
+\begin{itemize}
+  \item 1\textsc{m} dial: needle between 3 and 4 \(\rightarrow\) 3
+  \item 100\textsc{k} dial: needle between 8 and 9 \(\rightarrow\) 8
+  \item 10\textsc{k} dial: needle between 2 and 3 \(\rightarrow\) 2
+  \item 1\textsc{k} dial: needle between 5 and 6 \(\rightarrow\) 5
+\end{itemize}
+Reading = \textbf{3,825} m\textsuperscript{3}.
+\GreenDivider
+\CommonMistake{On a CCW dial, "between 8 and 9" means the needle is moving counterclockwise — so 8 appears to the \emph{left} of 9. Always record the lower digit regardless of direction.}
+\end{column}
+\end{columns}
+\end{frame}
+
 \end{document}
