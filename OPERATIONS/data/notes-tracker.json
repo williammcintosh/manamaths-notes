@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 11,
+    "notesComplete": 12,
     "notesStarted": 0,
-    "notesNotStarted": 116
+    "notesNotStarted": 115
   },
   "learningObjectives": [
     {
@@ -242,16 +242,16 @@
       "canonicalTitle": "Weight",
       "canonicalDisplayTitle": "Weight",
       "slug": "lo-yr9-weight",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-weight",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-weight/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-weight/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
