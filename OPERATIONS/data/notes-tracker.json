@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 12,
+    "notesComplete": 13,
     "notesStarted": 0,
-    "notesNotStarted": 115
+    "notesNotStarted": 114
   },
   "learningObjectives": [
     {
@@ -262,16 +262,16 @@
       "canonicalTitle": "Capacity",
       "canonicalDisplayTitle": "Capacity",
       "slug": "lo-yr9-capacity",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-capacity",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-capacity/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-capacity/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
