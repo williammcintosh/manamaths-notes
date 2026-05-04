@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 14,
+    "notesComplete": 15,
     "notesStarted": 0,
-    "notesNotStarted": 113
+    "notesNotStarted": 112
   },
   "learningObjectives": [
     {
@@ -1222,16 +1222,16 @@
       "canonicalTitle": "Expanding double brackets",
       "canonicalDisplayTitle": "Expanding double brackets",
       "slug": "lo-yr9-expanding-double-brackets",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-double-brackets/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
