@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 13,
+    "notesComplete": 14,
     "notesStarted": 0,
-    "notesNotStarted": 114
+    "notesNotStarted": 113
   },
   "learningObjectives": [
     {
@@ -982,16 +982,16 @@
       "canonicalTitle": "Expanding single brackets",
       "canonicalDisplayTitle": "Expanding single brackets",
       "slug": "lo-yr9-expanding-single-brackets",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-expanding-single-brackets/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
