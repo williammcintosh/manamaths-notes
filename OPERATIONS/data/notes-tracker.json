@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 15,
+    "notesComplete": 16,
     "notesStarted": 0,
-    "notesNotStarted": 112
+    "notesNotStarted": 111
   },
   "learningObjectives": [
     {
@@ -1002,16 +1002,16 @@
       "canonicalTitle": "Factorising single brackets",
       "canonicalDisplayTitle": "Factorising single brackets",
       "slug": "lo-yr9-factorising-single-brackets",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-factorising-single-brackets/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {

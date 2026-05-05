@@ -1,0 +1,117 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\usepackage{tikz}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t,shrink=10]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{Factorising is the reverse of expanding. Find the highest common factor (HCF) of all terms, write it outside the bracket, then put what's left inside. Expanding checks your answer.}
+\SectionTitle{Steps}
+\StepLine{1}{Find the HCF of the coefficients (the numbers).}
+\StepLine{2}{Find the HCF of the variables (lowest power of each letter).}
+\StepLine{3}{Write the HCF outside the bracket: \(\text{HCF}(\dots)\).}
+\StepLine{4}{Divide each term by the HCF. Write the results inside.}
+\StepLine{5}{Check: expand your answer — you should get back the original expression.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Examples}
+\begin{itemize}
+  \item \(6x+9\): HCF = 3, so \(3(2x+3)\)
+  \item \(x^2+5x\): HCF = \(x\), so \(x(x+5)\)
+  \item \(2x^2+6x\): HCF = \(2x\), so \(2x(x+3)\)
+  \item \(4a-10\): HCF = 2, so \(2(2a-5)\)
+  \item \(-3x-6\): HCF = \(-3\), so \(-3(x+2)\)
+  \item \(8y^2-12y\): HCF = \(4y\), so \(4y(2y-3)\)
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Only factoring the coefficient and leaving the variable. Factorise \(x^2+5x\) as \(x(x+5)\), not \(x^2(1+\frac{5}{x})\) or forgetting the \(x\). Check by expanding!}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: numbers only}{Factorise \(6x+9\). HCF of 6 and 9 is 3.\[3(2x+3)\]Check: \(3\times 2x+3\times 3=6x+9\)}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: variable in common}{Factorise \(x^2+4x\). HCF of \(x^2\) and \(4x\) is \(x\).\[x(x+4)\]Check: \(x\times x + x\times 4 = x^2+4x\)}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: both}{Factorise \(6x^2+9x\). HCF of \(6x^2\) and \(9x\) is \(3x\).\[3x(2x+3)\]Check: \(3x\times 2x+3x\times 3 = 6x^2+9x\)}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: negative}{Factorise \(-4x-8\). HCF is \(-4\).\[-4(x+2)\]Check: \(-4\times x + (-4)\times 2 = -4x-8\)}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item Factorise \(5x+15\).
+  \item Factorise \(x^2+7x\).
+  \item Factorise \(6a^2-9a\).
+\end{enumerate}}
+\end{column}
+\begin{column}{0.48\textwidth}
+\CommonMistake{Forgetting to check your answer. Always expand your factorised form to see if you get back the original expression. If not, find the right HCF.}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
