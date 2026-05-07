@@ -28,11 +28,11 @@ tectonic --outdir manamaths-notes/OBJECTIVES/<slug>/build manamaths-notes/OBJECT
 Confirmed working example:
 
 ```bash
-tectonic --outdir manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals/build manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals/main.tex
+tectonic --outdir manamaths-notes/OBJECTIVES/lo-place-values-and-decimals/build manamaths-notes/OBJECTIVES/lo-place-values-and-decimals/main.tex
 ```
 
 This produced:
-- `manamaths-notes/OBJECTIVES/lo-yr9-place-values-and-decimals/build/main.pdf`
+- `manamaths-notes/OBJECTIVES/lo-place-values-and-decimals/build/main.pdf`
 
 ## Notes
 

@@ -21,7 +21,7 @@ LaTeX is the source of truth. HTML notes pages are generated from that LaTeX sou
 ## Shape
 
 - `TEMPLATES/` — shared LaTeX templates
-- `OBJECTIVES/lo-yr9-.../` — one notes module per LO
+- `OBJECTIVES/lo-.../` — one notes module per LO
 - `OPERATIONS/data/notes-tracker.json` — Notes progress tracker
 - `OPERATIONS/scripts/generate_notes_tracker.py` — regenerate the Notes tracker from actual repo state
 - `OPERATIONS/scripts/generate_site.py` — build the static website into `SITE/`
