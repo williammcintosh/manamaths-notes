@@ -8,8 +8,8 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 128,
-    "notesComplete": 18,
+    "totalObjectives": 129,
+    "notesComplete": 19,
     "notesStarted": 0,
     "notesNotStarted": 110
   },
@@ -2492,6 +2492,26 @@
         "folder": false,
         "source": false,
         "pdf": false
+      }
+    },
+    {
+      "objectiveId": "T5_LO12a",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": null,
+      "canonicalSourceCode": null,
+      "canonicalTitle": "Isometric drawing of 3D shapes",
+      "canonicalDisplayTitle": "Isometric drawing of 3D shapes",
+      "slug": "lo-isometric-drawing",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-isometric-drawing",
+        "source": "manamaths-notes/OBJECTIVES/lo-isometric-drawing/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-isometric-drawing/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
