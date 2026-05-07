@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 127,
-    "notesComplete": 16,
+    "notesComplete": 17,
     "notesStarted": 0,
-    "notesNotStarted": 111
+    "notesNotStarted": 110
   },
   "learningObjectives": [
     {
@@ -1042,16 +1042,16 @@
       "canonicalTitle": "Solving 1-step equations",
       "canonicalDisplayTitle": "Solving 1-step equations",
       "slug": "lo-yr9-solving-1-step-equations",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations",
         "source": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-yr9-solving-1-step-equations/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
