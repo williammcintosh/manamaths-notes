@@ -8,8 +8,8 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 127,
-    "notesComplete": 17,
+    "totalObjectives": 128,
+    "notesComplete": 18,
     "notesStarted": 0,
     "notesNotStarted": 110
   },
@@ -2452,6 +2452,26 @@
         "folder": false,
         "source": false,
         "pdf": false
+      }
+    },
+    {
+      "objectiveId": "T5_LO11a",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": null,
+      "canonicalSourceCode": null,
+      "canonicalTitle": "Rotational symmetry and order of symmetry",
+      "canonicalDisplayTitle": "Rotational symmetry and order of symmetry",
+      "slug": "lo-rotational-symmetry",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-rotational-symmetry",
+        "source": "manamaths-notes/OBJECTIVES/lo-rotational-symmetry/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-rotational-symmetry/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {

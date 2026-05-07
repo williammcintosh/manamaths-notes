@@ -1,0 +1,117 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
+
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t,shrink=10]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{A shape has rotational symmetry if it can be rotated (less than 360°) around a centre point to fit exactly onto itself. The order of rotational symmetry is how many times it matches in one full 360° rotation. For a regular n-gon, the order is n.}
+\SectionTitle{Steps}
+\StepLine{1}{Find the centre of the shape.}
+\StepLine{2}{Rotate the shape mentally. How many different positions look identical?}
+\StepLine{3}{Count each position (including the starting position) — that's the order.}
+\StepLine{4}{Angle of rotation: \(360^\circ \div \text{order}\).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Quick reference}
+\begin{itemize}
+  \item Square: order 4, angle 90°
+  \item Rectangle: order 2, angle 180°
+  \item Regular triangle: order 3, angle 120°
+  \item Parallelogram: order 2, angle 180°
+  \item Regular pentagon: order 5, angle 72°
+  \item Regular hexagon: order 6, angle 60°
+  \item Circle: infinite order
+  \item Scalene triangle: order 1 (no rotational symmetry)
+  \item Isosceles triangle: order 1 (no rotational symmetry)
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Counting only positions after rotation, not including the starting position. If a shape looks the same in 3 different rotated positions, that means order 3 (starting + 2 others).}
+\end{frame}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: square}{A square matches itself when rotated 90°, 180°, 270°, and 360° (back to start). That's 4 positions: order of rotational symmetry = 4.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: rectangle}{A rectangle (not square) matches at 180° and 360°. Order of rotational symmetry = 2.}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: letter H}{The letter H looks the same when rotated 180° but not 90° or 270°. Order of rotational symmetry = 2.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: regular pentagon}{A regular pentagon matches at 72°, 144°, 216°, 288°, and 360°. That's 5 positions: order = 5.}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item Order of rotational symmetry for a regular octagon?
+  \item Order for a regular triangle?
+  \item What is the angle of rotation for a shape with order 5?
+\end{enumerate}}
+\end{column}
+\begin{column}{0.48\textwidth}
+\CommonMistake{Confusing lines of symmetry with rotational symmetry. A rectangle has 2 lines of symmetry and order 2 rotational symmetry. They are related but different concepts.}
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
