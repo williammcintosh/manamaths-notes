@@ -1,0 +1,121 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes -- Nets of 3D shapes}
+\footnotesize
+\KeyIdea{A net is a flat 2D plan that folds along edges to make a 3D shape. The same 3D shape can have many different nets. All faces must be present and connected.}
+\vspace{-0.3em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\SectionTitle{Steps to identify a net}
+\StepLine{1}{Count the faces. Does the net have the right number? (Cube = 6, cuboid = 6, pyramid = 5, tetrahedron = 4)}
+\StepLine{2}{Check shapes match. Are the faces the correct polygons?}
+\StepLine{3}{Visualise folding. Imagine bending each face along the edge.}
+\StepLine{4}{Check overlaps. No faces should overlap when folded.}
+\StepLine{5}{Check gaps. There should be no gaps between faces.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Common nets}
+\vspace{-0.2em}
+\begin{center}
+\scalebox{0.5}{
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (1,1);
+\draw[thick] (0,-1) rectangle (1,0);
+\draw[thick] (0,-2) rectangle (1,-1);
+\draw[thick] (1,-1) rectangle (2,0);
+\draw[thick] (-1,-1) rectangle (0,0);
+\draw[thick] (2,-1) rectangle (3,0);
+\node[scale=0.5] at (0.5,-0.5) {Cube};
+\end{tikzpicture}
+\hspace{0.3em}
+\scalebox{0.5}{
+\begin{tikzpicture}
+\draw[thick] (0,0) rectangle (2,1);
+\draw[thick] (0,-1) rectangle (2,0);
+\draw[thick] (0,-2) rectangle (2,-1);
+\draw[thick] (2,-1) rectangle (3,0);
+\draw[thick] (-1,-1) rectangle (0,0);
+\draw[thick] (0,1) rectangle (2,2);
+\node[scale=0.5] at (1,-0.5) {Cuboid};
+\end{tikzpicture}
+}
+}
+\end{center}
+\vspace{-0.3em}
+A cube has 11 distinct nets. A cuboid also has a net of 6 rectangles (3 pairs of equal size).
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Thinking any 6 connected squares form a cube net. In fact, if a cross arm is more than 2 squares long, it won't fold correctly.}
+\end{frame}
+
+\begin{frame}[t,shrink=6]
+\NotesTitle{Notes -- Nets and surface area}
+\vspace{-0.3em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: Cube net}{A cube of side 3 cm has net area = $6 \times (3 \times 3) = 54$ cm$^2$. The net is the surface area of the cube.}
+\vspace{0.3em}
+\WorkedExample{Example 2: Cuboid box}{A 5 $\times$ 3 $\times$ 2 cm box: SA = $2(5\cdot3+5\cdot2+3\cdot2) = 62$ cm$^2$.}
+\vspace{0.3em}
+\WorkedExample{Example 3: Opposite faces}{In a cube cross net, the two squares at the ends of the cross are opposite each other when folded.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: Open box}{An open box net has 5 faces (no top). Its surface area excludes the missing top face.}
+\vspace{0.3em}
+\TryThese{\begin{enumerate}
+  \item Draw a cube net of side 2 cm.
+  \item Find surface area of a 4 cm cube.
+  \item Identify opposite faces in a cross net.
+\end{enumerate}}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Forgetting that opposite faces never share an edge in a net. In the cross net, the top and bottom squares are opposite.}
+\end{frame}
+
+\end{document}

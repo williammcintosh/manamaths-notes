@@ -8,8 +8,8 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 129,
-    "notesComplete": 19,
+    "totalObjectives": 130,
+    "notesComplete": 20,
     "notesStarted": 0,
     "notesNotStarted": 110
   },
@@ -2507,6 +2507,26 @@
         "folder": "manamaths-notes/OBJECTIVES/lo-isometric-drawing",
         "source": "manamaths-notes/OBJECTIVES/lo-isometric-drawing/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-isometric-drawing/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      }
+    },
+    {
+      "objectiveId": "T5_LO12b",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": null,
+      "canonicalSourceCode": null,
+      "canonicalTitle": "Nets of 3D shapes",
+      "canonicalDisplayTitle": "Nets of 3D shapes",
+      "slug": "lo-nets",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-nets",
+        "source": "manamaths-notes/OBJECTIVES/lo-nets/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-nets/build/main.pdf"
       },
       "evidence": {
         "folder": true,
