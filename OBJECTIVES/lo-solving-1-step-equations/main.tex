@@ -25,8 +25,6 @@
 
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-\setbeamercolor{itemize item}{fg=mmgreenDeep}
-\setbeamercolor{itemize subitem}{fg=mmgreenDeep}
 
 \newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
@@ -37,7 +35,6 @@
 \newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
 \newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
 \newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
-\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
 
 \usepackage{tikz}
 \setbeamertemplate{background}{
@@ -51,84 +48,89 @@
 
 \begin{document}
 
-\begin{frame}[t,shrink=10]
+\begin{frame}[t]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\KeyIdea{Do the inverse (opposite) to both sides. Whatever you do to one side, do to the other.}
+\vspace{-0.2em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\SectionTitle{Inverse operations}
+\vspace{-0.2em}
+\begin{align*}
++x &\;\leftrightarrow\; -x \\
+\times x &\;\leftrightarrow\; \div x
+\end{align*}
+\vspace{-0.2em}
+\SectionTitle{Solve: \(x+5=12\)}
+\vspace{-0.4em}
+\begin{align*}
+x+5 &= 12 \\
+x+5-5 &= 12-5 \\
+x &= 7
+\end{align*}
+\vspace{-0.2em}
+Check: \(7+5=12\;\checkmark\)
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Solve: \(3x=15\)}
+\vspace{-0.4em}
+\begin{align*}
+3x &= 15 \\
+\frac{3x}{3} &= \frac{15}{3} \\
+x &= 5
+\end{align*}
+\vspace{-0.2em}
+Check: \(3\times5=15\;\checkmark\)
+
+\vspace{0.5em}
+\SectionTitle{Solve: \(\frac{x}{4}=7\)}
+\vspace{-0.4em}
+\begin{align*}
+\frac{x}{4} &= 7 \\
+\frac{x}{4}\times4 &= 7\times4 \\
+x &= 28
+\end{align*}
+\vspace{-0.2em}
+Check: \(28\div4=7\;\checkmark\)
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Forgetting to do the same to both sides. \(x+3=7\) means subtract 3 from both sides, not just move the 3.}
+\end{frame}
+
+\begin{frame}[t]
 \NotesTitle{Notes \& Steps}
 \footnotesize
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
-\KeyIdea{Solving an equation means finding the value of the variable that makes the equation true. To isolate the variable, do the inverse (opposite) operation to both sides. Whatever you do to one side, you must do to the other.}
-\SectionTitle{Steps}
-\StepLine{1}{Identify the operation being done to the variable.}
-\StepLine{2}{Do the inverse operation to both sides of the equals sign.}
-\StepLine{3}{Simplify each side to find the solution.}
-\StepLine{4}{Check your answer by substituting it back into the original equation.}
-\end{column}
-\begin{column}{0.48\textwidth}
-\SectionTitle{Inverse operations}
-\begin{itemize}
-  \item Addition \(\leftrightarrow\) Subtraction
-  \item Multiplication \(\leftrightarrow\) Division
-\end{itemize}
-\vspace{0.2em}
-\SectionTitle{Quick examples}
-\begin{itemize}
-  \item \(x+5=9 \rightarrow x=4\) (subtract 5)
-  \item \(x-3=7 \rightarrow x=10\) (add 3)
-  \item \(2x=10 \rightarrow x=5\) (divide by 2)
-  \item \(\frac{x}{4}=6 \rightarrow x=24\) (multiply by 4)
-\end{itemize}
-\end{column}
-\end{columns}
-\GreenDivider
-\CommonMistake{Forgetting to do the same operation to both sides. Always keep the equation balanced. \(x+3=7\) is solved by subtracting 3 from both sides, not just moving the 3.}
-\end{frame}
+\SectionTitle{Solve: \(x-3=8\)}
+\vspace{-0.4em}
+\begin{align*}
+x-3 &= 8 \\
+x-3+3 &= 8+3 \\
+x &= 11
+\end{align*}
+Check: \(11-3=8\;\checkmark\)
 
-\begin{frame}[t,shrink=12]
-\NotesTitle{Notes \& Steps}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.48\textwidth}
-\WorkedExample{Example 1: addition}{Solve \(x+5=12\). 
-Inverse of \(+5\) is \(-5\).
-\[x+5-5 = 12-5\]
-\[x = 7\]
-Check: \(7+5=12\)}
+\vspace{1em}
+\WorkedExample{Remember:}{
+\begin{itemize}
+  \item \(+\) undone by \(-\) 
+  \item \(-\) undone by \(+\) 
+  \item \(\times\) undone by \(\div\) 
+  \item \(\div\) undone by \(\times\)
+\end{itemize}}
 \end{column}
-\begin{column}{0.48\textwidth}
-\WorkedExample{Example 2: subtraction}{Solve \(x-3=8\).
-Inverse of \(-3\) is \(+3\).
-\[x-3+3=8+3\]
-\[x=11\]
-Check: \(11-3=8\)}
-\end{column}
-\end{columns}
-\GreenDivider
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.48\textwidth}
-\WorkedExample{Example 3: multiplication}{Solve \(3x=15\).
-Inverse of \(\times3\) is \(\div3\).
-\[3x\div3 = 15\div3\]
-\[x=5\]
-Check: \(3\times5=15\)}
-\end{column}
-\begin{column}{0.48\textwidth}
-\WorkedExample{Example 4: division}{Solve \(\frac{x}{4}=7\).
-Inverse of \(\div4\) is \(\times4\).
-\[\frac{x}{4}\times4 = 7\times4\]
-\[x=28\]
-Check: \(28\div4=7\)}
-\end{column}
-\end{columns}
-\GreenDivider
-\begin{columns}[b,onlytextwidth]
 \begin{column}{0.48\textwidth}
 \TryThese{\begin{enumerate}
   \item \(x+7=15\)
   \item \(x-5=9\)
   \item \(4x=20\)
+  \item \(\frac{x}{3}=6\)
 \end{enumerate}}
-\end{column}
-\begin{column}{0.48\textwidth}
-\CommonMistake{Mixing up inverse operations. For \(x-4=10\), you add 4 (not subtract 4). Think: we want \(x\) alone, so we undo what's been done to it.}
+\vspace{0.5em}
+\CommonMistake{Mixing up inverse. For \(x-4=10\) you \textit{add} 4 (not subtract 4). Undo what's been done to \(x\).}
 \end{column}
 \end{columns}
 \end{frame}

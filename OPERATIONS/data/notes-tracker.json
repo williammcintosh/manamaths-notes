@@ -8,9 +8,9 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 130,
+    "totalObjectives": 131,
     "notesComplete": 20,
-    "notesStarted": 0,
+    "notesStarted": 1,
     "notesNotStarted": 110
   },
   "learningObjectives": [
@@ -1970,6 +1970,26 @@
       },
       "evidence": {
         "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "objectiveId": "T4_LO5a",
+      "canonicalTopicId": "T4",
+      "canonicalInternalCode": null,
+      "canonicalSourceCode": null,
+      "canonicalTitle": "Coordinates and grid points",
+      "canonicalDisplayTitle": "Coordinates and grid points",
+      "slug": "lo-coordinates",
+      "notesStatus": "started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-coordinates",
+        "source": "manamaths-notes/OBJECTIVES/lo-coordinates/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-coordinates/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
         "source": false,
         "pdf": false
       }
