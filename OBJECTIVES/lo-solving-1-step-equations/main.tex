@@ -1,6 +1,7 @@
 \documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{array}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
 \usepackage[sfdefault,lf]{FiraSans}
@@ -25,10 +26,16 @@
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
 
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
 \newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
-\newcommand{\GreenDivider}{\par\vspace{0.03em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
-\newtcolorbox{MMGreenBox}[1][]{enhanced,breakable=false,colback=mmtanSoft,colframe=mmgreenDeep,boxrule=1.5pt,arc=6pt,left=4pt,right=4pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,fontupper=\footnotesize,#1}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
 
 \usepackage{tikz}
 \setbeamertemplate{background}{
@@ -42,53 +49,59 @@
 
 \begin{document}
 
-\begin{frame}[t]
+\begin{frame}[t,shrink=10]
 \NotesTitle{Notes \& Steps}
+\footnotesize
+\KeyIdea{Do the inverse (opposite) to both sides.\\
+Add \(\leftrightarrow\) Subtract \quad\textbar\quad Multiply \(\leftrightarrow\) Divide}
 \vspace{-0.1em}
-\begin{MMGreenBox}
-\small\textbf{Key idea:} Do the inverse to both sides. 
-+ $\leftrightarrow$ --, \quad $\times$ $\leftrightarrow$ $\div$
-\end{MMGreenBox}
-\vspace{-0.2em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.23\textwidth}
-\centering\footnotesize\textbf{Addition}\\
-$x+5=12$\\
-$x+5-5=12-5$\\
-$x=7$\\
-{\scriptsize Check: $7+5=12$}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: addition}{Solve \(x+5=12\).
+Inverse of \(+5\) is \(-5\).
+\[x+5-5 = 12-5\]
+\[x = 7\]
+Check: \(7+5=12\)}
 \end{column}
-\begin{column}{0.23\textwidth}
-\centering\footnotesize\textbf{Subtraction}\\
-$x-3=8$\\
-$x-3+3=8+3$\\
-$x=11$\\
-{\scriptsize Check: $11-3=8$}
-\end{column}
-\begin{column}{0.23\textwidth}
-\centering\footnotesize\textbf{Multiplication}\\
-$3x=15$\\
-$3x\div3=15\div3$\\
-$x=5$\\
-{\scriptsize Check: $3\times5=15$}
-\end{column}
-\begin{column}{0.23\textwidth}
-\centering\footnotesize\textbf{Division}\\
-$\frac{x}{4}=7$\\
-$\frac{x}{4}\times4=7\times4$\\
-$x=28$\\
-{\scriptsize Check: $28\div4=7$}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 2: subtraction}{Solve \(x-3=8\).
+Inverse of \(-3\) is \(+3\).
+\[x-3+3=8+3\]
+\[x=11\]
+Check: \(11-3=8\)}
 \end{column}
 \end{columns}
-\vspace{-0.02em}
 \GreenDivider
-\vspace{-0.02em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.5\textwidth}
-\small\textbf{Try these:}\quad {\scriptsize$1.\;x+7=15$\quad $2.\;x-5=9$\quad $3.\;4x=20$\quad $4.\;\frac{x}{3}=6$}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: multiplication}{Solve \(3x=15\).
+Inverse of \(\times3\) is \(\div3\).
+\[3x\div3 = 15\div3\]
+\[x=5\]
+Check: \(3\times5=15\)}
 \end{column}
-\begin{column}{0.5\textwidth}
-{\scriptsize\textbf{Common mistake:} Forgetting to do the same to both sides. $x+3=7$ means subtract 3 from both sides.}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 4: division}{Solve \(\frac{x}{4}=7\).
+Inverse of \(\div4\) is \(\times4\).
+\[\frac{x}{4}\times4 = 7\times4\]
+\[x=28\]
+Check: \(28\div4=7\)}
+\end{column}
+\end{columns}
+\GreenDivider
+\begin{columns}[b,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item \(x+7=15\)
+  \item \(x-5=9\)
+  \item \(4x=20\)
+  \item \(\frac{x}{3}=6\)
+\end{enumerate}}
+\end{column}
+\begin{column}{0.48\textwidth}
+\CommonMistake{Forgetting to do the same to both sides.\\
+\(x+3=7\) means subtract 3 from both sides, not just move the 3.
+For \(x-4=10\) add 4 (not subtract 4). Undo what's been done to \(x\).}
 \end{column}
 \end{columns}
 \end{frame}
