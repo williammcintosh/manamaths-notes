@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 131,
-    "notesComplete": 20,
+    "notesComplete": 21,
     "notesStarted": 1,
-    "notesNotStarted": 110
+    "notesNotStarted": 109
   },
   "learningObjectives": [
     {
@@ -1062,16 +1062,16 @@
       "canonicalTitle": "Solving 2-step equations",
       "canonicalDisplayTitle": "Solving 2-step equations",
       "slug": "lo-solving-2-step-equations",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-solving-2-step-equations",
         "source": "manamaths-notes/OBJECTIVES/lo-solving-2-step-equations/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-solving-2-step-equations/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
