@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 131,
-    "notesComplete": 21,
+    "notesComplete": 22,
     "notesStarted": 1,
-    "notesNotStarted": 109
+    "notesNotStarted": 108
   },
   "learningObjectives": [
     {
@@ -1082,16 +1082,16 @@
       "canonicalTitle": "Solving equations with variables on both sides",
       "canonicalDisplayTitle": "Solving equations with variables on both sides",
       "slug": "lo-solving-equations-with-variables-on-both-sides",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-solving-equations-with-variables-on-both-sides",
         "source": "manamaths-notes/OBJECTIVES/lo-solving-equations-with-variables-on-both-sides/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-solving-equations-with-variables-on-both-sides/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     },
     {
