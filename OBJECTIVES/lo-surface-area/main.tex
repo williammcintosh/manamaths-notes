@@ -92,31 +92,35 @@
 
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
-\KeyIdea{Surface area is the total area of all the outside faces of a 3D shape. A good method is to imagine the net, find the area of each face, then add them all together.}
-\SectionTitle{Steps}
-\StepLine{1}{Identify every outside face.}
-\StepLine{2}{Find the area of each face.}
-\StepLine{3}{Multiply pairs of congruent faces when possible.}
-\StepLine{4}{Add the areas and give square units.}
+\KeyIdea{Surface area is the total area of all the outside faces of a 3D shape. Imagine wrapping the shape in paper --- the amount of paper needed is the surface area. A good method is to find the area of each face, then add them all together.}
 
-\CommonMistake{Missing one face. For example, a closed cuboid has 6 faces and a closed cylinder has 2 circles plus 1 curved surface.}
+\SectionTitle{Step-by-step method}
+\StepLine{1}{Identify every face on the outside of the shape.}
+\StepLine{2}{Find the area of each face using the correct formula.}
+\StepLine{3}{Multiply when faces are the same (congruent pairs).}
+\StepLine{4}{Add all the areas together.}
+\StepLine{5}{Write the final answer with square units (cm$^2$, m$^2$, etc.).}
+
+\CommonMistake{Forgetting a face. A cube and a cuboid each have \textbf{6 faces}. A closed cylinder has \textbf{2 circles} plus the curved surface --- that's 3 parts, not 2!}
 \end{column}
 \begin{column}{0.48\textwidth}
 \WorkedExample{Cube}{%
 \DrawCuboid{4}{4}{4}\\[2pt]
-A cube has side length 4 cm.\\[2pt]
-Each face: $4\times 4 = 16$ cm$^2$\\
-6 faces: $6\times 16 = 96$ cm$^2$\\[2pt]
-\textbf{Surface area = 96 cm$^2$}}
+A cube has side length 4 cm. All faces are identical squares.\\[4pt]
+Area of one face: $4\times 4 = 16$ cm$^2$\\
+6 identical faces: $6\times 16 = 96$ cm$^2$\\[4pt]
+\GreenDivider
+\textbf{Surface area = 96~cm$^2$}}
 
 \WorkedExample{Cuboid}{%
 \DrawCuboid{8}{3}{2}\\[2pt]
-A box is 8 cm by 3 cm by 2 cm.\\[2pt]
-Top \& bottom: $2(8\times 3)=48$\\
-Front \& back: $2(8\times 2)=32$\\
-Left \& right: $2(3\times 2)=12$\\
-Total: $48+32+12=92$ cm$^2$\\[2pt]
-\textbf{Surface area = 92 cm$^2$}}
+A box is 8~cm by 3~cm by 2~cm. Opposite faces are the same size.\\[4pt]
+Top \& bottom: $2\times (8\times 3)=48$\\
+Front \& back: $2\times (8\times 2)=32$\\
+Left \& right: $2\times (3\times 2)=12$\\
+Total: $48+32+12=92$\\[4pt]
+\GreenDivider
+\textbf{Surface area = 92~cm$^2$}}
 \end{column}
 \end{columns}
 \GreenDivider
@@ -124,17 +128,27 @@ Total: $48+32+12=92$ cm$^2$\\[2pt]
 \begin{column}{0.48\textwidth}
 \WorkedExample{Cylinder}{%
 \DrawCylinder{10}{3}\\[2pt]
-A cylinder has radius 3 cm and height 10 cm.\\[2pt]
+A cylinder has radius 3~cm and height 10~cm. It has two circles and one curved surface (which unfolds to a rectangle).\\[4pt]
 Two circles: $2\pi r^2 = 2\pi(3^2)=18\pi$\\
 Curved surface: $2\pi rh = 2\pi(3)(10)=60\pi$\\
-Total: $18\pi + 60\pi = 78\pi$ cm$^2$\\[2pt]
-\textbf{Surface area = $78\pi$\,cm$^2$}}
+Total: $18\pi+60\pi = 78\pi$\\[4pt]
+\GreenDivider
+\textbf{Surface area = $78\pi$~cm$^2$}}
+
+\CommonMistake{Using the diameter instead of the radius. For a cylinder with diameter 8~cm, the radius is 4~cm. Always halve the diameter before using the formula.}
 \end{column}
 \begin{column}{0.48\textwidth}
 \TryThese{\begin{enumerate}
-\item A cube has side length 6 cm. Find its surface area.
-\item A cuboid is 10 cm by 4 cm by 2 cm. Find its surface area.
-\item A cylinder has radius 4 cm and height 9 cm. Write its total surface area in terms of $\pi$.
+\item A cube has side length 6~cm. Find its surface area.
+\item A cuboid is 10~cm by 4~cm by 2~cm. Find its surface area.
+\item A cylinder has radius 4~cm and height 9~cm. Write the total surface area in terms of $\pi$.
+\end{enumerate}
+\vspace{4pt}
+\SectionTitle{Answers}
+\begin{enumerate}
+\item $6\times(6\times6)=216$~cm$^2$
+\item $2(10\times4)+2(10\times2)+2(4\times2)=136$~cm$^2$
+\item $2\pi(4^2)+2\pi(4)(9)=32\pi+72\pi=104\pi$~cm$^2$
 \end{enumerate}}
 \end{column}
 \end{columns}
