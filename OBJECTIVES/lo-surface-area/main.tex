@@ -5,10 +5,56 @@
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{shadings}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \everymath{\displaystyle}
+
+%% TikZ 3D shape macros for surface-area notes
+% DrawCuboid[scale]{depth}{width}{height}
+\newcommand{\DrawCuboid}[4][0.45]{%
+\begin{tikzpicture}[scale=#1,line cap=round,line join=round]
+  \def\d{#2}\def\w{#3}\def\h{#4}
+  \fill[top color=gray!30,bottom color=gray!5,middle color=gray!15,shading=axis,opacity=0.3]
+    (0,0) -- (\w,0) -- (\w+\d*0.35,\d*0.3) -- (\d*0.35,\d*0.3) -- cycle;
+  \fill[top color=gray!50,bottom color=gray!10,middle color=gray!25,shading=axis,opacity=0.3]
+    (0,\h) -- (\w,\h) -- (\w+\d*0.35,\h+\d*0.3) -- (\d*0.35,\h+\d*0.3) -- cycle;
+  \fill[left color=gray!40,right color=gray!10,middle color=gray!20,shading=axis,opacity=0.3]
+    (0,0) -- (0,\h) -- (\d*0.35,\h+\d*0.3) -- (\d*0.35,\d*0.3) -- cycle;
+  \fill[top color=gray!20,bottom color=gray!5,middle color=gray!10,shading=axis,opacity=0.3]
+    (0,0) -- (\w,0) -- (\w,\h) -- (0,\h) -- cycle;
+  \fill[left color=gray!35,right color=gray!10,middle color=gray!20,shading=axis,opacity=0.3]
+    (\w,0) -- (\w,\h) -- (\w+\d*0.35,\h+\d*0.3) -- (\w+\d*0.35,\d*0.3) -- cycle;
+  \draw (\w,0) -- (\w,\h) -- (0,\h) -- (0,0) -- (\w,0);
+  \draw (\w,\h) -- (\w+\d*0.35,\h+\d*0.3);
+  \draw (0,\h) -- (\d*0.35,\h+\d*0.3);
+  \draw (\w+\d*0.35,\h+\d*0.3) -- (\d*0.35,\h+\d*0.3);
+  \draw (\d*0.35,\h+\d*0.3) -- (\d*0.35,\d*0.3);
+  \draw (\w+\d*0.35,\d*0.3) -- (\w,0);
+  \draw (\w+\d*0.35,\d*0.3) -- (\w+\d*0.35,\h+\d*0.3);
+  \draw[densely dashed] (0,0) -- (\d*0.35,\d*0.3);
+  \draw[densely dashed] (\d*0.35,\d*0.3) -- (\w+\d*0.35,\d*0.3);
+  \draw[<->,thin] (\d*0.35,-0.2) -- (\w+\d*0.35,-0.2) node[midway,below,font=\tiny]{\w};
+  \draw[<->,thin] (-0.25,0) -- (-0.25,\h) node[midway,left,font=\tiny]{\h};
+\end{tikzpicture}%
+}
+% DrawCylinder[scale]{height}{radius}
+\newcommand{\DrawCylinder}[3][0.5]{%
+\begin{tikzpicture}[scale=#1,line cap=round]
+  \def\cyld{#3}\def\cylh{#2}
+  \fill[top color=gray!50!black,bottom color=gray!10,middle color=gray,shading=axis,opacity=0.25]
+    (0,0) circle (\cyld cm and 0.5cm);
+  \fill[left color=gray!50!black,right color=gray!50!black,middle color=gray!50,shading=axis,opacity=0.25]
+    (\cyld,0) -- (\cyld,\cylh) arc (360:180:\cyld cm and 0.5cm) -- (-\cyld,0) arc (180:360:\cyld cm and 0.5cm);
+  \fill[top color=gray!90!,bottom color=gray!2,middle color=gray!30,shading=axis,opacity=0.25]
+    (0,\cylh) circle (\cyld cm and 0.5cm);
+  \draw (-\cyld,\cylh) -- (-\cyld,0) arc (180:360:\cyld cm and 0.5cm) -- (\cyld,\cylh) ++ (-\cyld,0) circle (\cyld cm and 0.5cm);
+  \draw[densely dashed] (-\cyld,0) arc (180:0:\cyld cm and 0.5cm);
+  \draw[<->,thin] (\cyld+0.35,0) -- (\cyld+0.35,\cylh) node[midway,right,font=\tiny]{\cylh};
+  \draw[<->,thin] (-\cyld,-0.4) -- (\cyld,-0.4) node[midway,below,font=\tiny]{$2\cyld$};
+\end{tikzpicture}%
+}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
@@ -72,12 +118,16 @@
 \CommonMistake{Missing one face. For example, a closed cuboid has 6 faces and a closed cylinder has 2 circles plus 1 curved surface.}
 \end{column}
 \begin{column}{0.48\textwidth}
-\WorkedExample{Cube}{A cube has side length 4 cm.\\[2pt]
+\WorkedExample{Cube}{%
+\DrawCuboid[0.5]{4}{4}{4}\\[2pt]
+A cube has side length 4 cm.\\[2pt]
 Each face: $4\times 4 = 16$ cm$^2$\\
 6 faces: $6\times 16 = 96$ cm$^2$\\[2pt]
 \textbf{Surface area = 96 cm$^2$}}
 
-\WorkedExample{Cuboid}{A box is 8 cm by 3 cm by 2 cm.\\[2pt]
+\WorkedExample{Cuboid}{%
+\DrawCuboid[0.45]{8}{3}{2}\\[2pt]
+A box is 8 cm by 3 cm by 2 cm.\\[2pt]
 Top \& bottom: $2(8\times 3)=48$\\
 Front \& back: $2(8\times 2)=32$\\
 Left \& right: $2(3\times 2)=12$\\
@@ -88,7 +138,9 @@ Total: $48+32+12=92$ cm$^2$\\[2pt]
 \GreenDivider
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
-\WorkedExample{Cylinder}{A cylinder has radius 3 cm and height 10 cm.\\[2pt]
+\WorkedExample{Cylinder}{%
+\DrawCylinder[0.55]{10}{3}\\[2pt]
+A cylinder has radius 3 cm and height 10 cm.\\[2pt]
 Two circles: $2\pi r^2 = 2\pi(3^2)=18\pi$\\
 Curved surface: $2\pi rh = 2\pi(3)(10)=60\pi$\\
 Total: $18\pi + 60\pi = 78\pi$ cm$^2$\\[2pt]
