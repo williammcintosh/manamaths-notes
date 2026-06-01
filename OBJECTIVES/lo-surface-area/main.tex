@@ -13,50 +13,34 @@
 
 %% TikZ 3D shape macros for surface-area notes
 % DrawCuboid[scale]{depth}{width}{height}
-\newcommand{\DrawCuboid}[4][0.45]{%
-\begin{tikzpicture}[scale=#1,line cap=round,line join=round]
-  \def\d{#2}\def\w{#3}\def\h{#4}
-  \fill[top color=gray!30,bottom color=gray!5,middle color=gray!15,shading=axis,opacity=0.3]
-    (0,0) -- (\w,0) -- (\w+\d*0.35,\d*0.3) -- (\d*0.35,\d*0.3) -- cycle;
-  \fill[top color=gray!50,bottom color=gray!10,middle color=gray!25,shading=axis,opacity=0.3]
-    (0,\h) -- (\w,\h) -- (\w+\d*0.35,\h+\d*0.3) -- (\d*0.35,\h+\d*0.3) -- cycle;
-  \fill[left color=gray!40,right color=gray!10,middle color=gray!20,shading=axis,opacity=0.3]
-    (0,0) -- (0,\h) -- (\d*0.35,\h+\d*0.3) -- (\d*0.35,\d*0.3) -- cycle;
-  \fill[top color=gray!20,bottom color=gray!5,middle color=gray!10,shading=axis,opacity=0.3]
-    (0,0) -- (\w,0) -- (\w,\h) -- (0,\h) -- cycle;
-  \fill[left color=gray!35,right color=gray!10,middle color=gray!20,shading=axis,opacity=0.3]
-    (\w,0) -- (\w,\h) -- (\w+\d*0.35,\h+\d*0.3) -- (\w+\d*0.35,\d*0.3) -- cycle;
-  \draw (\w,0) -- (\w,\h) -- (0,\h) -- (0,0) -- (\w,0);
-  \draw (\w,\h) -- (\w+\d*0.35,\h+\d*0.3);
-  \draw (0,\h) -- (\d*0.35,\h+\d*0.3);
-  \draw (\w+\d*0.35,\h+\d*0.3) -- (\d*0.35,\h+\d*0.3);
-  \draw (\d*0.35,\h+\d*0.3) -- (\d*0.35,\d*0.3);
-  \draw (\w+\d*0.35,\d*0.3) -- (\w,0);
-  \draw (\w+\d*0.35,\d*0.3) -- (\w+\d*0.35,\h+\d*0.3);
-  \draw[densely dashed] (0,0) -- (\d*0.35,\d*0.3);
-  \draw[densely dashed] (\d*0.35,\d*0.3) -- (\w+\d*0.35,\d*0.3);
-  \draw[<->,thin] (\d*0.35,-0.2) -- (\w+\d*0.35,-0.2) node[midway,below,font=\tiny]{\w};
-  \draw[<->,thin] (-0.25,0) -- (-0.25,\h) node[midway,left,font=\tiny]{\h};
+\newcommand{\DrawCuboid}[3]{%
+\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round]
+  \fill[mmgreenLeaf!15] (0,0) -- (2,0) -- (2,1.35) -- (0,1.35) -- cycle;
+  \fill[mmgreenLeaf!25] (2,0) -- (2.45,0.22) -- (2.45,1.57) -- (2,1.35) -- cycle;
+  \fill[mmgreenLeaf!10] (0,1.35) -- (2,1.35) -- (2.45,1.57) -- (0.45,1.57) -- cycle;
+  \draw (2,0) -- (2,1.35) -- (0,1.35) -- (0,0) -- (2,0);
+  \draw (2,1.35) -- (2.45,1.57);
+  \draw (0,1.35) -- (0.45,1.57) -- (2.45,1.57) -- (2.45,0.22) -- (2,0);
+  \draw[densely dashed] (0,0) -- (0.45,0.22) -- (2.45,0.22);
+  \draw[densely dashed] (0.45,0.22) -- (0.45,1.57);
+  \draw[<->,thin] (0.45,-0.28) -- (2.45,-0.28) node[midway,below,font=\tiny]{#2};
+  \draw[<->,thin] (-0.32,0) -- (-0.32,1.35) node[midway,left,font=\tiny]{#3};
 \end{tikzpicture}%
-}
-% DrawCylinder[scale]{height}{radius}
-\newcommand{\DrawCylinder}[3][0.5]{%
-\begin{tikzpicture}[scale=#1,line cap=round]
-  \def\cyld{#3}\def\cylh{#2}
+}\newcommand{\DrawCylinder}[2]{%
+\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round]
   \fill[top color=gray!50!black,bottom color=gray!10,middle color=gray,shading=axis,opacity=0.25]
-    (0,0) circle (\cyld cm and 0.5cm);
+    (0,-0.9) ellipse [x radius=0.78, y radius=0.22];
   \fill[left color=gray!50!black,right color=gray!50!black,middle color=gray!50,shading=axis,opacity=0.25]
-    (\cyld,0) -- (\cyld,\cylh) arc (360:180:\cyld cm and 0.5cm) -- (-\cyld,0) arc (180:360:\cyld cm and 0.5cm);
+    (0.78,-0.9) -- (0.78,0.9) arc[start angle=360,end angle=180,x radius=0.78,y radius=0.22] -- (-0.78,-0.9) arc[start angle=180,end angle=360,x radius=0.78,y radius=0.22];
   \fill[top color=gray!90!,bottom color=gray!2,middle color=gray!30,shading=axis,opacity=0.25]
-    (0,\cylh) circle (\cyld cm and 0.5cm);
-  \draw (-\cyld,\cylh) -- (-\cyld,0) arc (180:360:\cyld cm and 0.5cm) -- (\cyld,\cylh) ++ (-\cyld,0) circle (\cyld cm and 0.5cm);
-  \draw[densely dashed] (-\cyld,0) arc (180:0:\cyld cm and 0.5cm);
-  \draw[<->,thin] (\cyld+0.35,0) -- (\cyld+0.35,\cylh) node[midway,right,font=\tiny]{\cylh};
-  \draw[<->,thin] (-\cyld,-0.4) -- (\cyld,-0.4) node[midway,below,font=\tiny]{$2\cyld$};
+    (0,0.9) ellipse [x radius=0.78, y radius=0.22];
+  \draw (-0.78,0.9) -- (-0.78,-0.9) arc[start angle=180,end angle=360,x radius=0.78,y radius=0.22] -- (0.78,0.9);
+  \draw (0,0.9) ellipse [x radius=0.78, y radius=0.22];
+  \draw[densely dashed] (-0.78,-0.9) arc[start angle=180,end angle=0,x radius=0.78,y radius=0.22];
+  \draw[<->,thin] (1.15,-0.9) -- (1.15,0.9) node[midway,right,font=\tiny]{#1};
+  \draw[<->,thin] (-0.78,-1.25) -- (0.78,-1.25) node[midway,below,font=\tiny]{$2\times #2$};
 \end{tikzpicture}%
-}
-
-\setbeamertemplate{navigation symbols}{}
+}\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{blocks}[rounded][shadow=false]
@@ -119,14 +103,14 @@
 \end{column}
 \begin{column}{0.48\textwidth}
 \WorkedExample{Cube}{%
-\DrawCuboid[0.5]{4}{4}{4}\\[2pt]
+\DrawCuboid{4}{4}{4}\\[2pt]
 A cube has side length 4 cm.\\[2pt]
 Each face: $4\times 4 = 16$ cm$^2$\\
 6 faces: $6\times 16 = 96$ cm$^2$\\[2pt]
 \textbf{Surface area = 96 cm$^2$}}
 
 \WorkedExample{Cuboid}{%
-\DrawCuboid[0.45]{8}{3}{2}\\[2pt]
+\DrawCuboid{8}{3}{2}\\[2pt]
 A box is 8 cm by 3 cm by 2 cm.\\[2pt]
 Top \& bottom: $2(8\times 3)=48$\\
 Front \& back: $2(8\times 2)=32$\\
@@ -139,7 +123,7 @@ Total: $48+32+12=92$ cm$^2$\\[2pt]
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.48\textwidth}
 \WorkedExample{Cylinder}{%
-\DrawCylinder[0.55]{10}{3}\\[2pt]
+\DrawCylinder{10}{3}\\[2pt]
 A cylinder has radius 3 cm and height 10 cm.\\[2pt]
 Two circles: $2\pi r^2 = 2\pi(3^2)=18\pi$\\
 Curved surface: $2\pi rh = 2\pi(3)(10)=60\pi$\\
