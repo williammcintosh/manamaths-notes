@@ -9,8 +9,8 @@
   ],
   "summary": {
     "totalObjectives": 131,
-    "notesComplete": 22,
-    "notesStarted": 2,
+    "notesComplete": 23,
+    "notesStarted": 1,
     "notesNotStarted": 107
   },
   "learningObjectives": [
@@ -522,7 +522,7 @@
       "canonicalTitle": "Surface area",
       "canonicalDisplayTitle": "Surface area",
       "slug": "lo-surface-area",
-      "notesStatus": "started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-surface-area",
         "source": "manamaths-notes/OBJECTIVES/lo-surface-area/main.tex",
@@ -531,7 +531,7 @@
       "evidence": {
         "folder": true,
         "source": true,
-        "pdf": false
+        "pdf": true
       }
     },
     {
