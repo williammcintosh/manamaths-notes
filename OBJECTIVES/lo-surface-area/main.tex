@@ -12,19 +12,64 @@
 \everymath{\displaystyle}
 
 %% TikZ 3D shape macros for surface-area notes
-% DrawCuboid[scale]{depth}{width}{height}
+% DrawCuboid[3]{depth}{width}{height}
 \newcommand{\DrawCuboid}[3]{%
-\begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round]
-  \fill[mmgreenLeaf!15] (0,0) -- (2,0) -- (2,1.35) -- (0,1.35) -- cycle;
-  \fill[mmgreenLeaf!25] (2,0) -- (2.45,0.22) -- (2.45,1.57) -- (2,1.35) -- cycle;
-  \fill[mmgreenLeaf!10] (0,1.35) -- (2,1.35) -- (2.45,1.57) -- (0.45,1.57) -- cycle;
-  \draw (2,0) -- (2,1.35) -- (0,1.35) -- (0,0) -- (2,0);
-  \draw (2,1.35) -- (2.45,1.57);
-  \draw (0,1.35) -- (0.45,1.57) -- (2.45,1.57) -- (2.45,0.22) -- (2,0);
-  \draw[densely dashed] (0,0) -- (0.45,0.22) -- (2.45,0.22);
-  \draw[densely dashed] (0.45,0.22) -- (0.45,1.57);
-  \draw[<->,thin] (0.45,-0.28) -- (2.45,-0.28) node[midway,below,font=\tiny]{#2};
-  \draw[<->,thin] (-0.32,0) -- (-0.32,1.35) node[midway,left,font=\tiny]{#3};
+\begin{tikzpicture}[line join=round,line cap=round]
+  \pgfmathsetmacro{\ddx}{0.18*#1}
+  \pgfmathsetmacro{\ddy}{0.08*#1}
+  \pgfmathsetmacro{\wx}{0.22*#2}
+  \pgfmathsetmacro{\hy}{0.28*#3}
+  \coordinate (o) at (0,0);
+  \coordinate (a) at (\wx,0);
+  \coordinate (b) at (\wx,\hy);
+  \coordinate (c) at (0,\hy);
+  \coordinate (d) at (\ddx,\ddy);
+  \coordinate (e) at (\wx+\ddx,\ddy);
+  \coordinate (f) at (\wx+\ddx,\hy+\ddy);
+  \coordinate (g) at (\ddx,\hy+\ddy);
+  \fill[mmgreenLeaf!15] (o) -- (a) -- (b) -- (c) -- cycle;
+  \fill[mmgreenLeaf!25] (a) -- (e) -- (f) -- (b) -- cycle;
+  \fill[mmgreenLeaf!10] (c) -- (b) -- (f) -- (g) -- cycle;
+  \draw (a) -- (b) -- (c) -- (o) -- (a);
+  \draw (b) -- (f) -- (g) -- (c);
+  \draw (f) -- (e) -- (a);
+  \draw[densely dashed] (o) -- (d) -- (e);
+  \draw[densely dashed] (d) -- (g);
+  \draw[<->,thin] ([xshift=-4pt]o) -- ([xshift=-4pt]c) node[midway,left,font=\tiny]{#3};
+  \draw[<->,thin] ([yshift=-4pt]o) -- ([yshift=-4pt]a) node[midway,below,font=\tiny]{#2};
+  \draw[<->,thin] ([xshift=3pt,yshift=-3pt]a) -- ([xshift=3pt,yshift=-3pt]e) node[midway,sloped,below,font=\tiny]{#1};
+  \path (o) rectangle (f);
+\end{tikzpicture}%
+}
+% DrawCubeNet[2]{side length}{label}
+\newcommand{\DrawCubeNet}[2]{%
+\begin{tikzpicture}[x=0.18cm,y=0.18cm,line cap=round,line join=round]
+  \pgfmathsetmacro{\s}{#1}
+  % Cross net: 6 squares arranged like a T
+  % Center square (front)
+  \fill[mmgreenLeaf!20] (0,0) rectangle (\s,\s);
+  \draw (0,0) rectangle (\s,\s);
+  \node[font=\tiny] at (\s/2,\s/2) {#2};
+  % Top (back)
+  \fill[mmgreenLeaf!10] (0,\s) rectangle (\s,2*\s);
+  \draw (0,\s) rectangle (\s,2*\s);
+  \node[font=\tiny] at (\s/2,1.5*\s) {#2};
+  % Bottom (front)
+  \fill[mmgreenLeaf!20] (0,-\s) rectangle (\s,0);
+  \draw (0,-\s) rectangle (\s,0);
+  \node[font=\tiny] at (\s/2,-\s/2) {#2};
+  % Left (left side)
+  \fill[mmgreenLeaf!15] (-\s,0) rectangle (0,\s);
+  \draw (-\s,0) rectangle (0,\s);
+  \node[font=\tiny] at (-\s/2,\s/2) {#2};
+  % Right (right side)
+  \fill[mmgreenLeaf!15] (\s,0) rectangle (2*\s,\s);
+  \draw (\s,0) rectangle (2*\s,\s);
+  \node[font=\tiny] at (1.5*\s,\s/2) {#2};
+  % Back (top continuation)
+  \fill[mmgreenLeaf!10] (0,2*\s) rectangle (\s,3*\s);
+  \draw (0,2*\s) rectangle (\s,3*\s);
+  \node[font=\tiny] at (\s/2,2.5*\s) {#2};
 \end{tikzpicture}%
 }\newcommand{\DrawCylinder}[2]{%
 \begin{tikzpicture}[x=0.55cm,y=0.55cm,line cap=round,line join=round]
@@ -105,10 +150,17 @@
 \end{column}
 \begin{column}{0.48\textwidth}
 \WorkedExample{Cube}{%
-\DrawCuboid{4}{4}{4}\\[2pt]
-A cube has side length 4 cm. All faces are identical squares.\\[4pt]
-Area of one face: $4\times 4 = 16$ cm$^2$\\
-6 identical faces: $6\times 16 = 96$ cm$^2$\\[4pt]
+\begin{minipage}[t]{0.42\linewidth}
+\centering\DrawCuboid{4}{4}{4}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.52\linewidth}
+\centering\DrawCubeNet{4}{$4\times4=16$}
+\end{minipage}
+\\[4pt]
+A cube has side length 4~cm. All faces are identical squares.\\[4pt]
+Area of one face: $4\times4 = 16$~cm$^2$\\
+6 identical faces: $6\times16 = 96$~cm$^2$\\[4pt]
 \GreenDivider
 \textbf{Surface area = 96~cm$^2$}}
 
