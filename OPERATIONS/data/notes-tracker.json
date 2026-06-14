@@ -8,8 +8,8 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 135,
-    "notesComplete": 24,
+    "totalObjectives": 136,
+    "notesComplete": 25,
     "notesStarted": 1,
     "notesNotStarted": 110
   },
@@ -2698,9 +2698,21 @@
     },
     {
       "slug": "lo-differentiating-power-functions",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-differentiating-power-functions"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      }
+    },
+    {
+      "slug": "lo-gradient-of-tangents-on-curves",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-gradient-of-tangents-on-curves"
       },
       "evidence": {
         "folder": false,
