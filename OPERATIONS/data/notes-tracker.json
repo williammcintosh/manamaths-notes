@@ -9,9 +9,9 @@
   ],
   "summary": {
     "totalObjectives": 136,
-    "notesComplete": 25,
+    "notesComplete": 26,
     "notesStarted": 1,
-    "notesNotStarted": 110
+    "notesNotStarted": 109
   },
   "learningObjectives": [
     {
@@ -2710,14 +2710,14 @@
     },
     {
       "slug": "lo-gradient-of-tangents-on-curves",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-gradient-of-tangents-on-curves"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
+        "folder": true,
+        "source": true,
+        "pdf": true
       }
     }
   ]
