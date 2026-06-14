@@ -8,8 +8,8 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 131,
-    "notesComplete": 23,
+    "totalObjectives": 132,
+    "notesComplete": 24,
     "notesStarted": 1,
     "notesNotStarted": 107
   },
@@ -2267,6 +2267,27 @@
         "folder": "manamaths-notes/OBJECTIVES/lo-naming-angles",
         "source": "manamaths-notes/OBJECTIVES/lo-naming-angles/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-naming-angles/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      },
+      "status": "complete"
+    },
+    {
+      "objectiveId": "T5_LO1a",
+      "canonicalTopicId": "T5",
+      "canonicalInternalCode": "T5_LO1a",
+      "canonicalSourceCode": "LO1a",
+      "canonicalTitle": "Measuring angles",
+      "canonicalDisplayTitle": "Measuring angles",
+      "slug": "lo-measuring-angles",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-measuring-angles",
+        "source": "manamaths-notes/OBJECTIVES/lo-measuring-angles/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-measuring-angles/build/main.pdf"
       },
       "evidence": {
         "folder": true,
