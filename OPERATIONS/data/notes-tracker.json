@@ -2262,17 +2262,18 @@
       "canonicalTitle": "Naming angles",
       "canonicalDisplayTitle": "Naming angles",
       "slug": "lo-naming-angles",
-      "notesStatus": "not_started",
+      "notesStatus": "complete",
       "paths": {
         "folder": "manamaths-notes/OBJECTIVES/lo-naming-angles",
         "source": "manamaths-notes/OBJECTIVES/lo-naming-angles/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-naming-angles/build/main.pdf"
       },
       "evidence": {
-        "folder": false,
-        "source": false,
-        "pdf": false
-      }
+        "folder": true,
+        "source": true,
+        "pdf": true
+      },
+      "status": "complete"
     },
     {
       "objectiveId": "T5_LO2",

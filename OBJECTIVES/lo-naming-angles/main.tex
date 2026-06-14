@@ -1,0 +1,80 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.45cm,yshift=-0.45cm]current page.north west) rectangle ([xshift=-0.45cm,yshift=0.45cm]current page.south east);\end{tikzpicture}}
+\begin{document}
+\begin{frame}[t,shrink=10]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{An angle is named with three letters. The \textbf{middle letter is always the vertex}. If the angle is made by rays $QP$ and $QR$, then valid names are $\angle PQR$ and $\angle RQP$.}
+\SectionTitle{Steps}
+\StepLine{1}{Find the vertex — the corner where the two arms meet.}
+\StepLine{2}{Choose one point on each arm of the angle.}
+\StepLine{3}{Write the vertex in the middle.}
+\StepLine{4}{You can reverse the outside letters and it is still the same angle.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Quick checks}
+\begin{itemize}
+\item $\angle ABC$ has vertex $B$
+\item $\angle PQR$ and $\angle RQP$ are the same angle
+\item $\angle PRQ$ is a different angle because the vertex is $R$
+\item In a busy diagram, look at the middle letter first
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Putting the vertex on the end. If the corner is at $Q$, then $Q$ must be the middle letter. $\angle PQR$ is correct, but $\angle PRQ$ is not the same angle.}
+\end{frame}
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1}{If the angle has arms through $A$ and $C$ and the vertex is $B$, then the angle can be named $\angle ABC$ or $\angle CBA$.}
+\WorkedExample{Example 2}{In a diagram with three rays from one point, the small angle between the first two rays and the large angle across all rays are different angles. Name the exact angle that is marked.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\TryThese{\begin{enumerate}
+  \item What is the vertex of $\angle MNO$?
+  \item Give another correct name for $\angle DEF$.
+  \item Why is $\angle ACB$ different from $\angle ABC$?
+\end{enumerate}}
+\CommonMistake{Choosing letters that are not on the arms of the marked angle, or naming a larger angle when only the small marked angle is wanted. Always match the arc mark.}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}
