@@ -1,0 +1,101 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.45cm,yshift=-0.45cm]current page.north west) rectangle ([xshift=-0.45cm,yshift=0.45cm]current page.south east);\end{tikzpicture}}
+\begin{document}
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{The derivative $f'(x)$ is found using differentiation by first principles:
+\[
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
+This gives the gradient function of $f(x)$.}
+
+\SectionTitle{Steps}
+\StepLine{1}{Write $f(x+h)$ by replacing $x$ with $x+h$.}
+\StepLine{2}{Expand and simplify $f(x+h) - f(x)$.}
+\StepLine{3}{Divide by $h$: $\frac{f(x+h) - f(x)}{h}$.}
+\StepLine{4}{Take the limit as $h \to 0$ (the terms with $h$ disappear).}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Quick checks}
+\begin{itemize}
+\item For $f(x) = x^2$: $f'(x) = 2x$
+\item For $f(x) = 4x$: $f'(x) = 4$
+\item For $f(x) = x^2 + 5$: $f'(x) = 2x$
+\item Constants differentiate to zero
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Forgetting to expand $(x+h)^2$ correctly. Remember $(x+h)^2 = x^2 + 2xh + h^2$, not $x^2 + h^2$. Also common: forgetting that the constant term cancels out in step 2.}
+\end{frame}
+\begin{frame}[t,shrink=15]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: $f(x) = x^2$}{
+$f(x+h) = (x+h)^2 = x^2 + 2xh + h^2$\\
+$f(x+h) - f(x) = (x^2 + 2xh + h^2) - x^2 = 2xh + h^2$\\
+$\frac{f(x+h) - f(x)}{h} = \frac{2xh + h^2}{h} = 2x + h$\\
+As $h \to 0$: $f'(x) = 2x$
+}
+\WorkedExample{Example 2: $f(x) = 3x^2 + 2x$}{
+$f(x+h) = 3(x+h)^2 + 2(x+h) = 3x^2 + 6xh + 3h^2 + 2x + 2h$\\
+$f(x+h) - f(x) = 6xh + 3h^2 + 2h = h(6x + 3h + 2)$\\
+$\frac{f(x+h) - f(x)}{h} = 6x + 3h + 2$\\
+As $h \to 0$: $f'(x) = 6x + 2$
+}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: $f(x) = x^3$}{
+$f(x+h) = (x+h)^3 = x^3 + 3x^2h + 3xh^2 + h^3$\\
+$f(x+h) - f(x) = 3x^2h + 3xh^2 + h^3 = h(3x^2 + 3xh + h^2)$\\
+$\frac{f(x+h) - f(x)}{h} = 3x^2 + 3xh + h^2$\\
+As $h \to 0$: $f'(x) = 3x^2$
+}
+\TryThese{\begin{enumerate}
+  \item $f(x) = 2x^2$ — find $f'(x)$ by first principles
+  \item $f(x) = x^2 + 4x$ — find $f'(x)$ by first principles
+  \item $f(x) = 5x^2 - 3x + 2$ — find $f'(x)$ by first principles
+\end{enumerate}}
+\CommonMistake{When expanding $(x+h)^3$, students often miss the $3xh^2$ term. Write it out term by term: $(x+h)^3 = (x+h)(x^2 + 2xh + h^2)$.}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}

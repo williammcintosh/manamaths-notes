@@ -8,10 +8,10 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 132,
+    "totalObjectives": 134,
     "notesComplete": 24,
     "notesStarted": 1,
-    "notesNotStarted": 107
+    "notesNotStarted": 109
   },
   "learningObjectives": [
     {
@@ -2649,6 +2649,38 @@
         "folder": "manamaths-notes/OBJECTIVES/lo-introduction-to-circle-geometry",
         "source": "manamaths-notes/OBJECTIVES/lo-introduction-to-circle-geometry/main.tex",
         "pdf": "manamaths-notes/OBJECTIVES/lo-introduction-to-circle-geometry/build/main.pdf"
+      },
+      "evidence": {
+        "folder": false,
+        "source": false,
+        "pdf": false
+      }
+    },
+    {
+      "slug": "lo-deriving-functions",
+      "canonicalTitle": "Deriving functions",
+      "canonicalDisplayTitle": "Deriving functions",
+      "objectiveId": "T6_LO1",
+      "canonicalTopicId": "T6",
+      "canonicalInternalCode": "T6_LO1",
+      "canonicalSourceCode": "LO1",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-deriving-functions",
+        "source": "manamaths-notes/OBJECTIVES/lo-deriving-functions/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-deriving-functions/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      }
+    },
+    {
+      "slug": "lo-limits",
+      "notesStatus": "not_started",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-limits"
       },
       "evidence": {
         "folder": false,
