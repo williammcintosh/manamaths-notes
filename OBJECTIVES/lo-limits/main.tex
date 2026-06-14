@@ -1,0 +1,99 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmwarn}{HTML}{8F2F36}
+\definecolor{mmwarnSoft}{HTML}{F8E8EA}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\setbeamercolor{itemize item}{fg=mmgreenDeep}
+\newtcolorbox{MMCard}[2][]{enhanced,breakable=false,colback=#2,colframe=black,boxrule=1.5pt,arc=8pt,left=5pt,right=5pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../../manamaths/SITE/header-logo.png}}}
+\newcommand{\NotesTitle}[1]{{\colorbox{mmtanSoft}{\parbox{0.975\linewidth}{\vspace{0.14em}\hspace{0.25em}{\LARGE\bfseries\textcolor{mmgreenDeep}{#1}\hfill\KoruIcon}\vspace{0.14em}}}\par\vspace{0.18em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.12em}}}
+\newcommand{\SectionTitle}[1]{{\large\bfseries\textcolor{mmgreenDeep}{#1}}\par\vspace{0.04em}}
+\newcommand{\GreenDivider}{\par\vspace{0.01em}{\color{mmgreenLeaf}\rule{\linewidth}{2.4pt}}\par\vspace{0.03em}}
+\newcommand{\KeyIdea}[1]{\begin{MMCard}[title={\textbf{Key idea}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\WorkedExample}[2]{\begin{MMCard}[title={\textbf{#1}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{white}\small #2\end{MMCard}}
+\newcommand{\CommonMistake}[1]{\begin{MMCard}[title={\textbf{Common mistake}},colbacktitle=mmwarnSoft,coltitle=mmwarn]{white}\small #1\end{MMCard}}
+\newcommand{\TryThese}[1]{\begin{MMCard}[title={\textbf{Try these}},colbacktitle=mmgreenSoft,coltitle=mmgreenDeep]{mmtanSoft}\small #1\end{MMCard}}
+\newcommand{\StepLine}[2]{\textbf{#1.} #2\par\vspace{0.03em}}
+\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.45cm,yshift=-0.45cm]current page.north west) rectangle ([xshift=-0.45cm,yshift=0.45cm]current page.south east);\end{tikzpicture}}
+\begin{document}
+\begin{frame}[t,shrink=12]
+\NotesTitle{Notes \& Steps}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\KeyIdea{A limit asks: what value does a function approach as $x$ gets closer and closer to a number (or infinity)? If the function has a hole at $x = a$, the limit tells you the $y$-value the graph was heading toward.}
+
+\SectionTitle{Steps}
+\StepLine{1}{Try direct substitution first. If you get a number, that is the limit.}
+\StepLine{2}{If substitution gives $\frac{0}{0}$ (indeterminate), factorise the numerator and denominator, cancel the common factor, then substitute again.}
+\StepLine{3}{For limits at infinity, identify the highest power of $x$ in the numerator and denominator. Divide every term by that power. As $x \to \infty$, terms like $\frac{1}{x}$, $\frac{1}{x^2}$, etc. become 0.}
+\StepLine{4}{For the form $\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$, expand and simplify first, then let $h \to 0$.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\SectionTitle{Quick checks}
+\begin{itemize}
+\item $\displaystyle\lim_{x \to 2} (x+3) = 5$ (direct substitution)
+\item $\displaystyle\lim_{x \to 3} \frac{x^2-9}{x-3} = 6$ (factorise first)
+\item $\displaystyle\lim_{x \to \infty} \frac{1}{x} = 0$ (millionaire theory: 1 divided by a huge number is tiny)
+\item $\displaystyle\lim_{x \to \infty} \frac{2x+1}{x+3} = 2$ (ratio of leading coefficients)
+\end{itemize}
+\end{column}
+\end{columns}
+\GreenDivider
+\CommonMistake{Trying to substitute $x = a$ directly when the denominator becomes zero. You must factorise and cancel first. For example, $\frac{x^2-4}{x-2}$ at $x = 2$ is $\frac{0}{0}$, but factorising gives $\frac{(x-2)(x+2)}{x-2} = x+2$, so the limit is $4$.}
+\end{frame}
+\begin{frame}[t,shrink=15]
+\NotesTitle{Notes \& Steps}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 1: Factorisation}{
+$\displaystyle\lim_{x \to 5} \frac{x^2 - 25}{x - 5}$\\
+Direct substitution: $\frac{0}{0}$, so factorise.\\
+$x^2 - 25 = (x-5)(x+5)$, cancel $(x-5)$ giving $x+5$.\\
+Substitute $x = 5$: $5 + 5 = 10$.
+}
+\WorkedExample{Example 2: Limits at infinity}{
+$\displaystyle\lim_{x \to \infty} \frac{3x^2 + 2x}{5x^2 - x + 1}$\\
+Highest power is $x^2$. Divide each term by $x^2$:\\
+$\displaystyle \frac{3 + \frac{2}{x}}{5 - \frac{1}{x} + \frac{1}{x^2}}$\\
+As $x \to \infty$, $\frac{2}{x} \to 0$, $\frac{1}{x} \to 0$, $\frac{1}{x^2} \to 0$.\\
+Limit = $\frac{3}{5}$.
+}
+\end{column}
+\begin{column}{0.48\textwidth}
+\WorkedExample{Example 3: The $h \to 0$ form}{
+$\displaystyle\lim_{h \to 0} \frac{(x+h)^2 - x^2}{h}$\\
+Expand: $(x+h)^2 = x^2 + 2xh + h^2$\\
+$(x+h)^2 - x^2 = 2xh + h^2 = h(2x + h)$\\
+Divide by $h$: $2x + h$\\
+As $h \to 0$: limit = $2x$.
+}
+\TryThese{\begin{enumerate}
+  \item $\displaystyle\lim_{x \to 4} \frac{x^2 - 16}{x - 4}$
+  \item $\displaystyle\lim_{x \to \infty} \frac{4x^2 + 3x}{2x^2 - 5}$
+  \item $\displaystyle\lim_{h \to 0} \frac{2(x+h)^2 - 2x^2}{h}$
+\end{enumerate}}
+\CommonMistake{When doing limits at infinity, dividing by the wrong power. Always use the \textbf{highest} power in the \textbf{denominator} to divide every term. If numerator degree $>$ denominator degree, the limit is $\infty$ (or $-\infty$).}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}

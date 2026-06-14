@@ -8,10 +8,10 @@
     "This file is generated from the Mana Maths LO tracker plus the actual manamaths-notes filesystem state."
   ],
   "summary": {
-    "totalObjectives": 134,
+    "totalObjectives": 135,
     "notesComplete": 24,
     "notesStarted": 1,
-    "notesNotStarted": 109
+    "notesNotStarted": 110
   },
   "learningObjectives": [
     {
@@ -2678,9 +2678,29 @@
     },
     {
       "slug": "lo-limits",
+      "canonicalTitle": "Limits",
+      "canonicalDisplayTitle": "Limits",
+      "objectiveId": "T6_LO2",
+      "canonicalTopicId": "T6",
+      "canonicalInternalCode": "T6_LO2",
+      "canonicalSourceCode": "LO2",
+      "notesStatus": "complete",
+      "paths": {
+        "folder": "manamaths-notes/OBJECTIVES/lo-limits",
+        "source": "manamaths-notes/OBJECTIVES/lo-limits/main.tex",
+        "pdf": "manamaths-notes/OBJECTIVES/lo-limits/build/main.pdf"
+      },
+      "evidence": {
+        "folder": true,
+        "source": true,
+        "pdf": true
+      }
+    },
+    {
+      "slug": "lo-differentiating-power-functions",
       "notesStatus": "not_started",
       "paths": {
-        "folder": "manamaths-notes/OBJECTIVES/lo-limits"
+        "folder": "manamaths-notes/OBJECTIVES/lo-differentiating-power-functions"
       },
       "evidence": {
         "folder": false,
